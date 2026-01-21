@@ -1,0 +1,13 @@
+# Ignore Composer files
+/vendor/
+/table/
+/uploads/
+/logs/
+/api/vendor/
+/api/logs/
+# Ignore other files and directories
+*.log
+*.tmp
+.DS_Store
+
+/bak/

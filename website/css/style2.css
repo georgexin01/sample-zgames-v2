@@ -1,0 +1,507 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Aguafina+Script&display=swap'); */
+.font-12{font-size: 12px !important;}
+.font-13{font-size: 13px !important;}
+.font-14{font-size: 14px !important;}
+.font-15{font-size: 15px !important;}
+.font-16{font-size: 16px !important;}
+.text-uppercase{text-transform: uppercase !important;}
+.max-w-500{ max-width: 500px !important;}
+.max-w-600{ max-width: 600px !important;}
+.max-w-700{ max-width: 700px !important;}
+.max-w-800{ max-width: 800px !important;}
+.max-w-900{ max-width: 900px !important;}
+.max-w-1000{ max-width: 1000px !important;}
+.d-grid{ display: grid !important; }
+.rounded-xl{ border-radius: 30px; }
+.top-0{ top: 0 !important; }
+.object-cover{ object-fit: cover !important; }
+.object-contain{ object-fit: contain !important; }
+.ratio-1{
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+}
+
+/* @others */
+.moverspackers-blog-classicfull{
+    margin: 10px 0px 10px 0px !important;
+}
+@media(max-width:540px){
+    .slick-slide img{
+        height:370px;
+        object-fit: cover;
+    }
+}
+.moverspackers-services-text i{
+    padding:8px;
+}
+
+/* Home page styles */
+.article-all img{
+    width: 360px;
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+@media (width: 768px){
+    .moverspackers-banner-text h5{
+        margin-top: 30px;
+    }
+    .moverspackers-main-content .cols-md-4{
+        width: 50%;
+    }
+}
+
+@media (min-width: 767px) {
+    .phone{
+        display: none;
+    }
+}
+
+@media (max-width: 767px){
+    .desktop{
+        display: none;
+    }
+}
+
+/* Contact page styles */
+@media(width: 768px){
+    .contact_p{
+        font-size:10px;
+    }
+    .moverspackers-contact-info.moverspackers-contact-widget li{
+        padding-right: 0px;
+    }
+}
+
+@media (width: 1024px){
+    .cols-md-4 {
+        width: 41%;
+        padding-right: 0px;
+    }
+}
+
+.moverspackers-contact-info-text p, .moverspackers-contact-info-text a{
+    margin-bottom: 10px;
+}
+
+/* About page styles */
+@media (min-width: 768px) and (max-width: 990px) {
+    .moverspackers-main-content .cols-md-7{ width: 100%;  margin-bottom: 30px; }
+    .moverspackers-main-content .cols-md-5{ width: 100%;  }
+}
+
+@media(min-width:1030px){
+    .kimp{
+        padding:0;
+    }
+}
+@media(max-width:500px){
+    .kimp{
+        padding: 16px 0 2%;
+    }
+}
+
+@media(max-width:767px){
+    .desktop1{
+        display:none !important;
+    }
+}
+@media(min-width:767px){
+    .mobile1{
+        display: none !important;
+    }
+    .cop{
+        margin-top: 90px;
+    }
+}
+@media(min-width:760px) and (max-width:770px){
+    .moverspackers-main-content .cols-md-8 {
+        float: none;
+        display: inline-block;
+        vertical-align: top;
+        margin-right: -4px;
+        width: 60%;
+    }
+}
+
+.service-all img{
+    max-width: 262.2px;
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+    border: 2px solid #f9ad17;
+}
+
+.mySlides{
+    display: none;
+    height: 100%;
+}
+
+.row > .column {
+    padding: 0 8px;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.column {
+    float: left;
+    width: 25%;
+    padding-bottom: 20px;
+}
+
+/* The Modal (background) */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: auto;
+    height: 100%;
+    overflow: auto;
+    background-color: #000000c9;
+}
+
+/* Modal Content */
+.modal-content {
+    position: relative;
+    background-color: transparent;
+    margin: auto;
+    padding: 0;
+    width: auto;
+    height: 95%;
+}
+
+.hover-shadow:hover {opacity: 0.5;transition: 0.5s;}
+
+/* The Close Button */
+.close {
+    color: white;
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: red;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.cursor {
+    cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -50px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.demo {
+    opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+    opacity: 1;
+}
+
+.modalImagess {
+    margin: auto;
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media (min-width: 768px) and (max-width: 990px){
+    .moverspackers-main-content .cols-md-3{
+        width: 50%;
+    }
+    .service-all img{
+        max-width: 100%;
+    }
+}
+
+@media (width: 767px){
+    .moverspackers-main-content .cols-md-3{
+        width: 100%;
+    }
+    .service-all img{
+        max-width: 100%;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 540px){
+    .moverspackers-main-content .cols-md-3{
+        width: 49.44%;
+    }
+    .service-all img{
+        height: 150px;
+    }
+}
+
+.moverspackers-banner-layer img:hover{
+    cursor:pointer;
+}
+
+
+@media (max-width: 768px){
+    .has-child .submenu-toogle {
+        padding: 21px 10px 7px 25px;
+    }
+}
+
+/* Equipment page styles */
+.wed p{
+    margin-bottom:2px;
+}
+
+.wed{
+    height:60px;
+}
+
+@media(max-width:590px){
+    .wed{
+        height:auto;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 540px){
+    .moverspackers-main-content .cols-md-3{
+        width: 49.33%;
+    }
+    .service-all img{
+        height: 120px;
+    }
+}
+
+/* Career page styles */
+label{
+    font-size: 15px;
+}
+
+textarea, input[type="text"], input[type="password"], input[type="datetime"], input[type="datetime-local"], input[type="date"], input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], input[type="color"], .uneditable-input{
+    height: 45px;
+}
+
+.custom-form input[type="submit"]{
+    float: none;
+    padding: 2px 20px 5px;
+    color: #ffffff;
+    font-weight: bold;
+    background-color: #f9ad17;
+    border: 1px solid #cccccc;
+    letter-spacing: 0.9px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media (max-width:792px) {
+    .custom-form input[type="submit"]{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width:25%;
+    }
+}
+@media (max-width:692px) {
+    .custom-form input[type="submit"]{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width:30%;
+    }
+}
+@media (max-width:320px) {
+    .custom-form input[type="submit"]{
+        width:40%;
+    }
+}
+
+@media (max-width:250px) {
+    .custom-form input[type="submit"]{
+        width:50%;
+    }
+}
+
+.custom-form input[type="submit"]:hover { color: #dddddd; background-color: #61573d;transition-duration: 0.8s;}
+
+.custom-form input{
+    margin: 10px 0;
+}
+
+@media(max-width:769px){
+    .custom-form input{
+        width: 100%;
+    }
+}
+
+.custom-form label{
+    margin: 10px 0 0 0;
+}
+
+@media (max-width: 1024px) and (max-width: 1440px){
+    .col-md-5 {
+        width: 15.66666667%;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 990px){
+    .moverspackers-main-content .col-md-5{ width: 15%;}
+    .moverspackers-main-content .col-md-7{ width: 40%;}
+    .moverspackers-main-content .col-md-4{width: 100%;}
+    img {padding: 0 0;}
+    .custom-form input[type="submit"] {
+        float: none;
+    }
+}
+
+@media screen and (min-width: 991px) and (max-width: 1054px) {
+    .col-md-5 {
+        width: 21.66666667%;
+    }
+    .col-md-7 {
+        width: 38.33333333%;
+    }
+}
+
+@media (max-width: 480px) {
+    .custom-form label {
+        margin: 15px 15% 0 0;
+    }
+    .moverspackers-main-content .col-md-7 {
+        width: 60%;
+    }
+    .col-md-12-custom{
+        margin-bottom: 50px;
+        padding-left: 0px;
+        padding-right: 0px;
+        font-size: 12px;
+    }
+}
+
+@media (min-width: 992px){
+    .col-md-7 {
+        width: 48.33333333%;
+    }
+    .col-md-5 {
+        width: 11.66666667%;
+    }
+}
+
+@media (max-width: 767px){
+    .moverspackers-main-content .col-md-5{
+        width: 25%
+    }
+    .moverspackers-main-content .col-md-7{
+        width: 50%;
+    }
+    .col-md-7 label{
+        margin: 15px 20px 0 0
+    }
+}
+
+/* Service page styles */
+.service-menus h5{
+    padding-bottom: 35px;
+}
+.service-menus img{
+    width: 233px;
+    height: 240px;
+    object-fit: cover;
+    border: 2px solid #f9ad17;
+}
+.custom-readmore {
+    text-align: center !important ;
+    font-size: 13px;
+    border: 1px solid #dddddd;
+    padding: 8px 12px;
+    background-color: #f9ad17;
+    color: white;
+    transition-duration: 0.5s;
+}
+.custom-readmore-right {
+    display: block;
+    width: 30%;
+    font-size: 16px;
+    border: 1px solid #dddddd;
+    padding: 10px 12px;
+    background-color: #272B34;
+    color: white;
+    transition-duration: 0.5s;
+    margin-left:auto !important;
+    margin-right: auto !important;
+}
+@media(max-width:769px){
+    .custom-readmore-right {
+        width: 40%;
+    }
+}
+@media(max-width:540px){
+    .custom-readmore-right {
+        width: 60%;
+    }
+}
+.custom-readmore-right:hover {
+    border: 1px solid #FFB118;
+    background-color: #272B34;
+    color: #FFB118;
+}
+.custom-readmore:hover {
+    background-color: #dddddd;
+    color: white;
+}
+
+/* Project page styles */
+.project-all img{
+    max-width: 360px;
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+}
+
+@media (min-width: 768px) and (max-width: 990px){
+    .moverspackers-main-content .cols-md-4{
+        width: 50%;
+    }
+}

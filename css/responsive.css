@@ -1,0 +1,286 @@
+/**
+ * ZGames - Responsive Stylesheet
+ * Mobile-first media queries
+ */
+
+/* ============================================
+   Extra Small Devices (< 576px)
+   ============================================ */
+@media (max-width: 575.98px) {
+    /* Typography */
+    body {
+        font-size: 13px;
+    }
+
+    .page-title {
+        font-size: 1.4rem;
+    }
+
+    .section-title {
+        font-size: 1.2rem;
+    }
+
+    /* Header */
+    .zgames-header .navbar-brand {
+        font-size: 1.1rem;
+    }
+
+    .zgames-header .logo-img {
+        height: 32px;
+    }
+
+    /* Cards */
+    .card-img-top {
+        height: 150px;
+    }
+
+    /* Footer */
+    .footer-main {
+        padding: 30px 0 20px;
+    }
+
+    .footer-widget .widget-title {
+        font-size: 1rem;
+    }
+
+    .footer-bottom {
+        text-align: center;
+    }
+
+    .footer-bottom-links {
+        justify-content: center;
+        margin-top: 10px;
+    }
+
+    /* WhatsApp Button */
+    .whatsapp-float {
+        width: 50px;
+        height: 50px;
+        font-size: 1.5rem;
+        bottom: 80px;
+        right: 15px;
+    }
+
+    /* Container padding */
+    .container {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    /* Section */
+    .section {
+        padding: 25px 0;
+    }
+}
+
+/* ============================================
+   Small Devices (576px - 767px)
+   ============================================ */
+@media (min-width: 576px) and (max-width: 767.98px) {
+    .page-title {
+        font-size: 1.5rem;
+    }
+
+    .section-title {
+        font-size: 1.3rem;
+    }
+
+    .card-img-top {
+        height: 160px;
+    }
+
+    .section {
+        padding: 30px 0;
+    }
+}
+
+/* ============================================
+   Medium Devices (768px - 991px)
+   ============================================ */
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .page-title {
+        font-size: 1.6rem;
+    }
+
+    .card-img-top {
+        height: 170px;
+    }
+
+    /* Show mobile nav on tablets */
+    .mobile-bottom-nav {
+        display: flex;
+    }
+}
+
+/* ============================================
+   Large Devices (992px+)
+   ============================================ */
+@media (min-width: 992px) {
+    /* Hide mobile elements */
+    .mobile-search {
+        display: none;
+    }
+
+    .mobile-bottom-nav {
+        display: none !important;
+    }
+
+    .mobile-nav-spacer {
+        display: none;
+    }
+
+    /* Adjust WhatsApp button */
+    .whatsapp-float {
+        bottom: 30px;
+        right: 30px;
+    }
+
+    /* Footer */
+    .footer-main {
+        padding: 60px 0 40px;
+    }
+
+    /* Cards hover effect */
+    .card:hover {
+        transform: translateY(-5px);
+    }
+}
+
+/* ============================================
+   Extra Large Devices (1200px+)
+   ============================================ */
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1200px;
+    }
+
+    .page-title {
+        font-size: 2rem;
+    }
+
+    .section-title {
+        font-size: 1.6rem;
+    }
+}
+
+/* ============================================
+   Mobile-Specific Adjustments
+   ============================================ */
+
+/* Prevent body scroll when modal open */
+body.modal-open {
+    overflow: hidden;
+    position: fixed;
+    width: 100%;
+}
+
+/* Safe area for notched phones */
+@supports (padding-bottom: env(safe-area-inset-bottom)) {
+    .mobile-bottom-nav {
+        padding-bottom: calc(12px + env(safe-area-inset-bottom));
+    }
+
+    .zgames-footer {
+        padding-bottom: env(safe-area-inset-bottom);
+    }
+}
+
+/* Touch-friendly tap targets */
+@media (hover: none) and (pointer: coarse) {
+    .nav-link,
+    .btn,
+    .footer-links a,
+    .dropdown-item {
+        min-height: 44px;
+        display: flex;
+        align-items: center;
+    }
+}
+
+/* Landscape orientation on mobile */
+@media (max-height: 500px) and (orientation: landscape) {
+    .zgames-header {
+        position: relative;
+    }
+
+    .mobile-bottom-nav {
+        display: none;
+    }
+
+    .whatsapp-float {
+        bottom: 15px;
+    }
+}
+
+/* High DPI screens */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .zgames-header .logo-img,
+    .footer-widget .footer-logo {
+        image-rendering: -webkit-optimize-contrast;
+    }
+}
+
+/* ============================================
+   Print Styles
+   ============================================ */
+@media print {
+    .zgames-header,
+    .zgames-footer,
+    .mobile-bottom-nav,
+    .whatsapp-float {
+        display: none !important;
+    }
+
+    .zgames-wrapper {
+        min-height: auto;
+    }
+
+    body {
+        background: white;
+        color: black;
+    }
+
+    .card {
+        box-shadow: none;
+        border: 1px solid #ddd;
+    }
+}
+
+/* ============================================
+   Dark Mode Support (Optional)
+   ============================================ */
+@media (prefers-color-scheme: dark) {
+    /* Uncomment to enable dark mode support
+    :root {
+        --dark-color: #f5f6fa;
+        --light-color: #1a1a2e;
+        --white-color: #16213e;
+    }
+
+    body {
+        background-color: #1a1a2e;
+        color: #f5f6fa;
+    }
+
+    .card {
+        background: #16213e;
+    }
+    */
+}
+
+/* ============================================
+   Reduced Motion
+   ============================================ */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+
+    html {
+        scroll-behavior: auto;
+    }
+}
