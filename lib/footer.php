@@ -6,39 +6,34 @@
  */
 ?>
 
-<!-- Customer Service Floating Button -->
-<a href="customer-service.php" class="sp-cs-float">
-    <i class="fas fa-headset"></i>
-</a>
-
 <!-- Bottom Navigation -->
 <nav class="sp-bottom-nav">
-    <!-- 通知 -->
-    <a href="notification.php" class="sp-nav-item <?php echo isActivePage($pageName, 'notification'); ?>">
-        <i class="fas fa-bell"></i>
-        <span>通知</span>
+    <!-- 首页 (Home) -->
+    <a href="index.php" class="sp-nav-item <?php echo isActivePage($pageName, 'home'); ?>">
+        <i class="fas fa-home"></i>
+        <span>首页</span>
     </a>
 
-    <!-- 邀请好友 -->
-    <a href="invite.php" class="sp-nav-item <?php echo isActivePage($pageName, 'invite'); ?>">
-        <i class="fas fa-user-plus"></i>
-        <span>邀请好友</span>
+    <!-- 金金 (Deposit) -->
+    <a href="deposit.php" class="sp-nav-item <?php echo isActivePage($pageName, 'deposit'); ?>">
+        <i class="fas fa-coins"></i>
+        <span>金金</span>
     </a>
 
-    <!-- Center Crown Button -->
+    <!-- Center Crown Button (VIP) -->
     <div class="sp-nav-center">
-        <a href="index.php" class="sp-nav-crown <?php echo isActivePage($pageName, 'home'); ?>">
+        <a href="vip.php" class="sp-nav-crown <?php echo isActivePage($pageName, 'vip'); ?>">
             <i class="fas fa-crown"></i>
         </a>
     </div>
 
-    <!-- 聊天室 -->
-    <a href="chatroom.php" class="sp-nav-item <?php echo isActivePage($pageName, 'chatroom'); ?>">
-        <i class="fas fa-comments"></i>
-        <span>聊天室</span>
+    <!-- 大奖 (Rewards) -->
+    <a href="rewards.php" class="sp-nav-item <?php echo isActivePage($pageName, 'rewards'); ?>">
+        <i class="fas fa-gift"></i>
+        <span>大奖</span>
     </a>
 
-    <!-- 我的 -->
+    <!-- 我的 (Profile) -->
     <a href="profile.php" class="sp-nav-item <?php echo isActivePage($pageName, 'profile'); ?>">
         <i class="fas fa-user"></i>
         <span>我的</span>

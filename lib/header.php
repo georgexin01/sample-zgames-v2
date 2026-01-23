@@ -9,35 +9,17 @@
 <?php if ($pageName === 'home'): ?>
 <!-- ========== HOME PAGE HEADER ========== -->
 <header class="sp-home-header">
-    <!-- Top Row: Logo + Language + Settings -->
+    <!-- Top Row: Logo + Globe Icon -->
     <div class="sp-home-header-top">
         <div class="sp-logo-wrap">
-            <img src="resource/logo/superong-logo.png" alt="SUPERONG" class="sp-logo">
+            <img src="resource/ui-elements/logo-white.svg" alt="SUPERONG" class="sp-logo">
         </div>
         <div class="sp-header-actions">
-            <!-- Settings Icon -->
-            <a href="settings.php" class="sp-header-icon">
-                <i class="fas fa-cog"></i>
+            <!-- Globe/Language Icon -->
+            <a href="#" class="sp-header-globe" id="langToggle">
+                <img src="resource/ui-elements/webs.svg" alt="Language" class="sp-globe-icon">
             </a>
-            <!-- Language Dropdown -->
-            <div class="sp-lang-dropdown" id="langDropdown">
-                <span class="sp-lang-current"><?php echo e($availableLanguages[getLang()]); ?></span>
-                <i class="fas fa-chevron-down"></i>
-                <div class="sp-lang-menu">
-                    <?php foreach ($availableLanguages as $code => $name): ?>
-                    <a href="?lang=<?php echo $code; ?>" class="sp-lang-item <?php echo getLang() === $code ? 'active' : ''; ?>">
-                        <?php echo e($name); ?>
-                    </a>
-                    <?php endforeach; ?>
-                </div>
-            </div>
         </div>
-    </div>
-
-    <!-- Point Bar -->
-    <div class="sp-point-bar">
-        <span class="sp-point-label">Point</span>
-        <span class="sp-point-value"><?php echo e($siteConfig['currency']); ?> <?php echo number_format($currentUser['point'], 2); ?></span>
     </div>
 </header>
 
