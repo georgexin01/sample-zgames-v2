@@ -1,81 +1,68 @@
-<!-- Header Navigation -->
-<header class="zgames-header">
-    <nav class="navbar navbar-expand-lg navbar-dark">
-        <div class="container">
-            <!-- Logo -->
-            <a class="navbar-brand" href="index.php">
-                <img src="images/default/logo.png" alt="<?php echo e($siteConfig['siteName']); ?>" class="logo-img">
-                <span class="logo-text"><?php echo e($siteConfig['siteName']); ?></span>
+<?php
+/**
+ * header.php - SUPERONG Mobile App
+ * Header component (Home header + Inner page header)
+ * 99% Similarity Required
+ */
+?>
+
+<?php if ($pageName === 'home'): ?>
+<!-- ========== HOME PAGE HEADER ========== -->
+<header class="sp-home-header">
+    <!-- Top Row: Logo + Language + Settings -->
+    <div class="sp-home-header-top">
+        <div class="sp-logo-wrap">
+            <img src="resource/logo/superong-logo.png" alt="SUPERONG" class="sp-logo">
+        </div>
+        <div class="sp-header-actions">
+            <!-- Settings Icon -->
+            <a href="settings.php" class="sp-header-icon">
+                <i class="fas fa-cog"></i>
             </a>
-
-            <!-- Mobile Toggle Button -->
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain" aria-controls="navbarMain" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <!-- Navigation Menu -->
-            <div class="collapse navbar-collapse" id="navbarMain">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link <?php echo isActivePage($pageName, 'Home'); ?>" href="index.php">
-                            <i class="fas fa-home"></i> Home
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link <?php echo isActivePage($pageName, 'Games'); ?>" href="games.php">
-                            <i class="fas fa-gamepad"></i> Games
-                        </a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            <i class="fas fa-th-large"></i> Categories
-                        </a>
-                        <ul class="dropdown-menu">
-                            <?php foreach ($categories as $cat): ?>
-                            <li>
-                                <a class="dropdown-item" href="games.php?cat=<?php echo $cat['id']; ?>">
-                                    <i class="fas <?php echo e($cat['icon']); ?>"></i> <?php echo e($cat['name']); ?>
-                                </a>
-                            </li>
-                            <?php endforeach; ?>
-                        </ul>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link <?php echo isActivePage($pageName, 'About'); ?>" href="about.php">
-                            <i class="fas fa-info-circle"></i> About
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link <?php echo isActivePage($pageName, 'Contact'); ?>" href="contact.php">
-                            <i class="fas fa-envelope"></i> Contact
-                        </a>
-                    </li>
-                </ul>
-
-                <!-- Search Box (Desktop) -->
-                <form class="d-none d-lg-flex ms-3" role="search">
-                    <div class="input-group">
-                        <input type="search" class="form-control" placeholder="Search games..." aria-label="Search">
-                        <button class="btn btn-primary" type="submit">
-                            <i class="fas fa-search"></i>
-                        </button>
-                    </div>
-                </form>
+            <!-- Language Dropdown -->
+            <div class="sp-lang-dropdown" id="langDropdown">
+                <span class="sp-lang-current"><?php echo e($availableLanguages[getLang()]); ?></span>
+                <i class="fas fa-chevron-down"></i>
+                <div class="sp-lang-menu">
+                    <?php foreach ($availableLanguages as $code => $name): ?>
+                    <a href="?lang=<?php echo $code; ?>" class="sp-lang-item <?php echo getLang() === $code ? 'active' : ''; ?>">
+                        <?php echo e($name); ?>
+                    </a>
+                    <?php endforeach; ?>
+                </div>
             </div>
         </div>
-    </nav>
+    </div>
 
-    <!-- Mobile Search (Visible on mobile only) -->
-    <div class="mobile-search d-lg-none">
-        <div class="container">
-            <form role="search">
-                <div class="input-group">
-                    <input type="search" class="form-control" placeholder="Search games..." aria-label="Search">
-                    <button class="btn btn-primary" type="submit">
-                        <i class="fas fa-search"></i>
-                    </button>
-                </div>
-            </form>
-        </div>
+    <!-- Point Bar -->
+    <div class="sp-point-bar">
+        <span class="sp-point-label">Point</span>
+        <span class="sp-point-value"><?php echo e($siteConfig['currency']); ?> <?php echo number_format($currentUser['point'], 2); ?></span>
     </div>
 </header>
+
+<?php else: ?>
+<!-- ========== INNER PAGE HEADER ========== -->
+<header class="sp-page-header">
+    <!-- Back Button -->
+    <a href="javascript:history.back()" class="sp-header-back">
+        <i class="fas fa-arrow-left"></i>
+    </a>
+
+    <!-- Page Title -->
+    <h1 class="sp-header-title"><?php echo e($headerTitle ?? $pageTitle ?? ''); ?></h1>
+
+    <!-- Right Icon (optional) -->
+    <?php if (isset($headerRightIcon)): ?>
+    <a href="<?php echo e($headerRightLink ?? '#'); ?>" class="sp-header-icon-right">
+        <i class="fas <?php echo e($headerRightIcon); ?>"></i>
+    </a>
+    <?php elseif (isset($headerRightText)): ?>
+    <a href="<?php echo e($headerRightLink ?? '#'); ?>" class="sp-header-text-right">
+        <?php echo e($headerRightText); ?>
+    </a>
+    <?php else: ?>
+    <div class="sp-header-placeholder"></div>
+    <?php endif; ?>
+</header>
+<?php endif; ?>

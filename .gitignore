@@ -1,0 +1,35 @@
+# AI Assistants
+.claude/
+.continue/
+
+# IDE
+.vscode/
+.idea/
+*.sublime-*
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Logs
+*.log
+logs/
+
+# Dependencies
+node_modules/
+vendor/
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# Cache
+*.cache
+cache/
+tmp/
+
+# Uploads (keep folder, ignore contents)
+uploads/*
+!uploads/.gitkeep

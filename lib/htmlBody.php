@@ -1,25 +1,18 @@
-    </div><!-- /.zgames-wrapper -->
+    </div><!-- /.sp-wrapper -->
 
-    <!-- JavaScript Libraries -->
-    <script src="script/jquery.min.js"></script>
-    <script src="script/bootstrap.bundle.min.js"></script>
-
-    <!-- Custom JavaScript -->
+    <!-- JavaScript -->
     <script src="<?php echo asset('js/main.js'); ?>"></script>
 
-    <!-- Page-specific scripts -->
-    <?php if (isset($pageScripts)): ?>
-        <?php foreach ($pageScripts as $script): ?>
-            <script src="<?php echo e($script); ?>"></script>
-        <?php endforeach; ?>
+    <!-- Page specific JS if exists -->
+    <?php if (isset($pageJS) && !empty($pageJS)): ?>
+    <script src="<?php echo asset($pageJS); ?>"></script>
     <?php endif; ?>
 
     <!-- Inline scripts -->
-    <?php if (isset($inlineScript)): ?>
-        <script>
-            <?php echo $inlineScript; ?>
-        </script>
+    <?php if (isset($inlineJS) && !empty($inlineJS)): ?>
+    <script>
+        <?php echo $inlineJS; ?>
+    </script>
     <?php endif; ?>
-
 </body>
 </html>

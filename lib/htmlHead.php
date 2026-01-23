@@ -1,7 +1,8 @@
 <?php
 /**
- * htmlHead.php - HTML <head> section with meta tags and CSS includes
- * Include this at the top of every page
+ * htmlHead.php - SUPERONG Mobile App
+ * HTML <head> section
+ * 99% Similarity Required
  */
 
 // Load initData if not already loaded
@@ -11,64 +12,53 @@ if (!isset($siteConfig)) {
 
 // Set default page name if not set
 if (!isset($pageName)) {
-    $pageName = 'Home';
+    $pageName = 'home';
+}
+
+// Set default page title if not set
+if (!isset($pageTitle)) {
+    $pageTitle = $siteConfig['siteName'];
 }
 ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="<?php echo getLang(); ?>">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-    <!-- SEO Meta Tags -->
-    <title><?php echo e($metaTitle); ?></title>
-    <meta name="description" content="<?php echo e($metaDescription); ?>">
-    <meta name="keywords" content="<?php echo e($metaKeywords); ?>">
-    <meta name="author" content="<?php echo e($siteConfig['siteName']); ?>">
-    <meta name="robots" content="index, follow">
-    <link rel="canonical" href="<?php echo e($canonicalUrl); ?>">
-
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="<?php echo e($canonicalUrl); ?>">
-    <meta property="og:title" content="<?php echo e($metaTitle); ?>">
-    <meta property="og:description" content="<?php echo e($metaDescription); ?>">
-    <meta property="og:image" content="<?php echo e($siteConfig['siteUrl']); ?>/images/default/og-image.jpg">
-    <meta property="og:site_name" content="<?php echo e($siteConfig['siteName']); ?>">
-
-    <!-- Twitter -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="<?php echo e($metaTitle); ?>">
-    <meta name="twitter:description" content="<?php echo e($metaDescription); ?>">
+    <!-- Page Title -->
+    <title><?php echo e($pageTitle); ?></title>
 
     <!-- Mobile Web App -->
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="apple-mobile-web-app-title" content="<?php echo e($siteConfig['siteName']); ?>">
-    <meta name="theme-color" content="#6c5ce7">
+    <meta name="theme-color" content="#2d2d5a">
+
+    <!-- Prevent phone number detection -->
+    <meta name="format-detection" content="telephone=no">
 
     <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="favicon/favicon.ico">
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" href="resource/favicon.png">
+    <link rel="apple-touch-icon" href="resource/app-icon.png">
 
-    <!-- CSS Libraries -->
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-
-    <!-- Font Awesome (CDN) -->
+    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
-    <!-- Google Fonts -->
+    <!-- Google Fonts - Noto Sans SC for Chinese -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="<?php echo asset('css/style.css'); ?>">
-    <link rel="stylesheet" href="<?php echo asset('css/responsive.css'); ?>">
+    <link rel="stylesheet" href="<?php echo asset('css/style2.css'); ?>">
+
+    <!-- Page specific CSS if exists -->
+    <?php if (isset($pageCSS) && !empty($pageCSS)): ?>
+    <link rel="stylesheet" href="<?php echo asset($pageCSS); ?>">
+    <?php endif; ?>
 </head>
-<body>
-    <div class="zgames-wrapper">
+<body class="sp-app <?php echo isset($bodyClass) ? e($bodyClass) : ''; ?>">
+    <div class="sp-wrapper">

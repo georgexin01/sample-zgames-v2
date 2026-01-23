@@ -1,329 +1,363 @@
 /**
- * ZGames - Main JavaScript
- * Mobile Gaming WebApp
+ * main.js - SUPERONG Mobile App
+ * JavaScript functionality for buttons, modals, and interactions
+ * 99% Similarity Required
  */
 
-(function($) {
-    'use strict';
+// ============================================================================
+// MODAL FUNCTIONS
+// ============================================================================
 
-    // ============================================
-    // Document Ready
-    // ============================================
-    $(document).ready(function() {
-        initStickyHeader();
-        initMobileMenu();
-        initLazyLoading();
-        initSmoothScroll();
-        initBackToTop();
-        initFormValidation();
+/**
+ * Show a modal by ID
+ */
+function showModal(modalId) {
+    const modal = document.getElementById(modalId);
+    if (modal) {
+        modal.classList.add('active');
+        document.body.style.overflow = 'hidden';
+    }
+}
+
+/**
+ * Close a modal by ID
+ */
+function closeModal(modalId) {
+    const modal = document.getElementById(modalId);
+    if (modal) {
+        modal.classList.remove('active');
+        document.body.style.overflow = '';
+    }
+}
+
+/**
+ * Show success modal with custom message
+ */
+function showSuccess(message, duration = 2000) {
+    const modal = document.getElementById('successModal');
+    const text = document.getElementById('successModalText');
+    if (modal && text) {
+        text.textContent = message;
+        showModal('successModal');
+        setTimeout(() => {
+            closeModal('successModal');
+        }, duration);
+    }
+}
+
+/**
+ * Show confirm modal
+ */
+function showConfirm(options) {
+    const modal = document.getElementById('confirmModal');
+    const icon = document.getElementById('confirmModalIcon');
+    const title = document.getElementById('confirmModalTitle');
+    const message = document.getElementById('confirmModalMessage');
+    const btn = document.getElementById('confirmModalBtn');
+
+    if (modal) {
+        if (icon && options.icon) {
+            icon.innerHTML = `<i class="fas ${options.icon}"></i>`;
+        }
+        if (title) title.textContent = options.title || '确认操作？';
+        if (message) message.textContent = options.message || '';
+        if (btn && options.onConfirm) {
+            btn.onclick = () => {
+                closeModal('confirmModal');
+                options.onConfirm();
+            };
+        }
+        showModal('confirmModal');
+    }
+}
+
+/**
+ * Show password input modal
+ */
+function showPasswordModal(options) {
+    const modal = document.getElementById('passwordModal');
+    const title = document.getElementById('passwordModalTitle');
+    const btn = document.getElementById('passwordModalBtn');
+    const inputs = document.querySelectorAll('.sp-password-box');
+
+    if (modal) {
+        if (title) title.textContent = options.title || '输入密码';
+
+        // Clear inputs
+        inputs.forEach(input => input.value = '');
+
+        // Focus first input
+        if (inputs.length > 0) {
+            setTimeout(() => inputs[0].focus(), 100);
+        }
+
+        if (btn && options.onSubmit) {
+            btn.onclick = () => {
+                let password = '';
+                inputs.forEach(input => password += input.value);
+                if (password.length === inputs.length) {
+                    closeModal('passwordModal');
+                    options.onSubmit(password);
+                }
+            };
+        }
+        showModal('passwordModal');
+    }
+}
+
+// ============================================================================
+// PASSWORD INPUT BOXES
+// ============================================================================
+document.addEventListener('DOMContentLoaded', function() {
+    const passwordBoxes = document.querySelectorAll('.sp-password-box');
+
+    passwordBoxes.forEach((box, index) => {
+        box.addEventListener('input', function(e) {
+            if (this.value.length === 1) {
+                // Move to next box
+                const next = passwordBoxes[index + 1];
+                if (next) next.focus();
+            }
+        });
+
+        box.addEventListener('keydown', function(e) {
+            if (e.key === 'Backspace' && this.value === '') {
+                // Move to previous box
+                const prev = passwordBoxes[index - 1];
+                if (prev) {
+                    prev.focus();
+                    prev.value = '';
+                }
+            }
+        });
+    });
+});
+
+// ============================================================================
+// CLOSE MODAL ON OVERLAY CLICK
+// ============================================================================
+document.addEventListener('click', function(e) {
+    if (e.target.classList.contains('sp-modal-overlay')) {
+        e.target.classList.remove('active');
+        document.body.style.overflow = '';
+    }
+});
+
+// ============================================================================
+// LANGUAGE DROPDOWN
+// ============================================================================
+document.addEventListener('DOMContentLoaded', function() {
+    const langDropdown = document.getElementById('langDropdown');
+    if (langDropdown) {
+        langDropdown.addEventListener('click', function(e) {
+            e.stopPropagation();
+            this.classList.toggle('active');
+        });
+
+        document.addEventListener('click', function() {
+            langDropdown.classList.remove('active');
+        });
+    }
+});
+
+// ============================================================================
+// COPY TO CLIPBOARD
+// ============================================================================
+function copyToClipboard(text) {
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(text).then(() => {
+            showSuccess('复制成功');
+        }).catch(() => {
+            fallbackCopy(text);
+        });
+    } else {
+        fallbackCopy(text);
+    }
+}
+
+function fallbackCopy(text) {
+    const textarea = document.createElement('textarea');
+    textarea.value = text;
+    textarea.style.position = 'fixed';
+    textarea.style.opacity = '0';
+    document.body.appendChild(textarea);
+    textarea.select();
+    try {
+        document.execCommand('copy');
+        showSuccess('复制成功');
+    } catch (err) {
+        console.error('Copy failed', err);
+    }
+    document.body.removeChild(textarea);
+}
+
+// ============================================================================
+// TAB SWITCHING
+// ============================================================================
+function switchTab(tabGroup, tabIndex) {
+    const tabs = document.querySelectorAll(`[data-tab-group="${tabGroup}"] .sp-tab`);
+    const contents = document.querySelectorAll(`[data-tab-content="${tabGroup}"]`);
+
+    tabs.forEach((tab, index) => {
+        tab.classList.toggle('active', index === tabIndex);
     });
 
-    // ============================================
-    // Sticky Header on Scroll
-    // ============================================
-    function initStickyHeader() {
-        var header = $('.zgames-header');
-        var scrollThreshold = 50;
+    contents.forEach((content, index) => {
+        content.style.display = index === tabIndex ? 'block' : 'none';
+    });
+}
 
-        $(window).on('scroll', function() {
-            if ($(this).scrollTop() > scrollThreshold) {
-                header.addClass('header-scrolled');
-            } else {
-                header.removeClass('header-scrolled');
-            }
+// Initialize tabs on page load
+document.addEventListener('DOMContentLoaded', function() {
+    document.querySelectorAll('.sp-tabs').forEach(tabGroup => {
+        const groupName = tabGroup.dataset.tabGroup;
+        const tabs = tabGroup.querySelectorAll('.sp-tab');
+
+        tabs.forEach((tab, index) => {
+            tab.addEventListener('click', () => switchTab(groupName, index));
         });
-    }
+    });
+});
 
-    // ============================================
-    // Mobile Menu
-    // ============================================
-    function initMobileMenu() {
-        // Close mobile menu when clicking a link
-        $('.navbar-nav .nav-link').on('click', function() {
-            if ($(window).width() < 992) {
-                $('.navbar-collapse').collapse('hide');
-            }
-        });
+// ============================================================================
+// LOGOUT FUNCTION
+// ============================================================================
+function logout() {
+    showConfirm({
+        icon: 'fa-sign-out-alt',
+        title: '退出登入',
+        message: '确定要退出登入？',
+        onConfirm: () => {
+            // Redirect to login page
+            window.location.href = 'login.php';
+        }
+    });
+}
 
-        // Close dropdown on outside click (mobile)
-        $(document).on('click', function(e) {
-            if (!$(e.target).closest('.navbar').length) {
-                $('.navbar-collapse').collapse('hide');
-            }
-        });
-    }
+// ============================================================================
+// DELETE FRIEND FUNCTION
+// ============================================================================
+function deleteFriend(friendId, friendName) {
+    showConfirm({
+        icon: 'fa-user-minus',
+        title: '删除该好友？',
+        message: friendName,
+        onConfirm: () => {
+            // TODO: Call API to delete friend
+            showSuccess('已删除好友');
+        }
+    });
+}
 
-    // ============================================
-    // Lazy Loading for Images
-    // ============================================
-    function initLazyLoading() {
-        // Simple lazy loading using IntersectionObserver
-        if ('IntersectionObserver' in window) {
-            var lazyImages = document.querySelectorAll('img[data-src]');
+// ============================================================================
+// ADD TO BLACKLIST FUNCTION
+// ============================================================================
+function addToBlacklist(userId, userName) {
+    showConfirm({
+        icon: 'fa-ban',
+        title: '加入黑名单？',
+        message: userName,
+        onConfirm: () => {
+            // TODO: Call API to add to blacklist
+            showSuccess(userName + ' 已加入黑名单');
+        }
+    });
+}
 
-            var imageObserver = new IntersectionObserver(function(entries, observer) {
-                entries.forEach(function(entry) {
-                    if (entry.isIntersecting) {
-                        var img = entry.target;
-                        img.src = img.dataset.src;
-                        img.removeAttribute('data-src');
-                        img.classList.add('loaded');
-                        observer.unobserve(img);
-                    }
-                });
-            }, {
-                rootMargin: '50px 0px'
-            });
+// ============================================================================
+// REMOVE FROM BLACKLIST FUNCTION
+// ============================================================================
+function removeFromBlacklist(userId, userName) {
+    showConfirm({
+        icon: 'fa-user-check',
+        title: '解除黑名单？',
+        message: userName,
+        onConfirm: () => {
+            // TODO: Call API to remove from blacklist
+            showSuccess('已解除黑名单');
+        }
+    });
+}
 
-            lazyImages.forEach(function(img) {
-                imageObserver.observe(img);
-            });
+// ============================================================================
+// TRANSFER CONFIRMATION
+// ============================================================================
+function confirmTransfer(data) {
+    showPasswordModal({
+        title: '输入密码',
+        onSubmit: (password) => {
+            // TODO: Verify password and process transfer
+            showSuccess('转帐成功');
+        }
+    });
+}
+
+// ============================================================================
+// FORM VALIDATION
+// ============================================================================
+function validateForm(formId) {
+    const form = document.getElementById(formId);
+    if (!form) return false;
+
+    const inputs = form.querySelectorAll('[required]');
+    let isValid = true;
+
+    inputs.forEach(input => {
+        if (!input.value.trim()) {
+            isValid = false;
+            input.classList.add('error');
         } else {
-            // Fallback for older browsers
-            $('img[data-src]').each(function() {
-                $(this).attr('src', $(this).data('src'));
-            });
+            input.classList.remove('error');
         }
-    }
+    });
 
-    // ============================================
-    // Smooth Scroll
-    // ============================================
-    function initSmoothScroll() {
-        $('a[href^="#"]').on('click', function(e) {
-            var target = $(this.getAttribute('href'));
-            if (target.length) {
-                e.preventDefault();
-                $('html, body').animate({
-                    scrollTop: target.offset().top - 70
-                }, 600);
-            }
-        });
-    }
+    return isValid;
+}
 
-    // ============================================
-    // Back to Top Button
-    // ============================================
-    function initBackToTop() {
-        // Create back to top button if not exists
-        if (!$('.back-to-top').length) {
-            $('body').append('<a href="#" class="back-to-top"><i class="fas fa-arrow-up"></i></a>');
-        }
+// ============================================================================
+// UTILITY FUNCTIONS
+// ============================================================================
 
-        var backToTop = $('.back-to-top');
+/**
+ * Format number with commas
+ */
+function formatNumber(num) {
+    return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+}
 
-        $(window).on('scroll', function() {
-            if ($(this).scrollTop() > 300) {
-                backToTop.addClass('visible');
-            } else {
-                backToTop.removeClass('visible');
-            }
-        });
+/**
+ * Format currency
+ */
+function formatMoney(amount, currency = 'MYR') {
+    return currency + ' ' + formatNumber(parseFloat(amount).toFixed(2));
+}
 
-        backToTop.on('click', function(e) {
-            e.preventDefault();
-            $('html, body').animate({
-                scrollTop: 0
-            }, 600);
-        });
-    }
-
-    // ============================================
-    // Form Validation
-    // ============================================
-    function initFormValidation() {
-        // Bootstrap 5 form validation
-        var forms = document.querySelectorAll('.needs-validation');
-
-        Array.prototype.slice.call(forms).forEach(function(form) {
-            form.addEventListener('submit', function(event) {
-                if (!form.checkValidity()) {
-                    event.preventDefault();
-                    event.stopPropagation();
-                }
-                form.classList.add('was-validated');
-            }, false);
-        });
-    }
-
-    // ============================================
-    // Utility Functions
-    // ============================================
-
-    // Show loading spinner
-    window.showLoading = function(container) {
-        var spinner = '<div class="loading-overlay"><div class="spinner"></div></div>';
-        $(container).append(spinner);
-    };
-
-    // Hide loading spinner
-    window.hideLoading = function(container) {
-        $(container).find('.loading-overlay').remove();
-    };
-
-    // Toast notification
-    window.showToast = function(message, type) {
-        type = type || 'info';
-        var toast = $('<div class="toast-notification toast-' + type + '">' + message + '</div>');
-        $('body').append(toast);
-
-        setTimeout(function() {
-            toast.addClass('show');
-        }, 100);
-
-        setTimeout(function() {
-            toast.removeClass('show');
-            setTimeout(function() {
-                toast.remove();
-            }, 300);
-        }, 3000);
-    };
-
-    // Format number with commas
-    window.formatNumber = function(num) {
-        return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
-    };
-
-    // Debounce function
-    window.debounce = function(func, wait) {
-        var timeout;
-        return function() {
-            var context = this;
-            var args = arguments;
+/**
+ * Debounce function
+ */
+function debounce(func, wait) {
+    let timeout;
+    return function executedFunction(...args) {
+        const later = () => {
             clearTimeout(timeout);
-            timeout = setTimeout(function() {
-                func.apply(context, args);
-            }, wait);
+            func(...args);
         };
+        clearTimeout(timeout);
+        timeout = setTimeout(later, wait);
     };
+}
 
-    // ============================================
-    // AJAX Helper
-    // ============================================
-    window.ajaxRequest = function(options) {
-        var defaults = {
-            method: 'POST',
-            dataType: 'json',
-            beforeSend: function() {
-                if (options.loadingContainer) {
-                    showLoading(options.loadingContainer);
-                }
-            },
-            complete: function() {
-                if (options.loadingContainer) {
-                    hideLoading(options.loadingContainer);
-                }
-            },
-            error: function(xhr, status, error) {
-                console.error('AJAX Error:', error);
-                showToast('An error occurred. Please try again.', 'error');
-            }
-        };
+// ============================================================================
+// PREVENT DEFAULT ON EMPTY LINKS
+// ============================================================================
+document.addEventListener('click', function(e) {
+    const link = e.target.closest('a');
+    if (link && link.getAttribute('href') === '#') {
+        e.preventDefault();
+    }
+});
 
-        return $.ajax($.extend({}, defaults, options));
-    };
-
-})(jQuery);
-
-// ============================================
-// Additional CSS for JS components
-// ============================================
-(function() {
-    var style = document.createElement('style');
-    style.textContent = `
-        /* Back to Top Button */
-        .back-to-top {
-            position: fixed;
-            bottom: 90px;
-            right: 80px;
-            width: 45px;
-            height: 45px;
-            background: var(--primary-color, #6c5ce7);
-            color: #fff;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            opacity: 0;
-            visibility: hidden;
-            transition: all 0.3s ease;
-            z-index: 997;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-        }
-
-        .back-to-top.visible {
-            opacity: 1;
-            visibility: visible;
-        }
-
-        .back-to-top:hover {
-            background: var(--primary-dark, #5b4cdb);
-            color: #fff;
-            transform: translateY(-3px);
-        }
-
-        /* Loading Overlay */
-        .loading-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: rgba(255,255,255,0.8);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            z-index: 100;
-        }
-
-        /* Toast Notification */
-        .toast-notification {
-            position: fixed;
-            bottom: 100px;
-            left: 50%;
-            transform: translateX(-50%) translateY(20px);
-            padding: 12px 24px;
-            border-radius: 8px;
-            color: #fff;
-            font-size: 14px;
-            opacity: 0;
-            visibility: hidden;
-            transition: all 0.3s ease;
-            z-index: 9999;
-        }
-
-        .toast-notification.show {
-            opacity: 1;
-            visibility: visible;
-            transform: translateX(-50%) translateY(0);
-        }
-
-        .toast-info { background: #6c5ce7; }
-        .toast-success { background: #00b894; }
-        .toast-error { background: #d63031; }
-        .toast-warning { background: #fdcb6e; color: #333; }
-
-        /* Lazy Loading */
-        img[data-src] {
-            opacity: 0;
-            transition: opacity 0.3s ease;
-        }
-
-        img.loaded {
-            opacity: 1;
-        }
-
-        /* Header Scrolled State */
-        .header-scrolled {
-            box-shadow: 0 4px 20px rgba(0,0,0,0.15);
-        }
-
-        @media (max-width: 991.98px) {
-            .back-to-top {
-                right: 20px;
-                bottom: 150px;
-            }
-        }
-    `;
-    document.head.appendChild(style);
-})();
+// ============================================================================
+// CONSOLE LOG
+// ============================================================================
+console.log('SUPERONG Mobile App v1.0 - Loaded');
