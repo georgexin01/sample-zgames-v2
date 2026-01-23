@@ -2,7 +2,24 @@
   "permissions": {
     "allow": [
       "Bash(curl:*)",
-      "Bash(dir:*)"
+      "Bash(dir:*)",
+      "Bash(ren:*)",
+      "Bash(powershell -Command \"Rename-Item -Path ''c:\\\\Users\\\\user\\\\Desktop\\\\zgames\\\\resource\\\\game-icons\\\\slideshow-generic.png'' -NewName ''pp-wang-zhe-slot-banner.png''\")",
+      "Bash(powershell -Command \"Rename-Item -Path ''c:\\\\Users\\\\user\\\\Desktop\\\\zgames\\\\resource\\\\game-icons\\\\game1-generic.png'' -NewName ''aristocrat-roman-warrior.png''\")",
+      "Bash(powershell -Command \"Rename-Item -Path ''c:\\\\Users\\\\user\\\\Desktop\\\\zgames\\\\resource\\\\game-icons\\\\game2-generic.png'' -NewName ''paxo-759-gaming-skeleton.png''\")",
+      "Bash(powershell -Command \"Rename-Item -Path ''c:\\\\Users\\\\user\\\\Desktop\\\\zgames\\\\resource\\\\game-icons\\\\Featured Movies@36x-generic.png'' -NewName ''ae-sexy-live.png''\")",
+      "Bash(powershell -Command \"Rename-Item -Path ''c:\\\\Users\\\\user\\\\Desktop\\\\zgames\\\\resource\\\\game-icons\\\\Featured Movies@35x-generic.png'' -NewName ''ag-asia-gaming-live.png''\")",
+      "Bash(powershell -Command \"Rename-Item -Path ''c:\\\\Users\\\\user\\\\Desktop\\\\zgames\\\\resource\\\\game-icons\\\\logo_main-generic.png'' -NewName ''spadegaming-logo.png''\")",
+      "Bash(powershell -Command \"Rename-Item -Path ''c:\\\\Users\\\\user\\\\Desktop\\\\zgames\\\\resource\\\\game-icons\\\\Featured Movies@33x-generic.png'' -NewName ''918kiss-genie.png''\")",
+      "Bash(powershell -Command \"Rename-Item -Path ''c:\\\\Users\\\\user\\\\Desktop\\\\zgames\\\\resource\\\\game-icons\\\\Featured Movies@37x-generic.png'' -NewName ''allbet-live.png''\")",
+      "Bash(powershell -Command \"Rename-Item -Path ''c:\\\\Users\\\\user\\\\Desktop\\\\zgames\\\\resource\\\\game-icons\\\\AB1552@3x-generic.png'' -NewName ''since-im-here.png''\")",
+      "Bash(powershell -Command \"Rename-Item -Path ''c:\\\\Users\\\\user\\\\Desktop\\\\zgames\\\\resource\\\\game-icons\\\\BNG_768@3x-generic.png'' -NewName ''super-china-pots.png''\")",
+      "Bash(powershell -Command \"Rename-Item -Path ''c:\\\\Users\\\\user\\\\Desktop\\\\zgames\\\\resource\\\\game-icons\\\\item-generic-3.png'' -NewName ''king-arthur.png''\")",
+      "Bash(powershell -Command \"Rename-Item -Path ''c:\\\\Users\\\\user\\\\Desktop\\\\zgames\\\\resource\\\\game-icons\\\\item-generic.png'' -NewName ''gold-rush-party.png''\")",
+      "Bash(powershell -Command \"Rename-Item -Path ''c:\\\\Users\\\\user\\\\Desktop\\\\zgames\\\\resource\\\\game-icons\\\\WG022@3x-generic.png'' -NewName ''golden-temple.png''\")",
+      "Bash(powershell -Command \"Rename-Item -Path ''c:\\\\Users\\\\user\\\\Desktop\\\\zgames\\\\resource\\\\game-icons\\\\WG025@3x-generic.png'' -NewName ''dragon-gem-2.png''\")",
+      "Bash(powershell -Command \"Rename-Item -Path ''c:\\\\Users\\\\user\\\\Desktop\\\\zgames\\\\resource\\\\game-icons\\\\AB1537@3x-generic.png'' -NewName ''yuanbao-mahjong-2.png''\")",
+      "Bash(powershell -Command:*)"
     ]
   }
 }

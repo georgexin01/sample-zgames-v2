@@ -1,0 +1,24 @@
+<svg id="组_1111" data-name="组 1111" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="375" height="812" viewBox="0 0 375 812">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="矩形_940" data-name="矩形 940" width="375" height="812" fill="#fff"/>
+    </clipPath>
+    <linearGradient id="linear-gradient" x1="0.5" y1="1.097" x2="0.5" y2="0.025" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#ac4ee9"/>
+      <stop offset="1" stop-color="#fff" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <rect id="矩形_939" data-name="矩形 939" width="375" height="812" fill="#fff"/>
+  <g id="蒙版组_4" data-name="蒙版组 4" clip-path="url(#clip-path)">
+    <g id="组_960" data-name="组 960" transform="translate(-136.757 20.762)" opacity="0.05">
+      <path id="路径_1489" data-name="路径 1489" d="M554.1,724.469l-90.541-90.541-90.569,90.541a255.287,255.287,0,0,1-179.86,74.769h540.83A255.286,255.286,0,0,1,554.1,724.469M191.876,633.9c-49.7-49.7-49.7-131.407,0-181.11Q327.687,316.936,463.556,181.11,599.367,316.964,735.207,452.79c49.7,49.7,49.7,131.406,0,181.11s-131.378,49.7-181.11,0l45.3,45.27c74.712,74.712,196.939,74.712,271.651,0s74.712-196.968,0-271.68Q667.244,203.774,463.527,0,259.768,203.76,56.036,407.491c-74.712,74.712-74.712,196.968,0,271.68s196.968,74.712,271.679,0l45.27-45.27c-49.7,49.7-131.407,49.7-181.11,0Z" transform="translate(-0.003)" fill="#00003c" fill-rule="evenodd"/>
+      <g id="组_959" data-name="组 959" transform="translate(332.516 357.56)">
+        <rect id="矩形_855" data-name="矩形 855" width="208.676" height="7.389" transform="translate(26.685 211.66)" fill="#00003c"/>
+        <path id="路径_1490" data-name="路径 1490" d="M325.743,232.957a34.91,34.91,0,0,0-5.315,28.219c4.945,20.205,8.725,54.194-23.36,50.528-25.292-2.9-18.159-32.056-10.685-50.954a47.877,47.877,0,0,0,.2-34.9L248.018,125.82,209.455,225.853a48.021,48.021,0,0,0,.2,34.9c7.474,18.926,14.635,48.084-10.686,50.954-32.084,3.666-28.3-30.323-23.36-50.528a34.91,34.91,0,0,0-5.314-28.219L117.01,156.37l13.3,103.9c24.809,43.139,13.385,72.5,13.385,72.5H352.371s-11.424-29.356,13.385-72.5l13.3-103.9-53.284,76.587Z" transform="translate(-117.01 -125.82)" fill="#00003c"/>
+      </g>
+    </g>
+  </g>
+  <g id="蒙版组_5" data-name="蒙版组 5" clip-path="url(#clip-path)">
+    <rect id="矩形_859" data-name="矩形 859" width="406" height="297" transform="translate(-15 523)" opacity="0.717" fill="url(#linear-gradient)"/>
+  </g>
+</svg>
