@@ -81,36 +81,36 @@ include 'lib/header.php';
         <!-- ========== FEATURE ICONS (8 Items) ========== -->
         <section class="sp-feature-section">
             <div class="sp-feature-scroll">
-                <a href="games.php" class="sp-feature-item">
-                    <div class="sp-feature-icon"><i class="fas fa-gift"></i></div>
+                <a href="activity.php" class="sp-feature-item">
+                    <div class="sp-feature-icon"><img src="resource/ui-elements/gift.png" alt="活动"></div>
                     <span class="sp-feature-label">活动</span>
                 </a>
-                <a href="ranking-page.php" class="sp-feature-item">
-                    <div class="sp-feature-icon"><i class="fas fa-trophy"></i></div>
+                <a href="ranking.php" class="sp-feature-item">
+                    <div class="sp-feature-icon"><img src="resource/ui-elements/champion.png" alt="排行榜"></div>
                     <span class="sp-feature-label">排行榜</span>
                 </a>
                 <a href="#" class="sp-feature-item">
                     <div class="sp-feature-icon"><i class="fas fa-qrcode"></i></div>
                     <span class="sp-feature-label">二维码</span>
                 </a>
-                <a href="chat-page.php" class="sp-feature-item">
-                    <div class="sp-feature-icon"><i class="fas fa-headset"></i></div>
+                <a href="customer-service.php" class="sp-feature-item">
+                    <div class="sp-feature-icon"><img src="resource/ui-elements/customer-service.png" alt="客服"></div>
                     <span class="sp-feature-label">客服</span>
                 </a>
-                <a href="#" class="sp-feature-item">
-                    <div class="sp-feature-icon"><i class="fas fa-user-plus"></i></div>
+                <a href="invite.php" class="sp-feature-item">
+                    <div class="sp-feature-icon"><img src="resource/ui-elements/user-plus.png" alt="邀请好友"></div>
                     <span class="sp-feature-label">邀请好友</span>
                 </a>
-                <a href="#" class="sp-feature-item">
-                    <div class="sp-feature-icon"><i class="fas fa-star"></i></div>
+                <a href="vip.php" class="sp-feature-item">
+                    <div class="sp-feature-icon"><img src="resource/ui-elements/level-1.png" alt="等级"></div>
                     <span class="sp-feature-label">等级</span>
                 </a>
-                <a href="#" class="sp-feature-item">
-                    <div class="sp-feature-icon"><i class="fas fa-exchange-alt"></i></div>
+                <a href="transfer.php" class="sp-feature-item">
+                    <div class="sp-feature-icon"><img src="resource/ui-elements/transfer.png" alt="转账"></div>
                     <span class="sp-feature-label">转账</span>
                 </a>
-                <a href="transaction-page.php" class="sp-feature-item">
-                    <div class="sp-feature-icon"><i class="fas fa-history"></i></div>
+                <a href="transaction.php" class="sp-feature-item">
+                    <div class="sp-feature-icon"><img src="resource/ui-elements/history.png" alt="记录"></div>
                     <span class="sp-feature-label">记录</span>
                 </a>
             </div>

@@ -31,7 +31,7 @@ global $currentUser;
                 <div class="sp-referral-value">
                     <span id="referralLink"><?php echo e($currentUser['referralLink']); ?></span>
                     <button class="sp-copy-btn" onclick="copyToClipboard('<?php echo e($currentUser['referralLink']); ?>')">
-                        <i class="far fa-copy"></i>
+                        <img src="resource/ui-elements/copy.png" alt="Copy" style="width: 16px; height: 16px;">
                     </button>
                 </div>
             </div>
@@ -40,7 +40,7 @@ global $currentUser;
                 <div class="sp-referral-value">
                     <span id="referralCode"><?php echo e($currentUser['referralCode']); ?></span>
                     <button class="sp-copy-btn" onclick="copyToClipboard('<?php echo e($currentUser['referralCode']); ?>')">
-                        <i class="far fa-copy"></i>
+                        <img src="resource/ui-elements/copy.png" alt="Copy" style="width: 16px; height: 16px;">
                     </button>
                 </div>
             </div>

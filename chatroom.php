@@ -22,13 +22,13 @@ $contacts = array(
         'id' => 1,
         'letter' => 'A',
         'name' => 'AAA111',
-        'avatar' => 'resource/avatars/default.png',
+        'avatar' => 'resource/ui-elements/user-alt.png',
     ),
     array(
         'id' => 2,
         'letter' => 'A',
         'name' => 'AAA222',
-        'avatar' => 'resource/avatars/default.png',
+        'avatar' => 'resource/ui-elements/user-alt.png',
     ),
 );
 
@@ -37,7 +37,7 @@ $chats = array(
     array(
         'id' => 1,
         'name' => 'AAA111',
-        'avatar' => 'resource/avatars/default.png',
+        'avatar' => 'resource/ui-elements/user-alt.png',
         'lastMessage' => 'SUPERONG超好玩',
         'time' => '04:29',
         'unread' => 0,
@@ -82,7 +82,7 @@ foreach ($contacts as $contact) {
                 <?php foreach ($letterContacts as $contact): ?>
                 <a href="chat.php?id=<?php echo $contact['id']; ?>" class="sp-contact-item">
                     <div class="sp-contact-avatar">
-                        <i class="fas fa-user"></i>
+                        <img src="<?php echo $contact['avatar']; ?>" alt="Avatar" style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%;">
                     </div>
                     <span class="sp-contact-name"><?php echo e($contact['name']); ?></span>
                 </a>
@@ -105,9 +105,7 @@ foreach ($contacts as $contact) {
             <?php foreach ($chats as $chat): ?>
             <a href="chat.php?id=<?php echo $chat['id']; ?>" class="sp-chat-item">
                 <div class="sp-chat-avatar">
-                    <div class="sp-avatar-placeholder">
-                        <i class="fas fa-user"></i>
-                    </div>
+                    <img src="<?php echo $chat['avatar']; ?>" alt="Avatar" style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%;">
                 </div>
                 <div class="sp-chat-content">
                     <div class="sp-chat-header">
@@ -127,7 +125,7 @@ foreach ($contacts as $contact) {
 
     <!-- Customer Service Button -->
     <div class="sp-cs-button-container">
-        <a href="customer-service.php" class="sp-btn sp-btn-primary sp-btn-block">Customer Service</a>
+        <a href="customer-service.php" class="sp-btn sp-btn-primary sp-btn-block">联系客服</a>
     </div>
 
 </main>
