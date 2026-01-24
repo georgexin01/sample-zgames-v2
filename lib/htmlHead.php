@@ -1,4 +1,5 @@
 <?php
+
 /**
  * htmlHead.php - SUPERONG Mobile App
  * HTML <head> section
@@ -22,6 +23,7 @@ if (!isset($pageTitle)) {
 ?>
 <!DOCTYPE html>
 <html lang="<?php echo getLang(); ?>">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
@@ -54,11 +56,13 @@ if (!isset($pageTitle)) {
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="<?php echo asset('css/style2.css'); ?>">
+    <link rel="stylesheet" href="<?php echo asset('css/components.css'); ?>">
 
     <!-- Page specific CSS if exists -->
     <?php if (isset($pageCSS) && !empty($pageCSS)): ?>
-    <link rel="stylesheet" href="<?php echo asset($pageCSS); ?>">
+        <link rel="stylesheet" href="<?php echo asset($pageCSS); ?>">
     <?php endif; ?>
 </head>
+
 <body class="sp-app <?php echo isset($bodyClass) ? e($bodyClass) : ''; ?>">
     <div class="sp-wrapper">

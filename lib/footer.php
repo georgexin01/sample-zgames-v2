@@ -1,4 +1,5 @@
 <?php
+
 /**
  * footer.php - SUPERONG Mobile App
  * Bottom Navigation + Customer Service Floating Button
@@ -8,34 +9,34 @@
 
 <!-- Bottom Navigation -->
 <nav class="sp-bottom-nav">
-    <!-- 首页 (Home) -->
-    <a href="index.php" class="sp-nav-item <?php echo isActivePage($pageName, 'home'); ?>">
-        <i class="fas fa-home"></i>
-        <span>首页</span>
+    <!-- 通知 (Notification) -->
+    <a href="notification.php" class="sp-nav-item <?php echo isActivePage($pageName, 'notification'); ?>">
+        <img src="resource/ui-elements/alert.png" alt="通知" class="sp-nav-icon">
+        <span>通知</span>
     </a>
 
-    <!-- 金金 (Deposit) -->
-    <a href="deposit.php" class="sp-nav-item <?php echo isActivePage($pageName, 'deposit'); ?>">
-        <i class="fas fa-coins"></i>
-        <span>金金</span>
+    <!-- 邀请好友 (Invite Friends) -->
+    <a href="invite.php" class="sp-nav-item <?php echo isActivePage($pageName, 'invite'); ?>">
+        <img src="resource/ui-elements/user-plus.png" alt="邀请好友" class="sp-nav-icon">
+        <span>邀请好友</span>
     </a>
 
-    <!-- Center Crown Button (VIP) -->
+    <!-- Center Spade Button (Home) -->
     <div class="sp-nav-center">
-        <a href="vip.php" class="sp-nav-crown <?php echo isActivePage($pageName, 'vip'); ?>">
-            <i class="fas fa-crown"></i>
+        <a href="index.php" class="sp-nav-crown <?php echo isActivePage($pageName, 'index'); ?>">
+            <img src="resource/ui-elements/logo-transparent.png" alt="Home" class="sp-nav-crown-logo">
         </a>
     </div>
 
-    <!-- 大奖 (Rewards) -->
-    <a href="rewards.php" class="sp-nav-item <?php echo isActivePage($pageName, 'rewards'); ?>">
-        <i class="fas fa-gift"></i>
-        <span>大奖</span>
+    <!-- 聊天室 (Chat) -->
+    <a href="chatroom.php" class="sp-nav-item <?php echo isActivePage($pageName, 'chatroom'); ?>">
+        <img src="resource/ui-elements/chat.png" alt="聊天室" class="sp-nav-icon">
+        <span>聊天室</span>
     </a>
 
     <!-- 我的 (Profile) -->
     <a href="profile.php" class="sp-nav-item <?php echo isActivePage($pageName, 'profile'); ?>">
-        <i class="fas fa-user"></i>
+        <img src="resource/ui-elements/user.png" alt="我的" class="sp-nav-icon">
         <span>我的</span>
     </a>
 </nav>

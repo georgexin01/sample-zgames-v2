@@ -8,4116 +8,4153 @@
    SUPERONG Color Variables
    ============================================ */
 :root {
-    /* ===== Background Colors ===== */
-    --sp-bg-primary: #1a1a2e;
-    --sp-bg-secondary: #16213e;
-    --sp-bg-dark: #0f0f1a;
-    --sp-bg-card: #252542;
-    --sp-bg-input: #1e1e3a;
-    --sp-bg-white: #ffffff;
-    --sp-bg-light: #f5f5f5;
+  /* ===== Background Colors ===== */
+  --sp-bg-primary: #1a1a2e;
+  --sp-bg-secondary: #16213e;
+  --sp-bg-dark: #0f0f1a;
+  --sp-bg-card: #252542;
+  --sp-bg-input: #1e1e3a;
+  --sp-bg-white: #ffffff;
+  --sp-bg-light: #f5f5f5;
 
-    /* ===== Purple Theme ===== */
-    --sp-purple-darkest: #1a1a2e;
-    --sp-purple-dark: #2d2d5a;
-    --sp-purple-medium: #3d3d7a;
-    --sp-purple-light: #4a4a8a;
-    --sp-purple-accent: #6b6bb5;
+  /* ===== Purple Theme ===== */
+  --sp-purple-darkest: #1a1a2e;
+  --sp-purple-dark: #2d2d5a;
+  --sp-purple-medium: #3d3d7a;
+  --sp-purple-light: #4a4a8a;
+  --sp-purple-accent: #6b6bb5;
 
-    /* ===== Gold/Orange Accent ===== */
-    --sp-gold: #d4a84b;
-    --sp-gold-light: #e5c16e;
-    --sp-gold-dark: #b8923f;
-    --sp-orange: #f39c12;
-    --sp-orange-dark: #e67e22;
-    --sp-orange-darker: #d4691a;
+  /* ===== Gold/Orange Accent ===== */
+  --sp-gold: #d4a84b;
+  --sp-gold-light: #e5c16e;
+  --sp-gold-dark: #b8923f;
+  --sp-orange: #f39c12;
+  --sp-orange-dark: #e67e22;
+  --sp-orange-darker: #d4691a;
 
-    /* ===== Button Gradients ===== */
-    --sp-btn-gradient: linear-gradient(180deg, #f5a623 0%, #e8851c 50%, #d4691a 100%);
-    --sp-btn-gradient-hover: linear-gradient(180deg, #ffc107 0%, #f39c12 50%, #e67e22 100%);
-    --sp-btn-gradient-pressed: linear-gradient(180deg, #d4691a 0%, #c45a15 50%, #b04d10 100%);
+  /* ===== Button Gradients ===== */
+  --sp-btn-gradient: linear-gradient(
+    180deg,
+    #f5a623 0%,
+    #e8851c 50%,
+    #d4691a 100%
+  );
+  --sp-btn-gradient-hover: linear-gradient(
+    180deg,
+    #ffc107 0%,
+    #f39c12 50%,
+    #e67e22 100%
+  );
+  --sp-btn-gradient-pressed: linear-gradient(
+    180deg,
+    #d4691a 0%,
+    #c45a15 50%,
+    #b04d10 100%
+  );
 
-    /* ===== Header Gradients ===== */
-    --sp-header-gradient: linear-gradient(180deg, #3d3d7a 0%, #2a2a5a 100%);
-    --sp-header-gradient-dark: linear-gradient(180deg, #2d2d5a 0%, #1a1a2e 100%);
+  /* ===== Header Colors ===== */
+  --sp-primary-dark: #1a003c;
+  --sp-header-bg: #1a003c;
+  --sp-header-gradient: linear-gradient(180deg, #3d3d7a 0%, #2a2a5a 100%);
+  --sp-header-gradient-dark: linear-gradient(180deg, #2d2d5a 0%, #1a1a2e 100%);
+  --sp-header-gradient-new: linear-gradient(180deg, #1a003c 0%, #13001f 100%);
 
-    /* ===== Footer Gradient ===== */
-    --sp-footer-gradient: linear-gradient(180deg, #ffffff 0%, #e8e0f0 50%, #d0c4e0 100%);
+  /* ===== Footer Gradient ===== */
+  --sp-footer-gradient: linear-gradient(
+    180deg,
+    #ffffff 0%,
+    #e8e0f0 50%,
+    #d0c4e0 100%
+  );
 
-    /* ===== Status Colors ===== */
-    --sp-success: #2ecc71;
-    --sp-success-light: #58d68d;
-    --sp-success-bg: rgba(46, 204, 113, 0.15);
-    --sp-warning: #f39c12;
-    --sp-warning-bg: rgba(243, 156, 18, 0.15);
-    --sp-error: #e74c3c;
-    --sp-error-bg: rgba(231, 76, 60, 0.15);
-    --sp-info: #3498db;
-    --sp-info-bg: rgba(52, 152, 219, 0.15);
-    --sp-pending: #f39c12;
+  /* ===== Status Colors ===== */
+  --sp-success: #2ecc71;
+  --sp-success-light: #58d68d;
+  --sp-success-bg: rgba(46, 204, 113, 0.15);
+  --sp-warning: #f39c12;
+  --sp-warning-bg: rgba(243, 156, 18, 0.15);
+  --sp-error: #e74c3c;
+  --sp-error-bg: rgba(231, 76, 60, 0.15);
+  --sp-info: #3498db;
+  --sp-info-bg: rgba(52, 152, 219, 0.15);
+  --sp-pending: #f39c12;
 
-    /* ===== Text Colors ===== */
-    --sp-text-white: #ffffff;
-    --sp-text-light: #e0e0e0;
-    --sp-text-muted: #9999aa;
-    --sp-text-dark: #333333;
-    --sp-text-gold: #d4a84b;
-    --sp-text-purple: #6b6bb5;
-    --sp-text-link: #3498db;
+  /* ===== Text Colors ===== */
+  --sp-text-white: #ffffff;
+  --sp-text-light: #e0e0e0;
+  --sp-text-muted: #9999aa;
+  --sp-text-dark: #333333;
+  --sp-text-gold: #d4a84b;
+  --sp-text-purple: #6b6bb5;
+  --sp-text-link: #3498db;
 
-    /* ===== Border Colors ===== */
-    --sp-border-gold: #d4a84b;
-    --sp-border-purple: #4a4a8a;
-    --sp-border-light: rgba(255, 255, 255, 0.1);
-    --sp-border-dark: rgba(0, 0, 0, 0.1);
+  /* ===== Border Colors ===== */
+  --sp-border-gold: #d4a84b;
+  --sp-border-purple: #4a4a8a;
+  --sp-border-light: rgba(255, 255, 255, 0.1);
+  --sp-border-dark: rgba(0, 0, 0, 0.1);
 
-    /* ===== Shadow ===== */
-    --sp-shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.2);
-    --sp-shadow-md: 0 4px 12px rgba(0, 0, 0, 0.3);
-    --sp-shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.4);
-    --sp-shadow-gold: 0 4px 15px rgba(212, 168, 75, 0.3);
+  /* ===== Shadow ===== */
+  --sp-shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.2);
+  --sp-shadow-md: 0 4px 12px rgba(0, 0, 0, 0.3);
+  --sp-shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.4);
+  --sp-shadow-gold: 0 4px 15px rgba(212, 168, 75, 0.3);
 
-    /* ===== Dimensions ===== */
-    --sp-mobile-width: 414px;
-    --sp-header-height: 56px;
-    --sp-bottom-nav-height: 70px;
-    --sp-content-padding: 16px;
-    --sp-card-radius: 12px;
-    --sp-btn-radius: 25px;
-    --sp-input-radius: 8px;
+  /* ===== Dimensions ===== */
+  --sp-mobile-width: 414px;
+  --sp-header-height: 56px;
+  --sp-bottom-nav-height: 70px;
+  --sp-content-padding: 16px;
+  --sp-card-radius: 12px;
+  --sp-btn-radius: 25px;
+  --sp-input-radius: 8px;
 
-    /* ===== Safe Area ===== */
-    --sp-safe-top: env(safe-area-inset-top, 0px);
-    --sp-safe-bottom: env(safe-area-inset-bottom, 0px);
+  /* ===== Safe Area ===== */
+  --sp-safe-top: env(safe-area-inset-top, 0px);
+  --sp-safe-bottom: env(safe-area-inset-bottom, 0px);
 
-    /* ===== Transitions ===== */
-    --sp-transition: all 0.3s ease;
-    --sp-transition-fast: all 0.15s ease;
+  /* ===== Transitions ===== */
+  --sp-transition: all 0.3s ease;
+  --sp-transition-fast: all 0.15s ease;
+}
+
+/* ============================================
+   Global Anchor/Link Styles
+   ============================================ */
+a {
+  text-decoration: unset !important;
 }
 
 /* ============================================
    SUPERONG Base Styles
    ============================================ */
 .sp-app {
-    max-width: var(--sp-mobile-width);
-    margin: 0 auto;
-    min-height: 100vh;
-    background: var(--sp-bg-primary);
-    color: var(--sp-text-white);
-    font-family: 'PingFang SC', 'Microsoft YaHei', sans-serif;
-    position: relative;
-    overflow-x: hidden;
+  max-width: var(--sp-mobile-width);
+  margin: 0 auto;
+  min-height: 100vh;
+  background: var(--sp-bg-primary);
+  color: var(--sp-text-white);
+  font-family: "PingFang SC", "Microsoft YaHei", sans-serif;
+  position: relative;
+  overflow-x: hidden;
 }
 
 .sp-page {
-    min-height: 100vh;
-    padding-bottom: var(--sp-bottom-nav-height);
-    background: var(--sp-bg-white);
+  min-height: 100vh;
+  padding-bottom: var(--sp-bottom-nav-height);
+  background: var(--sp-bg-white);
 }
 
 .sp-page-dark {
-    background: var(--sp-bg-primary);
+  background: var(--sp-bg-primary);
 }
 
 /* ============================================
    SUPERONG Header
    ============================================ */
 .sp-header {
-    background: var(--sp-header-gradient);
-    height: var(--sp-header-height);
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 var(--sp-content-padding);
-    position: sticky;
-    top: 0;
-    z-index: 100;
+  background: var(--sp-header-gradient);
+  height: var(--sp-header-height);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 var(--sp-content-padding);
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
 
 .sp-header-title {
-    color: var(--sp-text-gold);
-    font-size: 18px;
-    font-weight: 600;
-    text-align: center;
-    flex: 1;
+  color: var(--sp-text-gold);
+  font-size: 18px;
+  font-weight: 600;
+  text-align: center;
+  flex: 1;
 }
 
 .sp-header-back {
-    color: var(--sp-text-white);
-    font-size: 20px;
-    padding: 10px;
-    cursor: pointer;
+  color: var(--sp-text-white);
+  font-size: 20px;
+  padding: 10px;
+  cursor: pointer;
 }
 
 .sp-header-icon {
-    color: var(--sp-text-white);
-    font-size: 20px;
-    padding: 10px;
-    cursor: pointer;
+  color: var(--sp-text-white);
+  font-size: 20px;
+  padding: 10px;
+  cursor: pointer;
 }
 
 /* ============================================
    SUPERONG Home Header (Special)
    ============================================ */
 .sp-home-header {
-    background: var(--sp-header-gradient);
-    height: 100px;
-    padding: 12px var(--sp-content-padding);
+  background: var(--sp-header-gradient);
+  height: 100px;
+  padding: 12px var(--sp-content-padding);
 }
 
 .sp-home-header-top {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    height: 40px;
-}
-
-.sp-logo {
-    height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 40px;
 }
 
 .sp-lang-dropdown {
-    background: transparent;
-    border: 1px solid var(--sp-border-gold);
-    color: var(--sp-text-gold);
-    height: 28px;
-    padding: 0 12px;
-    border-radius: 14px;
-    font-size: 12px;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
+  background: transparent;
+  border: 1px solid var(--sp-border-gold);
+  color: var(--sp-text-gold);
+  height: 28px;
+  padding: 0 12px;
+  border-radius: 14px;
+  font-size: 12px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
 }
 
 .sp-point-bar {
-    background: var(--sp-bg-card);
-    height: 36px;
-    border-radius: 18px;
-    padding: 0 16px;
-    margin-top: 12px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+  background: var(--sp-bg-card);
+  height: 36px;
+  border-radius: 18px;
+  padding: 0 16px;
+  margin-top: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .sp-point-label {
-    color: var(--sp-text-muted);
-    font-size: 12px;
+  color: var(--sp-text-muted);
+  font-size: 12px;
 }
 
 .sp-point-value {
-    color: var(--sp-text-gold);
-    font-size: 14px;
-    font-weight: 600;
+  color: var(--sp-text-gold);
+  font-size: 14px;
+  font-weight: 600;
 }
 
 /* ============================================
    SUPERONG Bottom Navigation
    ============================================ */
 .sp-bottom-nav {
-    position: fixed;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 100%;
-    max-width: var(--sp-mobile-width);
-    height: var(--sp-bottom-nav-height);
-    background: var(--sp-footer-gradient);
-    display: flex;
-    align-items: flex-end;
-    justify-content: space-around;
-    padding-bottom: 8px;
-    z-index: 100;
-    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: var(--sp-mobile-width);
+  height: var(--sp-bottom-nav-height);
+  background: #1a003c;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-around;
+  padding-bottom: 8px;
+  z-index: 100;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.2);
 }
 
 .sp-nav-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    color: var(--sp-purple-medium);
-    font-size: 10px;
-    padding: 5px 12px;
-    cursor: pointer;
-    transition: var(--sp-transition);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #e8e0f0;
+  font-size: 10px;
+  padding: 5px 12px;
+  cursor: pointer;
+  transition: var(--sp-transition);
 }
 
 .sp-nav-item i {
-    font-size: 20px;
-    margin-bottom: 4px;
+  font-size: 20px;
+  margin-bottom: 4px;
+}
+
+.sp-nav-icon {
+  width: 24px;
+  height: 24px;
+  margin-bottom: 4px;
+  object-fit: contain;
+  filter: brightness(1.1) hue-rotate(250deg) saturate(0.3);
+}
+
+.sp-nav-item.active .sp-nav-icon,
+.sp-nav-item:hover .sp-nav-icon {
+  opacity: 0.8;
 }
 
 .sp-nav-item.active,
 .sp-nav-item:hover {
-    color: var(--sp-purple-dark);
+  color: #ffffff;
 }
 
 /* Center Crown Button */
 .sp-nav-center {
-    position: relative;
-    margin-top: -30px;
+  position: relative;
+  height: 100%;
+  width: 50px;
 }
 
 .sp-nav-crown {
-    width: 60px;
-    height: 60px;
-    background: var(--sp-purple-dark);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: var(--sp-shadow-md);
-    position: relative;
-}
-
-.sp-nav-crown::before {
-    content: '';
-    position: absolute;
-    top: -5px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 70px;
-    height: 35px;
-    background: var(--sp-purple-dark);
-    border-radius: 35px 35px 0 0;
-    z-index: -1;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: none;
+  position: absolute;
+  background: transparent;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 101;
 }
 
 .sp-nav-crown i {
-    font-size: 28px;
-    color: var(--sp-gold);
+  font-size: 28px;
+  color: #1a003c;
+}
+
+.sp-nav-crown-icon {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+  filter: brightness(0) saturate(100%) invert(8%) sepia(90%) saturate(1000%)
+    hue-rotate(222deg) brightness(95%) contrast(100%);
+}
+
+.sp-nav-crown-logo {
+  width: 55px;
+  height: 55px;
+  object-fit: contain;
 }
 
 /* ============================================
    SUPERONG Buttons
    ============================================ */
 .sp-btn {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    height: 50px;
-    padding: 0 24px;
-    border-radius: var(--sp-btn-radius);
-    font-size: 16px;
-    font-weight: 600;
-    cursor: pointer;
-    transition: var(--sp-transition);
-    border: none;
-    width: 100%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  padding: 0 24px;
+  border-radius: var(--sp-btn-radius);
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--sp-transition);
+  border: none;
+  width: 100%;
 }
 
 .sp-btn-primary {
-    background: var(--sp-btn-gradient);
-    color: var(--sp-text-white);
-    box-shadow: var(--sp-shadow-gold);
+  background: var(--sp-btn-gradient);
+  color: var(--sp-text-white);
+  box-shadow: var(--sp-shadow-gold);
 }
 
 .sp-btn-primary:hover {
-    background: var(--sp-btn-gradient-hover);
-    transform: translateY(-1px);
+  background: var(--sp-btn-gradient-hover);
+  transform: translateY(-1px);
 }
 
 .sp-btn-primary:active {
-    background: var(--sp-btn-gradient-pressed);
-    transform: translateY(0);
+  background: var(--sp-btn-gradient-pressed);
+  transform: translateY(0);
 }
 
 .sp-btn-outline {
-    background: transparent;
-    border: 2px solid var(--sp-gold);
-    color: var(--sp-gold);
+  background: transparent;
+  border: 2px solid var(--sp-gold);
+  color: var(--sp-gold);
 }
 
 .sp-btn-outline:hover {
-    background: var(--sp-gold);
-    color: var(--sp-text-white);
+  background: var(--sp-gold);
+  color: var(--sp-text-white);
 }
 
-/* ============================================
-   SUPERONG Tab Navigation
-   ============================================ */
-.sp-tabs {
-    display: flex;
-    background: var(--sp-bg-light);
-    border-radius: 25px;
-    padding: 4px;
-    margin: 16px;
-}
-
-.sp-tab {
-    flex: 1;
-    height: 36px;
-    padding: 0 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    border-radius: 18px;
-    font-size: 14px;
-    color: var(--sp-text-muted);
-    cursor: pointer;
-    transition: var(--sp-transition);
-}
-
-.sp-tab.active {
-    background: var(--sp-purple-dark);
-    color: var(--sp-text-white);
-}
+/* DUPLICATE REMOVED - Latest .sp-tabs/.sp-tab definitions at line ~1906 */
 
 /* ============================================
    SUPERONG Cards & List Items
    ============================================ */
 .sp-card {
-    background: var(--sp-bg-white);
-    border-radius: var(--sp-card-radius);
-    padding: 16px;
-    margin: 12px var(--sp-content-padding);
-    box-shadow: var(--sp-shadow-sm);
+  background: var(--sp-bg-white);
+  border-radius: var(--sp-card-radius);
+  padding: 16px;
+  margin: 12px var(--sp-content-padding);
+  box-shadow: var(--sp-shadow-sm);
 }
 
 .sp-list-item {
-    display: flex;
-    align-items: center;
-    height: 72px;
-    padding: 16px;
-    border-bottom: 1px solid var(--sp-border-dark);
-    background: var(--sp-bg-white);
+  display: flex;
+  align-items: center;
+  height: 72px;
+  padding: 16px;
+  border-bottom: 1px solid var(--sp-border-dark);
+  background: var(--sp-bg-white);
 }
 
 .sp-list-item:last-child {
-    border-bottom: none;
+  border-bottom: none;
 }
 
 .sp-list-icon {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-right: 12px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 12px;
 }
 
 .sp-list-icon.success {
-    background: var(--sp-success-bg);
-    color: var(--sp-success);
+  background: var(--sp-success-bg);
+  color: var(--sp-success);
 }
 
 .sp-list-icon.pending {
-    background: var(--sp-warning-bg);
-    color: var(--sp-warning);
+  background: var(--sp-warning-bg);
+  color: var(--sp-warning);
 }
 
 .sp-list-content {
-    flex: 1;
+  flex: 1;
 }
 
 .sp-list-title {
-    font-size: 14px;
-    font-weight: 500;
-    color: var(--sp-text-dark);
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--sp-text-dark);
 }
 
 .sp-list-subtitle {
-    font-size: 12px;
-    color: var(--sp-text-muted);
-    margin-top: 4px;
+  font-size: 12px;
+  color: var(--sp-text-muted);
+  margin-top: 4px;
 }
 
 .sp-list-amount {
-    font-size: 16px;
-    font-weight: 600;
-    color: var(--sp-text-dark);
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--sp-text-dark);
 }
 
 /* ============================================
    SUPERONG Form Inputs
    ============================================ */
 .sp-form-group {
-    margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 
 .sp-form-label {
-    display: block;
-    font-size: 14px;
-    color: var(--sp-purple-dark);
-    margin-bottom: 8px;
-    font-weight: 500;
+  display: block;
+  font-size: 14px;
+  color: var(--sp-purple-dark);
+  margin-bottom: 8px;
+  font-weight: 500;
 }
 
 .sp-input {
-    width: 100%;
-    padding: 14px 16px;
-    border: 1px solid var(--sp-border-dark);
-    border-radius: var(--sp-input-radius);
-    font-size: 14px;
-    background: var(--sp-bg-white);
-    transition: var(--sp-transition);
+  width: 100%;
+  padding: 14px 16px;
+  border: 1px solid var(--sp-border-dark);
+  border-radius: var(--sp-input-radius);
+  font-size: 14px;
+  background: var(--sp-bg-white);
+  transition: var(--sp-transition);
 }
 
 .sp-input:focus {
-    outline: none;
-    border-color: var(--sp-gold);
-    box-shadow: 0 0 0 3px rgba(212, 168, 75, 0.1);
+  outline: none;
+  border-color: var(--sp-gold);
+  box-shadow: 0 0 0 3px rgba(212, 168, 75, 0.1);
 }
 
 .sp-input-dark {
-    background: var(--sp-bg-input);
-    border-color: var(--sp-border-purple);
-    color: var(--sp-text-white);
+  background: var(--sp-bg-input);
+  border-color: var(--sp-border-purple);
+  color: var(--sp-text-white);
 }
 
 .sp-input-dark::placeholder {
-    color: var(--sp-text-muted);
+  color: var(--sp-text-muted);
 }
 
 /* ============================================
    SUPERONG Modals
    ============================================ */
 .sp-modal-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.6);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 200;
-    opacity: 0;
-    visibility: hidden;
-    transition: var(--sp-transition);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 200;
+  opacity: 0;
+  visibility: hidden;
+  transition: var(--sp-transition);
 }
 
 .sp-modal-overlay.active {
-    opacity: 1;
-    visibility: visible;
+  opacity: 1;
+  visibility: visible;
 }
 
 .sp-modal {
-    background: var(--sp-bg-white);
-    border-radius: 16px;
-    padding: 24px;
-    width: 280px;
-    text-align: center;
-    transform: scale(0.9);
-    transition: var(--sp-transition);
+  background: var(--sp-bg-white);
+  border-radius: 16px;
+  padding: 24px;
+  width: 280px;
+  text-align: center;
+  transform: scale(0.9);
+  transition: var(--sp-transition);
 }
 
 .sp-modal-overlay.active .sp-modal {
-    transform: scale(1);
+  transform: scale(1);
 }
 
 .sp-modal-icon {
-    width: 60px;
-    height: 60px;
-    margin: 0 auto 16px;
+  width: 60px;
+  height: 60px;
+  margin: 0 auto 16px;
 }
 
 .sp-modal-icon.success {
-    color: var(--sp-success);
-    font-size: 50px;
+  color: var(--sp-success);
+  font-size: 50px;
 }
 
 .sp-modal-title {
-    font-size: 18px;
-    font-weight: 600;
-    color: var(--sp-text-dark);
-    margin-bottom: 12px;
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--sp-text-dark);
+  margin-bottom: 12px;
 }
 
 .sp-modal-text {
-    font-size: 14px;
-    color: var(--sp-text-muted);
-    margin-bottom: 20px;
+  font-size: 14px;
+  color: var(--sp-text-muted);
+  margin-bottom: 20px;
 }
 
 .sp-modal-buttons {
-    display: flex;
-    gap: 12px;
+  display: flex;
+  gap: 12px;
 }
 
 .sp-modal-btn {
-    flex: 1;
-    height: 44px;
-    padding: 0 12px;
-    border-radius: 22px;
-    font-size: 14px;
-    font-weight: 600;
-    cursor: pointer;
-    transition: var(--sp-transition);
+  flex: 1;
+  height: 44px;
+  padding: 0 12px;
+  border-radius: 22px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--sp-transition);
 }
 
 .sp-modal-btn-cancel {
-    background: var(--sp-bg-light);
-    color: var(--sp-text-dark);
-    border: none;
+  background: var(--sp-bg-light);
+  color: var(--sp-text-dark);
+  border: none;
 }
 
 .sp-modal-btn-confirm {
-    background: var(--sp-btn-gradient);
-    color: var(--sp-text-white);
-    border: none;
+  background: var(--sp-btn-gradient);
+  color: var(--sp-text-white);
+  border: none;
 }
 
 /* ============================================
    SUPERONG Dropdown
    ============================================ */
 .sp-dropdown {
-    position: relative;
+  position: relative;
 }
 
 .sp-dropdown-menu {
-    position: absolute;
-    top: 100%;
-    right: 0;
-    background: var(--sp-bg-white);
-    border-radius: var(--sp-card-radius);
-    box-shadow: var(--sp-shadow-lg);
-    min-width: 150px;
-    z-index: 150;
-    opacity: 0;
-    visibility: hidden;
-    transform: translateY(-10px);
-    transition: var(--sp-transition);
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background: var(--sp-bg-white);
+  border-radius: var(--sp-card-radius);
+  box-shadow: var(--sp-shadow-lg);
+  min-width: 150px;
+  z-index: 150;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  transition: var(--sp-transition);
 }
 
 .sp-dropdown.active .sp-dropdown-menu {
-    opacity: 1;
-    visibility: visible;
-    transform: translateY(0);
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
 }
 
 .sp-dropdown-item {
-    padding: 12px 16px;
-    font-size: 14px;
-    color: var(--sp-text-dark);
-    cursor: pointer;
-    transition: var(--sp-transition);
-    border-bottom: 1px solid var(--sp-border-dark);
+  padding: 12px 16px;
+  font-size: 14px;
+  color: var(--sp-text-dark);
+  cursor: pointer;
+  transition: var(--sp-transition);
+  border-bottom: 1px solid var(--sp-border-dark);
 }
 
 .sp-dropdown-item:last-child {
-    border-bottom: none;
+  border-bottom: none;
 }
 
 .sp-dropdown-item:hover {
-    background: var(--sp-bg-light);
+  background: var(--sp-bg-light);
 }
 
 /* ============================================
    SUPERONG Game Grid
    ============================================ */
 .sp-game-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 12px;
-    padding: var(--sp-content-padding);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  padding: var(--sp-content-padding);
 }
 
 .sp-game-card {
-    border-radius: var(--sp-card-radius);
-    overflow: hidden;
-    background: var(--sp-bg-card);
+  border-radius: var(--sp-card-radius);
+  overflow: hidden;
+  background: var(--sp-bg-card);
 }
 
 .sp-game-img {
-    width: 100%;
-    aspect-ratio: 1;
-    object-fit: cover;
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
 }
 
 .sp-game-title {
-    padding: 8px;
-    font-size: 12px;
-    color: var(--sp-text-white);
-    text-align: center;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+  padding: 8px;
+  font-size: 12px;
+  color: var(--sp-text-white);
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 /* ============================================
    SUPERONG Category Buttons
    ============================================ */
 .sp-category-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 12px;
-    padding: var(--sp-content-padding);
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  padding: var(--sp-content-padding);
 }
 
 .sp-category-btn {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 16px 8px;
-    background: var(--sp-gold);
-    border-radius: var(--sp-card-radius);
-    cursor: pointer;
-    transition: var(--sp-transition);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 16px 8px;
+  background: var(--sp-gold);
+  border-radius: var(--sp-card-radius);
+  cursor: pointer;
+  transition: var(--sp-transition);
 }
 
 .sp-category-btn:hover {
-    transform: translateY(-2px);
-    box-shadow: var(--sp-shadow-gold);
+  transform: translateY(-2px);
+  box-shadow: var(--sp-shadow-gold);
 }
 
 .sp-category-icon {
-    font-size: 24px;
-    color: var(--sp-text-white);
-    margin-bottom: 8px;
+  font-size: 24px;
+  color: var(--sp-text-white);
+  margin-bottom: 8px;
 }
 
 .sp-category-label {
-    font-size: 12px;
-    color: var(--sp-text-white);
-    font-weight: 500;
+  font-size: 12px;
+  color: var(--sp-text-white);
+  font-weight: 500;
 }
 
 /* ============================================
    SUPERONG Customer Service Button
    ============================================ */
 .sp-cs-float {
-    position: fixed;
-    bottom: calc(var(--sp-bottom-nav-height) + 20px);
-    right: 16px;
-    width: 50px;
-    height: 50px;
-    background: var(--sp-btn-gradient);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: var(--sp-shadow-gold);
-    z-index: 90;
-    cursor: pointer;
-    transition: var(--sp-transition);
+  position: fixed;
+  bottom: calc(var(--sp-bottom-nav-height) + 20px);
+  right: 16px;
+  width: 50px;
+  height: 50px;
+  background: var(--sp-btn-gradient);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--sp-shadow-gold);
+  z-index: 90;
+  cursor: pointer;
+  transition: var(--sp-transition);
 }
 
 .sp-cs-float:hover {
-    transform: scale(1.1);
+  transform: scale(1.1);
 }
 
 .sp-cs-float i {
-    font-size: 22px;
-    color: var(--sp-text-white);
+  font-size: 22px;
+  color: var(--sp-text-white);
 }
 
 /* ============================================
    SUPERONG Profile Section
    ============================================ */
 .sp-profile-header {
-    background: var(--sp-header-gradient);
-    padding: 30px var(--sp-content-padding);
-    text-align: center;
+  background: var(--sp-header-gradient);
+  padding: 30px var(--sp-content-padding);
+  text-align: center;
 }
 
 .sp-avatar {
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    border: 3px solid var(--sp-gold);
-    margin: 0 auto 12px;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 3px solid var(--sp-gold);
+  margin: 0 auto 12px;
 }
 
 .sp-username {
-    font-size: 20px;
-    font-weight: 600;
-    color: var(--sp-text-white);
-    margin-bottom: 4px;
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--sp-text-white);
+  margin-bottom: 4px;
 }
 
 .sp-user-id {
-    font-size: 14px;
-    color: var(--sp-text-muted);
+  font-size: 14px;
+  color: var(--sp-text-muted);
 }
 
 .sp-user-info {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    margin-top: 16px;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 16px;
 }
 
 .sp-user-info-item {
-    display: flex;
-    align-items: center;
-    gap: 6px;
-    font-size: 13px;
-    color: var(--sp-text-light);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  color: var(--sp-text-light);
 }
 
 /* ============================================
    SUPERONG Menu List
    ============================================ */
 .sp-menu-section {
-    background: var(--sp-bg-white);
-    margin: 16px;
-    border-radius: var(--sp-card-radius);
-    overflow: hidden;
+  background: var(--sp-bg-white);
+  margin: 16px;
+  border-radius: var(--sp-card-radius);
+  overflow: hidden;
 }
 
 .sp-menu-header {
-    padding: 12px 16px;
-    background: var(--sp-purple-dark);
-    color: var(--sp-text-gold);
-    font-size: 14px;
-    font-weight: 500;
+  padding: 12px 16px;
+  background: var(--sp-purple-dark);
+  color: var(--sp-text-gold);
+  font-size: 14px;
+  font-weight: 500;
 }
 
 .sp-menu-item {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    height: 56px;
-    padding: 0 16px;
-    border-bottom: 1px solid var(--sp-border-dark);
-    cursor: pointer;
-    transition: var(--sp-transition);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 56px;
+  padding: 0 16px;
+  border-bottom: 1px solid var(--sp-border-dark);
+  cursor: pointer;
+  transition: var(--sp-transition);
 }
 
 .sp-menu-item:last-child {
-    border-bottom: none;
+  border-bottom: none;
 }
 
 .sp-menu-item:hover {
-    background: var(--sp-bg-light);
+  background: var(--sp-bg-light);
 }
 
 .sp-menu-item-label {
-    font-size: 15px;
-    color: var(--sp-text-dark);
+  font-size: 15px;
+  color: var(--sp-text-dark);
 }
 
 .sp-menu-item-arrow {
-    color: var(--sp-text-muted);
+  color: var(--sp-text-muted);
 }
 
 /* ============================================
    Utility Classes
    ============================================ */
-.sp-text-gold { color: var(--sp-gold) !important; }
-.sp-text-white { color: var(--sp-text-white) !important; }
-.sp-text-muted { color: var(--sp-text-muted) !important; }
-.sp-text-success { color: var(--sp-success) !important; }
-.sp-text-error { color: var(--sp-error) !important; }
+.sp-text-gold {
+  color: var(--sp-gold) !important;
+}
+.sp-text-white {
+  color: var(--sp-text-white) !important;
+}
+.sp-text-muted {
+  color: var(--sp-text-muted) !important;
+}
+.sp-text-success {
+  color: var(--sp-success) !important;
+}
+.sp-text-error {
+  color: var(--sp-error) !important;
+}
 
-.sp-bg-purple { background: var(--sp-purple-dark) !important; }
-.sp-bg-gold { background: var(--sp-gold) !important; }
-.sp-bg-white { background: var(--sp-bg-white) !important; }
+.sp-bg-purple {
+  background: var(--sp-purple-dark) !important;
+}
+.sp-bg-gold {
+  background: var(--sp-gold) !important;
+}
+.sp-bg-white {
+  background: var(--sp-bg-white) !important;
+}
 
-.sp-mt-16 { margin-top: 16px; }
-.sp-mb-16 { margin-bottom: 16px; }
-.sp-p-16 { padding: 16px; }
+.sp-mt-16 {
+  margin-top: 16px;
+}
+.sp-mb-16 {
+  margin-bottom: 16px;
+}
+.sp-p-16 {
+  padding: 16px;
+}
 
-.sp-text-center { text-align: center; }
-.sp-flex-center { display: flex; align-items: center; justify-content: center; }
+.sp-text-center {
+  text-align: center;
+}
+.sp-flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
 /* ============================================
    SUPERONG Page Header (Inner Pages)
    ============================================ */
 .sp-page-header {
-    background: var(--sp-header-gradient);
-    height: 56px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 16px;
-    position: sticky;
-    top: 0;
-    z-index: 100;
+  background: var(--sp-header-gradient);
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 16px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
 
 .sp-page-header .sp-header-back {
-    width: 40px;
-    height: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--sp-text-white);
-    font-size: 18px;
-    text-decoration: none;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--sp-text-white);
+  font-size: 18px;
+  text-decoration: none;
 }
 
 .sp-page-header .sp-header-title {
-    flex: 1;
-    text-align: center;
-    font-size: 18px;
-    font-weight: 600;
-    color: var(--sp-gold);
-    margin: 0;
+  flex: 1;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--sp-gold);
+  margin: 0;
 }
 
 .sp-page-header .sp-header-icon-right,
 .sp-page-header .sp-header-text-right {
-    width: 40px;
-    height: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--sp-text-white);
-    font-size: 18px;
-    text-decoration: none;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--sp-text-white);
+  font-size: 18px;
+  text-decoration: none;
 }
 
 .sp-page-header .sp-header-placeholder {
-    width: 40px;
+  width: 40px;
 }
 
 /* ============================================
    Home Header Actions
    ============================================ */
 .sp-header-actions {
-    display: flex;
-    align-items: center;
-    gap: 12px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
 }
 
 .sp-header-icon {
-    width: 32px;
-    height: 32px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--sp-text-white);
-    font-size: 18px;
-    text-decoration: none;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--sp-text-white);
+  font-size: 18px;
+  text-decoration: none;
 }
 
 /* Language Dropdown */
 .sp-lang-dropdown {
-    position: relative;
-    display: flex;
-    align-items: center;
-    gap: 6px;
-    background: transparent;
-    border: 1px solid var(--sp-gold);
-    color: var(--sp-gold);
-    height: 28px;
-    padding: 0 12px;
-    border-radius: 14px;
-    font-size: 12px;
-    cursor: pointer;
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: transparent;
+  border: 1px solid var(--sp-gold);
+  color: var(--sp-gold);
+  height: 28px;
+  padding: 0 12px;
+  border-radius: 14px;
+  font-size: 12px;
+  cursor: pointer;
 }
 
 .sp-lang-dropdown i {
-    font-size: 10px;
+  font-size: 10px;
 }
 
 .sp-lang-menu {
-    position: absolute;
-    top: calc(100% + 8px);
-    right: 0;
-    background: var(--sp-bg-white);
-    border-radius: 8px;
-    box-shadow: var(--sp-shadow-lg);
-    min-width: 100px;
-    opacity: 0;
-    visibility: hidden;
-    transform: translateY(-10px);
-    transition: var(--sp-transition);
-    z-index: 200;
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
+  background: var(--sp-bg-white);
+  border-radius: 8px;
+  box-shadow: var(--sp-shadow-lg);
+  min-width: 100px;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  transition: var(--sp-transition);
+  z-index: 200;
 }
 
 .sp-lang-dropdown:hover .sp-lang-menu,
 .sp-lang-dropdown.active .sp-lang-menu {
-    opacity: 1;
-    visibility: visible;
-    transform: translateY(0);
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
 }
 
 .sp-lang-item {
-    display: block;
-    padding: 10px 16px;
-    font-size: 13px;
-    color: var(--sp-text-dark);
-    text-decoration: none;
-    border-bottom: 1px solid var(--sp-border-dark);
+  display: block;
+  padding: 10px 16px;
+  font-size: 13px;
+  color: var(--sp-text-dark);
+  text-decoration: none;
+  border-bottom: 1px solid var(--sp-border-dark);
 }
 
 .sp-lang-item:last-child {
-    border-bottom: none;
+  border-bottom: none;
 }
 
 .sp-lang-item:hover,
 .sp-lang-item.active {
-    background: var(--sp-bg-light);
-    color: var(--sp-purple-dark);
+  background: var(--sp-bg-light);
+  color: var(--sp-purple-dark);
 }
 
 /* ============================================
    Banner Section
    ============================================ */
 .sp-banner-section {
-    margin: 12px 16px;
-    border-radius: 12px;
-    overflow: hidden;
-    position: relative;
+  margin: 12px 16px;
+  border-radius: 12px;
+  overflow: hidden;
+  position: relative;
 }
 
 .sp-banner-slider {
-    position: relative;
-    width: 100%;
+  position: relative;
+  width: 100%;
 }
 
 .sp-banner-slide {
-    position: relative;
-    display: none;
+  position: relative;
+  display: none;
 }
 
 .sp-banner-slide.active {
-    display: block;
+  display: block;
 }
 
 .sp-banner-slide img {
-    width: 100%;
-    height: 160px;
-    object-fit: cover;
-    border-radius: 12px;
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 12px;
 }
 
 .sp-banner-content {
-    position: absolute;
-    top: 50%;
-    left: 20px;
-    transform: translateY(-50%);
-    z-index: 2;
+  position: absolute;
+  top: 50%;
+  left: 20px;
+  transform: translateY(-50%);
+  z-index: 2;
 }
 
 .sp-banner-label {
-    display: inline-block;
-    font-size: 10px;
-    color: rgba(255,255,255,0.8);
-    margin-bottom: 4px;
+  display: inline-block;
+  font-size: 10px;
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 4px;
 }
 
 .sp-banner-title {
-    font-size: 18px;
-    font-weight: 600;
-    color: var(--sp-text-white);
-    margin: 0 0 12px;
-    text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--sp-text-white);
+  margin: 0 0 12px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 .sp-banner-btn {
-    display: inline-block;
-    padding: 8px 20px;
-    background: var(--sp-btn-gradient);
-    color: var(--sp-text-white);
-    font-size: 12px;
-    font-weight: 500;
-    border-radius: 20px;
-    text-decoration: none;
-    box-shadow: var(--sp-shadow-gold);
+  display: inline-block;
+  padding: 8px 20px;
+  background: var(--sp-btn-gradient);
+  color: var(--sp-text-white);
+  font-size: 12px;
+  font-weight: 500;
+  border-radius: 20px;
+  text-decoration: none;
+  box-shadow: var(--sp-shadow-gold);
 }
 
 .sp-banner-indicators {
-    display: flex;
-    justify-content: center;
-    gap: 6px;
-    margin-top: 10px;
-}
-
-.sp-indicator {
-    width: 6px;
-    height: 6px;
-    border-radius: 50%;
-    background: rgba(255,255,255,0.3);
-    transition: var(--sp-transition);
-}
-
-.sp-indicator.active {
-    width: 18px;
-    border-radius: 3px;
-    background: var(--sp-gold);
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+  margin-top: 10px;
 }
 
 /* ============================================
    Feature Buttons Grid (Home Page)
    ============================================ */
 .sp-feature-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 16px;
-    padding: 16px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  padding: 16px;
 }
 
 .sp-feature-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-decoration: none;
-    transition: var(--sp-transition);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  transition: var(--sp-transition);
 }
 
 .sp-feature-item:hover {
-    transform: translateY(-2px);
+  transform: translateY(-2px);
 }
 
 .sp-feature-icon {
-    width: 56px;
-    height: 56px;
-    border-radius: 50%;
-    background: var(--sp-btn-gradient);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 8px;
-    box-shadow: var(--sp-shadow-gold);
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: var(--sp-btn-gradient);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 8px;
+  box-shadow: var(--sp-shadow-gold);
 }
 
 .sp-feature-icon i {
-    font-size: 24px;
-    color: var(--sp-text-white);
+  font-size: 24px;
+  color: var(--sp-text-white);
 }
 
 .sp-feature-label {
-    font-size: 12px;
-    color: var(--sp-text-white);
-    font-weight: 500;
+  font-size: 12px;
+  color: var(--sp-text-white);
+  font-weight: 500;
 }
 
 /* ============================================
    Game Section
    ============================================ */
 .sp-game-section {
-    padding: 16px 0 100px;
+  padding: 16px 0 100px;
 }
 
 /* ============================================
    Game Category Tabs
    ============================================ */
 .sp-game-tabs {
-    display: flex;
-    align-items: center;
-    padding: 0 16px;
-    gap: 8px;
-    margin-bottom: 16px;
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
+  display: flex;
+  align-items: center;
+  padding: 0 16px;
+  gap: 8px;
+  margin-bottom: 16px;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
 }
 
 .sp-game-tabs::-webkit-scrollbar {
-    display: none;
+  display: none;
 }
 
 .sp-game-tab {
-    flex: 0 0 auto;
-    padding: 8px 16px;
-    font-size: 13px;
-    color: var(--sp-text-muted);
-    background: transparent;
-    border: none;
-    cursor: pointer;
-    white-space: nowrap;
-    transition: var(--sp-transition);
-    display: flex;
-    align-items: center;
-    gap: 6px;
+  flex: 0 0 auto;
+  padding: 8px 16px;
+  font-size: 13px;
+  color: var(--sp-text-muted);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: var(--sp-transition);
+  display: flex;
+  align-items: center;
+  gap: 6px;
 }
 
 .sp-game-tab:first-child {
-    width: 44px;
-    height: 44px;
-    padding: 0;
-    border: 2px solid var(--sp-orange);
-    border-radius: 50%;
-    justify-content: center;
-    flex-direction: column;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border: 2px solid var(--sp-orange);
+  border-radius: 50%;
+  justify-content: center;
+  flex-direction: column;
 }
 
 .sp-game-tab:first-child i {
-    font-size: 14px;
-    color: var(--sp-orange);
+  font-size: 14px;
+  color: var(--sp-orange);
 }
 
 .sp-game-tab:first-child span {
-    font-size: 10px;
-    color: var(--sp-orange);
+  font-size: 10px;
+  color: var(--sp-orange);
 }
 
 .sp-game-tab:first-child.active {
-    background: var(--sp-btn-gradient);
-    border-color: transparent;
+  background: var(--sp-btn-gradient);
+  border-color: transparent;
 }
 
 .sp-game-tab:first-child.active i,
 .sp-game-tab:first-child.active span {
-    color: var(--sp-text-white);
+  color: var(--sp-text-white);
 }
 
 .sp-game-tab:not(:first-child).active {
-    background: var(--sp-btn-gradient);
-    color: var(--sp-text-white);
-    border-radius: 18px;
+  background: var(--sp-btn-gradient);
+  color: var(--sp-text-white);
+  border-radius: 18px;
 }
 
 /* ============================================
    Game Grid Items
    ============================================ */
 .sp-game-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 12px;
-    padding: 0 16px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  padding: 0 16px;
 }
 
 .sp-game-item {
-    display: flex;
-    flex-direction: column;
-    text-decoration: none;
-    transition: var(--sp-transition);
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  transition: var(--sp-transition);
 }
 
 .sp-game-item:hover {
-    transform: translateY(-2px);
+  transform: translateY(-2px);
 }
 
 .sp-game-thumb {
-    width: 100%;
-    aspect-ratio: 1;
-    border-radius: 12px;
-    overflow: hidden;
-    margin-bottom: 8px;
-    background: var(--sp-bg-card);
+  width: 100%;
+  aspect-ratio: 1;
+  border-radius: 12px;
+  overflow: hidden;
+  margin-bottom: 8px;
+  background: var(--sp-bg-card);
 }
 
 .sp-game-thumb img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .sp-game-name {
-    font-size: 11px;
-    color: var(--sp-text-white);
-    text-align: center;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+  font-size: 11px;
+  color: var(--sp-text-white);
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 /* ============================================
    Transaction/Record Items
    ============================================ */
 .sp-transaction-item {
-    display: flex;
-    align-items: center;
-    height: 80px;
-    padding: 12px 16px;
-    margin: 0 16px 8px;
-    background: var(--sp-bg-white);
-    border-radius: 8px;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+  display: flex;
+  align-items: center;
+  height: 80px;
+  padding: 12px 16px;
+  margin: 0 16px 8px;
+  background: var(--sp-bg-white);
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
 }
 
 .sp-transaction-icon {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-right: 12px;
-    font-size: 16px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 12px;
+  font-size: 16px;
 }
 
 .sp-transaction-icon.success {
-    background: var(--sp-success-bg);
-    color: var(--sp-success);
+  background: var(--sp-success-bg);
+  color: var(--sp-success);
 }
 
 .sp-transaction-icon.pending {
-    background: var(--sp-warning-bg);
-    color: var(--sp-warning);
+  background: var(--sp-warning-bg);
+  color: var(--sp-warning);
 }
 
 .sp-transaction-content {
-    flex: 1;
+  flex: 1;
 }
 
 .sp-transaction-bank {
-    display: inline-block;
-    padding: 2px 8px;
-    border-radius: 4px;
-    font-size: 11px;
-    color: var(--sp-text-white);
-    margin-bottom: 4px;
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 11px;
+  color: var(--sp-text-white);
+  margin-bottom: 4px;
 }
 
 .sp-transaction-bank.hong-leong {
-    background: #ed1c24;
+  background: #ed1c24;
 }
 
 .sp-transaction-bank.maybank {
-    background: #ffc600;
-    color: var(--sp-text-dark);
+  background: #ffc600;
+  color: var(--sp-text-dark);
 }
 
 .sp-transaction-date {
-    font-size: 12px;
-    color: var(--sp-text-muted);
+  font-size: 12px;
+  color: var(--sp-text-muted);
 }
 
 .sp-transaction-amount {
-    font-size: 16px;
-    font-weight: 600;
-    color: var(--sp-text-dark);
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--sp-text-dark);
 }
 
 /* ============================================
    Filter Bar
    ============================================ */
 .sp-filter-bar {
-    display: flex;
-    padding: 12px 16px;
-    gap: 12px;
-    background: var(--sp-purple-dark);
+  display: flex;
+  padding: 12px 16px;
+  gap: 12px;
+  background: var(--sp-purple-dark);
 }
 
 .sp-filter-select {
-    flex: 1;
-    height: 36px;
-    padding: 0 12px;
-    border-radius: 4px;
-    background: var(--sp-purple-darkest);
-    color: var(--sp-text-white);
-    font-size: 13px;
-    border: none;
-    appearance: none;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='%23d4a84b' viewBox='0 0 16 16'%3E%3Cpath d='M8 11L3 6h10l-5 5z'/%3E%3C/svg%3E");
-    background-repeat: no-repeat;
-    background-position: right 12px center;
-    padding-right: 32px;
+  flex: 1;
+  height: 36px;
+  padding: 0 12px;
+  border-radius: 4px;
+  background: var(--sp-purple-darkest);
+  color: var(--sp-text-white);
+  font-size: 13px;
+  border: none;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='%23d4a84b' viewBox='0 0 16 16'%3E%3Cpath d='M8 11L3 6h10l-5 5z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  padding-right: 32px;
 }
 
 /* ============================================
    Info Card (Invite Page Top Section)
    ============================================ */
 .sp-info-card {
-    margin: 16px;
-    padding: 16px;
-    background: var(--sp-purple-dark);
-    border-radius: 12px;
+  margin: 16px;
+  padding: 16px;
+  background: var(--sp-purple-dark);
+  border-radius: 12px;
 }
 
 .sp-info-row {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 8px 0;
-    border-bottom: 1px solid rgba(255,255,255,0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .sp-info-row:last-child {
-    border-bottom: none;
+  border-bottom: none;
 }
 
 .sp-info-label {
-    font-size: 13px;
-    color: rgba(255,255,255,0.7);
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.7);
 }
 
 .sp-info-value {
-    font-size: 14px;
-    color: var(--sp-text-white);
-    display: flex;
-    align-items: center;
-    gap: 8px;
+  font-size: 14px;
+  color: var(--sp-text-white);
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
 
 .sp-copy-btn {
-    width: 24px;
-    height: 24px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: transparent;
-    border: 1px solid var(--sp-gold);
-    border-radius: 4px;
-    color: var(--sp-gold);
-    font-size: 12px;
-    cursor: pointer;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border: 1px solid var(--sp-gold);
+  border-radius: 4px;
+  color: var(--sp-gold);
+  font-size: 12px;
+  cursor: pointer;
 }
 
 /* ============================================
    Commission Section
    ============================================ */
 .sp-commission-bar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 12px 16px;
-    background: var(--sp-bg-white);
-    margin: 0 16px;
-    border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 16px;
+  background: var(--sp-bg-white);
+  margin: 0 16px;
+  border-radius: 8px;
 }
 
 .sp-commission-label {
-    font-size: 13px;
-    color: var(--sp-text-muted);
+  font-size: 13px;
+  color: var(--sp-text-muted);
 }
 
 .sp-commission-value {
-    font-size: 16px;
-    font-weight: 600;
-    color: var(--sp-text-dark);
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--sp-text-dark);
 }
 
 .sp-commission-link {
-    font-size: 13px;
-    color: var(--sp-purple-dark);
+  font-size: 13px;
+  color: var(--sp-purple-dark);
 }
 
 /* ============================================
    Data Table
    ============================================ */
 .sp-table {
-    width: 100%;
-    background: var(--sp-bg-white);
+  width: 100%;
+  background: var(--sp-bg-white);
 }
 
 .sp-table-header {
-    display: flex;
-    padding: 12px 16px;
-    background: var(--sp-bg-light);
-    font-size: 13px;
-    color: var(--sp-text-muted);
+  display: flex;
+  padding: 12px 16px;
+  background: var(--sp-bg-light);
+  font-size: 13px;
+  color: var(--sp-text-muted);
 }
 
 .sp-table-row {
-    display: flex;
-    padding: 12px 16px;
-    border-bottom: 1px solid var(--sp-border-dark);
-    font-size: 14px;
-    color: var(--sp-text-dark);
+  display: flex;
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--sp-border-dark);
+  font-size: 14px;
+  color: var(--sp-text-dark);
 }
 
 .sp-table-cell {
-    flex: 1;
-    text-align: center;
+  flex: 1;
+  text-align: center;
 }
 
 .sp-table-cell:first-child {
-    text-align: left;
+  text-align: left;
 }
 
 /* ============================================
    Chat Components
    ============================================ */
 .sp-chat-list {
-    background: var(--sp-bg-white);
+  background: var(--sp-bg-white);
 }
 
 .sp-chat-item {
-    display: flex;
-    align-items: center;
-    padding: 16px;
-    border-bottom: 1px solid var(--sp-border-dark);
+  display: flex;
+  align-items: center;
+  padding: 16px;
+  border-bottom: 1px solid var(--sp-border-dark);
 }
 
 .sp-chat-avatar {
-    width: 48px;
-    height: 48px;
-    border-radius: 50%;
-    background: var(--sp-purple-dark);
-    margin-right: 12px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--sp-text-white);
-    font-size: 20px;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: var(--sp-purple-dark);
+  margin-right: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--sp-text-white);
+  font-size: 20px;
 }
 
 .sp-chat-info {
-    flex: 1;
+  flex: 1;
 }
 
 .sp-chat-name {
-    font-size: 15px;
-    font-weight: 500;
-    color: var(--sp-purple-dark);
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--sp-purple-dark);
 }
 
 .sp-chat-preview {
-    font-size: 13px;
-    color: var(--sp-text-muted);
-    margin-top: 4px;
+  font-size: 13px;
+  color: var(--sp-text-muted);
+  margin-top: 4px;
 }
 
 .sp-chat-time {
-    font-size: 12px;
-    color: var(--sp-text-muted);
+  font-size: 12px;
+  color: var(--sp-text-muted);
 }
 
 /* Chat Bubble */
 .sp-chat-bubble {
-    max-width: 70%;
-    padding: 12px 16px;
-    border-radius: 16px;
-    font-size: 14px;
-    line-height: 1.4;
-    margin-bottom: 12px;
+  max-width: 70%;
+  padding: 12px 16px;
+  border-radius: 16px;
+  font-size: 14px;
+  line-height: 1.4;
+  margin-bottom: 12px;
 }
 
 .sp-chat-bubble-sent {
-    background: var(--sp-bg-light);
-    color: var(--sp-text-dark);
-    border-bottom-right-radius: 4px;
-    margin-left: auto;
+  background: var(--sp-bg-light);
+  color: var(--sp-text-dark);
+  border-bottom-right-radius: 4px;
+  margin-left: auto;
 }
 
 .sp-chat-bubble-received {
-    background: var(--sp-purple-dark);
-    color: var(--sp-text-white);
-    border-bottom-left-radius: 4px;
+  background: var(--sp-purple-dark);
+  color: var(--sp-text-white);
+  border-bottom-left-radius: 4px;
 }
 
 /* Chat Input Bar */
 .sp-chat-input-bar {
-    position: fixed;
-    bottom: var(--sp-bottom-nav-height);
-    left: 50%;
-    transform: translateX(-50%);
-    width: 100%;
-    max-width: var(--sp-mobile-width);
-    height: 60px;
-    padding: 10px 16px;
-    background: var(--sp-bg-white);
-    border-top: 1px solid var(--sp-border-dark);
-    display: flex;
-    align-items: center;
-    gap: 12px;
+  position: fixed;
+  bottom: var(--sp-bottom-nav-height);
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: var(--sp-mobile-width);
+  height: 60px;
+  padding: 10px 16px;
+  background: var(--sp-bg-white);
+  border-top: 1px solid var(--sp-border-dark);
+  display: flex;
+  align-items: center;
+  gap: 12px;
 }
 
 .sp-chat-input {
-    flex: 1;
-    height: 40px;
-    padding: 0 16px;
-    border: 1px solid var(--sp-border-dark);
-    border-radius: 20px;
-    font-size: 14px;
-    background: var(--sp-bg-white);
+  flex: 1;
+  height: 40px;
+  padding: 0 16px;
+  border: 1px solid var(--sp-border-dark);
+  border-radius: 20px;
+  font-size: 14px;
+  background: var(--sp-bg-white);
 }
 
 .sp-chat-send-btn {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    background: var(--sp-btn-gradient);
-    border: none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--sp-btn-gradient);
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
 }
 
 .sp-chat-send-btn i {
-    color: var(--sp-text-white);
-    font-size: 16px;
+  color: var(--sp-text-white);
+  font-size: 16px;
 }
 
 /* ============================================
    Password Modal
    ============================================ */
 .sp-modal-password {
-    position: relative;
+  position: relative;
 }
 
 .sp-modal-close {
-    position: absolute;
-    top: 16px;
-    right: 16px;
-    width: 24px;
-    height: 24px;
-    background: none;
-    border: none;
-    font-size: 16px;
-    color: var(--sp-text-muted);
-    cursor: pointer;
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  width: 24px;
+  height: 24px;
+  background: none;
+  border: none;
+  font-size: 16px;
+  color: var(--sp-text-muted);
+  cursor: pointer;
 }
 
 .sp-password-inputs {
-    display: flex;
-    gap: 8px;
-    justify-content: center;
-    margin: 20px 0;
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  margin: 20px 0;
 }
 
 .sp-password-box {
-    width: 40px;
-    height: 44px;
-    border: 1px solid var(--sp-border-dark);
-    border-radius: 6px;
-    font-size: 20px;
-    text-align: center;
-    background: var(--sp-bg-white);
+  width: 40px;
+  height: 44px;
+  border: 1px solid var(--sp-border-dark);
+  border-radius: 6px;
+  font-size: 20px;
+  text-align: center;
+  background: var(--sp-bg-white);
 }
 
 .sp-password-box:focus {
-    outline: none;
-    border-color: var(--sp-gold);
+  outline: none;
+  border-color: var(--sp-gold);
 }
 
 .sp-modal-hint {
-    font-size: 13px;
-    color: var(--sp-text-muted);
-    margin-bottom: 16px;
+  font-size: 13px;
+  color: var(--sp-text-muted);
+  margin-bottom: 16px;
 }
 
 .sp-modal-submit {
-    width: 100%;
+  width: 100%;
 }
 
 /* ============================================
    Customer Service Page
    ============================================ */
 .sp-cs-welcome {
-    padding: 40px 16px;
-    text-align: center;
+  padding: 40px 16px;
+  text-align: center;
 }
 
 .sp-cs-logo {
-    width: 60px;
-    height: 60px;
-    margin: 0 auto 20px;
+  width: 60px;
+  height: 60px;
+  margin: 0 auto 20px;
 }
 
 .sp-cs-title {
-    font-size: 22px;
-    font-weight: 600;
-    color: var(--sp-purple-dark);
-    margin-bottom: 12px;
+  font-size: 22px;
+  font-weight: 600;
+  color: var(--sp-purple-dark);
+  margin-bottom: 12px;
 }
 
 .sp-cs-desc {
-    font-size: 14px;
-    color: var(--sp-text-muted);
-    line-height: 1.6;
-    margin-bottom: 24px;
+  font-size: 14px;
+  color: var(--sp-text-muted);
+  line-height: 1.6;
+  margin-bottom: 24px;
 }
 
 .sp-cs-options {
-    text-align: left;
+  text-align: left;
 }
 
 .sp-cs-option {
-    display: flex;
-    align-items: center;
-    padding: 16px;
-    border: 1px solid var(--sp-border-dark);
-    border-radius: 8px;
-    margin-bottom: 12px;
-    cursor: pointer;
-    transition: var(--sp-transition);
+  display: flex;
+  align-items: center;
+  padding: 16px;
+  border: 1px solid var(--sp-border-dark);
+  border-radius: 8px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  transition: var(--sp-transition);
 }
 
 .sp-cs-option:hover {
-    border-color: var(--sp-purple-dark);
-    background: var(--sp-bg-light);
+  border-color: var(--sp-purple-dark);
+  background: var(--sp-bg-light);
 }
 
 .sp-cs-option i {
-    font-size: 20px;
-    color: var(--sp-purple-dark);
-    margin-right: 12px;
+  font-size: 20px;
+  color: var(--sp-purple-dark);
+  margin-right: 12px;
 }
 
 .sp-cs-option span {
-    font-size: 15px;
-    color: var(--sp-text-dark);
+  font-size: 15px;
+  color: var(--sp-text-dark);
 }
 
 /* ============================================
    Ranking/Leaderboard
    ============================================ */
 .sp-ranking-header {
-    background: var(--sp-purple-dark);
-    padding: 20px 16px;
+  background: var(--sp-purple-dark);
+  padding: 20px 16px;
 }
 
 .sp-ranking-top3 {
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-    gap: 16px;
-    padding: 20px 0;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 16px;
+  padding: 20px 0;
 }
 
 .sp-ranking-item {
-    text-align: center;
+  text-align: center;
 }
 
 .sp-ranking-item.rank-1 {
-    order: 2;
+  order: 2;
 }
 
 .sp-ranking-item.rank-2 {
-    order: 1;
+  order: 1;
 }
 
 .sp-ranking-item.rank-3 {
-    order: 3;
+  order: 3;
 }
 
 .sp-ranking-medal {
-    width: 60px;
-    height: 60px;
-    margin: 0 auto 8px;
+  width: 60px;
+  height: 60px;
+  margin: 0 auto 8px;
 }
 
 .sp-ranking-medal.gold {
-    width: 80px;
-    height: 80px;
+  width: 80px;
+  height: 80px;
 }
 
 .sp-ranking-name {
-    font-size: 12px;
-    color: var(--sp-text-white);
+  font-size: 12px;
+  color: var(--sp-text-white);
 }
 
 .sp-ranking-score {
-    font-size: 14px;
-    font-weight: 600;
-    color: var(--sp-gold);
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--sp-gold);
 }
 
 /* ============================================
    Search Box
    ============================================ */
 .sp-search-box {
-    display: flex;
-    align-items: center;
-    padding: 0 16px;
-    margin: 16px;
-    background: var(--sp-bg-white);
-    border: 1px solid var(--sp-border-dark);
-    border-radius: 8px;
+  display: flex;
+  align-items: center;
+  padding: 0 16px;
+  margin: 16px;
+  background: var(--sp-bg-white);
+  border: 1px solid var(--sp-border-dark);
+  border-radius: 8px;
 }
 
 .sp-search-box input {
-    flex: 1;
-    height: 44px;
-    border: none;
-    background: none;
-    font-size: 14px;
-    padding: 0 12px;
+  flex: 1;
+  height: 44px;
+  border: none;
+  background: none;
+  font-size: 14px;
+  padding: 0 12px;
 }
 
 .sp-search-box input:focus {
-    outline: none;
+  outline: none;
 }
 
 .sp-search-box i {
-    color: var(--sp-text-muted);
+  color: var(--sp-text-muted);
 }
 
 /* ============================================
    Empty State
    ============================================ */
 .sp-empty {
-    padding: 60px 20px;
-    text-align: center;
+  padding: 60px 20px;
+  text-align: center;
 }
 
 .sp-empty-icon {
-    font-size: 48px;
-    color: var(--sp-text-muted);
-    margin-bottom: 16px;
+  font-size: 48px;
+  color: var(--sp-text-muted);
+  margin-bottom: 16px;
 }
 
 .sp-empty-text {
-    font-size: 14px;
-    color: var(--sp-text-muted);
+  font-size: 14px;
+  color: var(--sp-text-muted);
 }
 
 /* ============================================
    Page Content Wrapper
    ============================================ */
 .sp-page-content {
-    padding-bottom: calc(var(--sp-bottom-nav-height) + 20px);
+  padding-bottom: calc(var(--sp-bottom-nav-height) + 20px);
 }
 
 /* ============================================
    Swipe Actions
    ============================================ */
 .sp-swipe-item {
-    position: relative;
-    overflow: hidden;
+  position: relative;
+  overflow: hidden;
 }
 
 .sp-swipe-actions {
-    position: absolute;
-    right: 0;
-    top: 0;
-    height: 100%;
-    display: flex;
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  display: flex;
 }
 
 .sp-swipe-action {
-    width: 80px;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    color: var(--sp-text-white);
-    font-size: 12px;
+  width: 80px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: var(--sp-text-white);
+  font-size: 12px;
 }
 
 .sp-swipe-action i {
-    font-size: 18px;
-    margin-bottom: 4px;
+  font-size: 18px;
+  margin-bottom: 4px;
 }
 
 .sp-swipe-action.blacklist {
-    background: var(--sp-purple-dark);
+  background: var(--sp-purple-dark);
 }
 
 .sp-swipe-action.delete {
-    background: var(--sp-error);
+  background: var(--sp-error);
 }
 
 /* ============================================
    Point Row
    ============================================ */
 .sp-point-row {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 16px;
-    background: var(--sp-bg-white);
-    margin: 0 16px;
-    border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px;
+  background: var(--sp-bg-white);
+  margin: 0 16px;
+  border-radius: 8px;
 }
 
 .sp-point-row-label {
-    font-size: 14px;
-    color: var(--sp-text-muted);
+  font-size: 14px;
+  color: var(--sp-text-muted);
 }
 
 .sp-point-row-value {
-    font-size: 18px;
-    font-weight: 600;
-    color: var(--sp-text-dark);
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--sp-text-dark);
 }
 
 /* ============================================
    Bottom Spacer
    ============================================ */
 .sp-bottom-spacer {
-    height: calc(var(--sp-bottom-nav-height) + 20px);
+  height: calc(var(--sp-bottom-nav-height) + 20px);
 }
 
 /* ============================================
    Loading State
    ============================================ */
 .sp-loading {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
 }
 
 .sp-spinner {
-    width: 32px;
-    height: 32px;
-    border: 3px solid var(--sp-border-dark);
-    border-top-color: var(--sp-purple-dark);
-    border-radius: 50%;
-    animation: sp-spin 0.8s linear infinite;
+  width: 32px;
+  height: 32px;
+  border: 3px solid var(--sp-border-dark);
+  border-top-color: var(--sp-purple-dark);
+  border-radius: 50%;
+  animation: sp-spin 0.8s linear infinite;
 }
 
 @keyframes sp-spin {
-    to { transform: rotate(360deg); }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 /* ============================================
    Tabs Container (Inner Pages)
    ============================================ */
 .sp-tabs-container {
-    padding: 12px 16px;
+  padding: 12px 16px;
 }
 
 .sp-tabs {
-    display: flex;
-    background: var(--sp-bg-white);
-    border-radius: 25px;
-    padding: 4px;
-    border: 1px solid var(--sp-border-light);
+  display: flex;
+  background: var(--sp-bg-white);
+  border-radius: 25px;
+  padding: 4px;
+  border: 1px solid var(--sp-border-light);
 }
 
 .sp-tab {
-    flex: 1;
-    padding: 10px 20px;
-    font-size: 14px;
-    font-weight: 500;
-    color: var(--sp-text-muted);
-    background: transparent;
-    border: none;
-    border-radius: 20px;
-    cursor: pointer;
-    transition: var(--sp-transition);
+  flex: 1;
+  padding: 10px 20px;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--sp-text-muted);
+  background: transparent;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: var(--sp-transition);
 }
 
 .sp-tab.active {
-    background: var(--sp-btn-gradient);
-    color: var(--sp-text-white);
+  background: var(--sp-btn-gradient);
+  color: var(--sp-text-white);
 }
 
 .sp-tab-content {
-    padding: 0 16px;
+  padding: 0 16px;
 }
 
 /* ============================================
    Notification Items
    ============================================ */
 .sp-notification-item {
-    background: var(--sp-bg-white);
-    border-radius: 8px;
-    margin-bottom: 12px;
-    overflow: hidden;
+  background: var(--sp-bg-white);
+  border-radius: 8px;
+  margin-bottom: 12px;
+  overflow: hidden;
 }
 
 .sp-notification-header {
-    display: flex;
-    align-items: center;
-    padding: 12px 16px;
-    gap: 12px;
+  display: flex;
+  align-items: center;
+  padding: 12px 16px;
+  gap: 12px;
 }
 
 .sp-notification-status {
-    width: 28px;
-    height: 28px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 14px;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
 }
 
 .sp-notification-status.success {
-    background: var(--sp-success-bg);
-    color: var(--sp-success);
+  background: var(--sp-success-bg);
+  color: var(--sp-success);
 }
 
 .sp-notification-status.pending {
-    background: var(--sp-warning-bg);
-    color: var(--sp-warning);
+  background: var(--sp-warning-bg);
+  color: var(--sp-warning);
 }
 
 .sp-notification-title {
-    flex: 1;
-    font-size: 14px;
-    font-weight: 500;
-    color: var(--sp-text-dark);
+  flex: 1;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--sp-text-dark);
 }
 
 .sp-notification-date {
-    font-size: 12px;
-    color: var(--sp-text-muted);
+  font-size: 12px;
+  color: var(--sp-text-muted);
 }
 
 .sp-notification-body {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 12px 16px;
-    background: var(--sp-purple-dark);
-    color: var(--sp-text-white);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 16px;
+  background: var(--sp-purple-dark);
+  color: var(--sp-text-white);
 }
 
 .sp-notification-bank {
-    font-size: 14px;
-    font-weight: 500;
+  font-size: 14px;
+  font-weight: 500;
 }
 
 .sp-notification-amount {
-    font-size: 16px;
-    font-weight: 600;
+  font-size: 16px;
+  font-weight: 600;
 }
 
 /* ============================================
    News Items (Latest News)
    ============================================ */
 .sp-news-item {
-    background: var(--sp-bg-white);
-    border-radius: 8px;
-    margin-bottom: 12px;
-    overflow: hidden;
+  background: var(--sp-bg-white);
+  border-radius: 8px;
+  margin-bottom: 12px;
+  overflow: hidden;
 }
 
 .sp-news-header {
-    display: flex;
-    align-items: center;
-    padding: 12px 16px;
-    gap: 12px;
-    border-bottom: 1px solid var(--sp-border-light);
+  display: flex;
+  align-items: center;
+  padding: 12px 16px;
+  gap: 12px;
+  border-bottom: 1px solid var(--sp-border-light);
 }
 
 .sp-news-icon {
-    width: 28px;
-    height: 28px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 14px;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
 }
 
 .sp-news-icon.warning {
-    background: var(--sp-warning-bg);
-    color: var(--sp-warning);
+  background: var(--sp-warning-bg);
+  color: var(--sp-warning);
 }
 
 .sp-news-icon.info {
-    background: var(--sp-info-bg);
-    color: var(--sp-info);
+  background: var(--sp-info-bg);
+  color: var(--sp-info);
 }
 
 .sp-news-title {
-    flex: 1;
-    font-size: 14px;
-    font-weight: 500;
-    color: var(--sp-text-dark);
+  flex: 1;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--sp-text-dark);
 }
 
 .sp-news-date {
-    font-size: 12px;
-    color: var(--sp-text-muted);
+  font-size: 12px;
+  color: var(--sp-text-muted);
 }
 
 .sp-news-content {
-    padding: 16px;
-    display: flex;
-    align-items: center;
-    gap: 12px;
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
 }
 
 .sp-news-icon-large {
-    width: 44px;
-    height: 44px;
-    border-radius: 8px;
-    overflow: hidden;
-    flex-shrink: 0;
+  width: 44px;
+  height: 44px;
+  border-radius: 8px;
+  overflow: hidden;
+  flex-shrink: 0;
 }
 
 .sp-news-icon-large img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .sp-news-text {
-    font-size: 14px;
-    color: var(--sp-text-dark);
-    margin: 0;
+  font-size: 14px;
+  color: var(--sp-text-dark);
+  margin: 0;
 }
 
 /* ============================================
    Referral Card (Invite Page)
    ============================================ */
 .sp-referral-card {
-    margin: 16px;
-    background: var(--sp-purple-dark);
-    border-radius: 12px;
-    overflow: hidden;
+  margin: 16px;
+  background: var(--sp-purple-dark);
+  border-radius: 12px;
+  overflow: hidden;
 }
 
 .sp-referral-row {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1px;
-    background: rgba(255,255,255,0.1);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1px;
+  background: rgba(255, 255, 255, 0.1);
 }
 
 .sp-referral-item {
-    padding: 16px;
-    background: var(--sp-purple-dark);
+  padding: 16px;
+  background: var(--sp-purple-dark);
 }
 
 .sp-referral-label {
-    display: block;
-    font-size: 12px;
-    color: rgba(255,255,255,0.7);
-    margin-bottom: 8px;
+  display: block;
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 8px;
 }
 
 .sp-referral-value {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    background: var(--sp-bg-input);
-    padding: 10px 12px;
-    border-radius: 6px;
-    font-size: 12px;
-    color: var(--sp-text-white);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--sp-bg-input);
+  padding: 10px 12px;
+  border-radius: 6px;
+  font-size: 12px;
+  color: var(--sp-text-white);
 }
 
 .sp-referral-value span {
-    flex: 1;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .sp-copy-btn {
-    background: none;
-    border: none;
-    color: var(--sp-gold);
-    cursor: pointer;
-    padding: 4px;
+  background: none;
+  border: none;
+  color: var(--sp-gold);
+  cursor: pointer;
+  padding: 4px;
 }
 
 .sp-stats-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    background: var(--sp-bg-white);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background: var(--sp-bg-white);
 }
 
 .sp-stat-item {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 12px 16px;
-    border-bottom: 1px solid var(--sp-border-light);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--sp-border-light);
 }
 
 .sp-stat-item:nth-child(odd) {
-    border-right: 1px solid var(--sp-border-light);
+  border-right: 1px solid var(--sp-border-light);
 }
 
 .sp-stat-label {
-    font-size: 13px;
-    color: var(--sp-text-dark);
+  font-size: 13px;
+  color: var(--sp-text-dark);
 }
 
 .sp-stat-value {
-    font-size: 16px;
-    font-weight: 600;
-    color: var(--sp-purple-dark);
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--sp-purple-dark);
 }
 
 /* ============================================
    Commission Section
    ============================================ */
 .sp-commission-section {
-    margin: 16px;
-    background: var(--sp-bg-white);
-    border-radius: 8px;
-    overflow: hidden;
+  margin: 16px;
+  background: var(--sp-bg-white);
+  border-radius: 8px;
+  overflow: hidden;
 }
 
 .sp-commission-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 12px 16px;
-    border-bottom: 1px solid var(--sp-border-light);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--sp-border-light);
 }
 
 .sp-commission-title {
-    font-size: 14px;
-    font-weight: 600;
-    color: var(--sp-text-dark);
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--sp-text-dark);
 }
 
 .sp-commission-link {
-    font-size: 12px;
-    color: var(--sp-text-muted);
-    text-decoration: none;
+  font-size: 12px;
+  color: var(--sp-text-muted);
+  text-decoration: none;
 }
 
 .sp-commission-row {
-    display: flex;
-    align-items: center;
-    padding: 16px;
-    gap: 8px;
+  display: flex;
+  align-items: center;
+  padding: 16px;
+  gap: 8px;
 }
 
 .sp-commission-label {
-    font-size: 14px;
-    color: var(--sp-text-muted);
+  font-size: 14px;
+  color: var(--sp-text-muted);
 }
 
 .sp-commission-amount {
-    font-size: 18px;
-    font-weight: 700;
-    color: var(--sp-text-dark);
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--sp-text-dark);
 }
 
 .sp-commission-status {
-    margin-left: auto;
-    font-size: 12px;
-    color: var(--sp-success);
-    background: var(--sp-success-bg);
-    padding: 4px 12px;
-    border-radius: 12px;
+  margin-left: auto;
+  font-size: 12px;
+  color: var(--sp-success);
+  background: var(--sp-success-bg);
+  padding: 4px 12px;
+  border-radius: 12px;
 }
 
 /* ============================================
    Scrollable Tabs
    ============================================ */
 .sp-tabs-scroll {
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-    flex-wrap: nowrap;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  flex-wrap: nowrap;
 }
 
 .sp-tabs-scroll::-webkit-scrollbar {
-    display: none;
+  display: none;
 }
 
 .sp-tabs-scroll .sp-tab {
-    flex: 0 0 auto;
-    white-space: nowrap;
+  flex: 0 0 auto;
+  white-space: nowrap;
 }
 
 /* ============================================
    Performance Table
    ============================================ */
 .sp-performance-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px;
 }
 
 .sp-section-title {
-    font-size: 16px;
-    font-weight: 600;
-    color: var(--sp-text-dark);
-    margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--sp-text-dark);
+  margin: 0;
 }
 
 .sp-date-selector {
-    font-size: 14px;
-    color: var(--sp-text-muted);
+  font-size: 14px;
+  color: var(--sp-text-muted);
 }
 
 .sp-performance-table,
 .sp-team-table {
-    background: var(--sp-bg-white);
-    border-radius: 8px;
-    margin: 0 16px;
-    overflow: hidden;
+  background: var(--sp-bg-white);
+  border-radius: 8px;
+  margin: 0 16px;
+  overflow: hidden;
 }
 
 .sp-table-header {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    padding: 12px 16px;
-    background: var(--sp-bg-light);
-    font-size: 12px;
-    color: var(--sp-text-muted);
-    text-align: center;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  padding: 12px 16px;
+  background: var(--sp-bg-light);
+  font-size: 12px;
+  color: var(--sp-text-muted);
+  text-align: center;
 }
 
 .sp-table-header span:first-child {
-    text-align: left;
+  text-align: left;
 }
 
 .sp-table-row {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    padding: 12px 16px;
-    font-size: 14px;
-    color: var(--sp-text-dark);
-    text-align: center;
-    border-bottom: 1px solid var(--sp-border-light);
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  padding: 12px 16px;
+  font-size: 14px;
+  color: var(--sp-text-dark);
+  text-align: center;
+  border-bottom: 1px solid var(--sp-border-light);
 }
 
 .sp-table-row span:first-child {
-    text-align: left;
+  text-align: left;
 }
 
 .sp-table-row:last-child {
-    border-bottom: none;
+  border-bottom: none;
 }
 
 .sp-team-table .sp-table-header {
-    grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
 }
 
 .sp-team-table .sp-table-row {
-    grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
 }
 
 /* ============================================
    Button Container
    ============================================ */
 .sp-button-container {
-    padding: 20px 16px;
+  padding: 20px 16px;
 }
 
 /* ============================================
    Intro Content
    ============================================ */
 .sp-intro-content {
-    padding: 16px;
-    background: var(--sp-bg-white);
-    margin: 0 16px;
-    border-radius: 8px;
+  padding: 16px;
+  background: var(--sp-bg-white);
+  margin: 0 16px;
+  border-radius: 8px;
 }
 
 .sp-intro-content p {
-    font-size: 14px;
-    color: var(--sp-text-dark);
-    margin: 0 0 12px;
+  font-size: 14px;
+  color: var(--sp-text-dark);
+  margin: 0 0 12px;
 }
 
 .sp-intro-content ul {
-    margin: 0;
-    padding-left: 20px;
+  margin: 0;
+  padding-left: 20px;
 }
 
 .sp-intro-content li {
-    font-size: 14px;
-    color: var(--sp-text-dark);
-    margin-bottom: 8px;
+  font-size: 14px;
+  color: var(--sp-text-dark);
+  margin-bottom: 8px;
 }
 
 /* ============================================
    Contacts List (Chatroom)
    ============================================ */
 .sp-contacts-list {
-    background: var(--sp-bg-white);
-    margin: 0 16px;
-    border-radius: 8px;
-    overflow: hidden;
+  background: var(--sp-bg-white);
+  margin: 0 16px;
+  border-radius: 8px;
+  overflow: hidden;
 }
 
 .sp-contact-group {
-    border-bottom: 1px solid var(--sp-border-light);
+  border-bottom: 1px solid var(--sp-border-light);
 }
 
 .sp-contact-group:last-child {
-    border-bottom: none;
+  border-bottom: none;
 }
 
 .sp-contact-letter {
-    padding: 8px 16px;
-    font-size: 12px;
-    font-weight: 600;
-    color: var(--sp-text-muted);
-    background: var(--sp-bg-light);
+  padding: 8px 16px;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--sp-text-muted);
+  background: var(--sp-bg-light);
 }
 
 .sp-contact-item {
-    display: flex;
-    align-items: center;
-    padding: 12px 16px;
-    text-decoration: none;
-    border-bottom: 1px solid var(--sp-border-light);
+  display: flex;
+  align-items: center;
+  padding: 12px 16px;
+  text-decoration: none;
+  border-bottom: 1px solid var(--sp-border-light);
 }
 
 .sp-contact-item:last-child {
-    border-bottom: none;
+  border-bottom: none;
 }
 
 .sp-contact-avatar {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    background: var(--sp-purple-light);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-right: 12px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--sp-purple-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 12px;
 }
 
 .sp-contact-avatar i {
-    font-size: 18px;
-    color: var(--sp-text-white);
+  font-size: 18px;
+  color: var(--sp-text-white);
 }
 
 .sp-contact-name {
-    font-size: 14px;
-    font-weight: 500;
-    color: var(--sp-text-dark);
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--sp-text-dark);
 }
 
 /* ============================================
    Chat List
    ============================================ */
 .sp-chat-list {
-    background: var(--sp-bg-white);
-    margin: 0 16px;
-    border-radius: 8px;
-    overflow: hidden;
+  background: var(--sp-bg-white);
+  margin: 0 16px;
+  border-radius: 8px;
+  overflow: hidden;
 }
 
 .sp-chat-item {
-    display: flex;
-    align-items: center;
-    padding: 12px 16px;
-    text-decoration: none;
-    border-bottom: 1px solid var(--sp-border-light);
+  display: flex;
+  align-items: center;
+  padding: 12px 16px;
+  text-decoration: none;
+  border-bottom: 1px solid var(--sp-border-light);
 }
 
 .sp-chat-item:last-child {
-    border-bottom: none;
+  border-bottom: none;
 }
 
 .sp-chat-avatar {
-    width: 48px;
-    height: 48px;
-    margin-right: 12px;
-    flex-shrink: 0;
+  width: 48px;
+  height: 48px;
+  margin-right: 12px;
+  flex-shrink: 0;
 }
 
 .sp-avatar-placeholder {
-    width: 100%;
-    height: 100%;
-    border-radius: 8px;
-    background: var(--sp-purple-dark);
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+  background: var(--sp-purple-dark);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .sp-avatar-placeholder i {
-    font-size: 20px;
-    color: var(--sp-text-white);
+  font-size: 20px;
+  color: var(--sp-text-white);
 }
 
 .sp-chat-content {
-    flex: 1;
-    min-width: 0;
+  flex: 1;
+  min-width: 0;
 }
 
 .sp-chat-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 4px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 4px;
 }
 
 .sp-chat-name {
-    font-size: 14px;
-    font-weight: 600;
-    color: var(--sp-text-dark);
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--sp-text-dark);
 }
 
 .sp-chat-time {
-    font-size: 12px;
-    color: var(--sp-text-muted);
+  font-size: 12px;
+  color: var(--sp-text-muted);
 }
 
 .sp-chat-message {
-    font-size: 13px;
-    color: var(--sp-text-muted);
-    margin: 0;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+  font-size: 13px;
+  color: var(--sp-text-muted);
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .sp-chat-badge {
-    min-width: 20px;
-    height: 20px;
-    padding: 0 6px;
-    background: var(--sp-error);
-    color: var(--sp-text-white);
-    font-size: 12px;
-    font-weight: 600;
-    border-radius: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-left: 8px;
+  min-width: 20px;
+  height: 20px;
+  padding: 0 6px;
+  background: var(--sp-error);
+  color: var(--sp-text-white);
+  font-size: 12px;
+  font-weight: 600;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 8px;
 }
 
 /* ============================================
    Customer Service Button Container
    ============================================ */
 .sp-cs-button-container {
-    position: fixed;
-    bottom: calc(var(--sp-bottom-nav-height) + 20px);
-    left: 16px;
-    right: 16px;
+  position: fixed;
+  bottom: calc(var(--sp-bottom-nav-height) + 20px);
+  left: 16px;
+  right: 16px;
 }
 
 /* ============================================
    Profile Card
    ============================================ */
 .sp-profile-card {
-    background: var(--sp-purple-dark);
-    padding: 30px 20px;
-    text-align: center;
-    margin: 0 16px 16px;
-    border-radius: 12px;
+  background: var(--sp-purple-dark);
+  padding: 30px 20px;
+  text-align: center;
+  margin: 0 16px 16px;
+  border-radius: 12px;
 }
 
 .sp-profile-avatar {
-    margin-bottom: 16px;
+  margin-bottom: 16px;
 }
 
 .sp-avatar-circle {
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    border: 3px solid var(--sp-purple-light);
-    background: var(--sp-bg-card);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0 auto;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 3px solid var(--sp-purple-light);
+  background: var(--sp-bg-card);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
 }
 
 .sp-avatar-circle i {
-    font-size: 32px;
-    color: var(--sp-text-white);
+  font-size: 32px;
+  color: var(--sp-text-white);
 }
 
 .sp-profile-name {
-    font-size: 20px;
-    font-weight: 600;
-    color: var(--sp-text-white);
-    margin: 0 0 4px;
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--sp-text-white);
+  margin: 0 0 4px;
 }
 
 .sp-profile-nickname {
-    font-size: 14px;
-    color: rgba(255,255,255,0.7);
-    margin: 0 0 16px;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.7);
+  margin: 0 0 16px;
 }
 
 .sp-profile-info {
-    display: flex;
-    justify-content: center;
-    gap: 24px;
+  display: flex;
+  justify-content: center;
+  gap: 24px;
 }
 
 .sp-profile-info-item {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    font-size: 13px;
-    color: rgba(255,255,255,0.8);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.8);
 }
 
 .sp-profile-info-item i {
-    font-size: 14px;
-    color: var(--sp-gold);
+  font-size: 14px;
+  color: var(--sp-gold);
 }
 
 /* ============================================
    Menu Section
    ============================================ */
 .sp-menu-section {
-    margin: 16px;
+  margin: 16px;
 }
 
 .sp-menu-label {
-    display: inline-block;
-    padding: 6px 16px;
-    background: var(--sp-btn-gradient);
-    color: var(--sp-text-white);
-    font-size: 12px;
-    font-weight: 500;
-    border-radius: 16px;
-    margin-bottom: 12px;
+  display: inline-block;
+  padding: 6px 16px;
+  background: var(--sp-btn-gradient);
+  color: var(--sp-text-white);
+  font-size: 12px;
+  font-weight: 500;
+  border-radius: 16px;
+  margin-bottom: 12px;
 }
 
 .sp-menu-list {
-    background: var(--sp-bg-white);
-    border-radius: 8px;
-    overflow: hidden;
+  background: var(--sp-bg-white);
+  border-radius: 8px;
+  overflow: hidden;
 }
 
 .sp-menu-item {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 56px;
-    padding: 0 16px;
-    text-decoration: none;
-    border-bottom: 1px solid var(--sp-border-light);
-    transition: var(--sp-transition);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 56px;
+  padding: 0 16px;
+  text-decoration: none;
+  border-bottom: 1px solid var(--sp-border-light);
+  transition: var(--sp-transition);
 }
 
 .sp-menu-item:last-child {
-    border-bottom: none;
+  border-bottom: none;
 }
 
 .sp-menu-item:hover {
-    background: var(--sp-bg-light);
+  background: var(--sp-bg-light);
 }
 
 .sp-menu-item span {
-    font-size: 14px;
-    color: var(--sp-text-dark);
+  font-size: 14px;
+  color: var(--sp-text-dark);
 }
 
 .sp-menu-item i {
-    font-size: 12px;
-    color: var(--sp-text-muted);
+  font-size: 12px;
+  color: var(--sp-text-muted);
 }
 
 /* ============================================
    Form Components (Financial Pages)
    ============================================ */
 .sp-form {
-    padding: 0 16px;
+  padding: 0 16px;
 }
 
 .sp-form-section {
-    margin-bottom: 16px;
+  margin-bottom: 16px;
 }
 
 .sp-form-label {
-    display: block;
-    font-size: 13px;
-    color: var(--sp-text-muted);
-    margin-bottom: 8px;
+  display: block;
+  font-size: 13px;
+  color: var(--sp-text-muted);
+  margin-bottom: 8px;
 }
 
 .sp-select-box {
-    display: flex;
-    align-items: center;
-    padding: 12px 16px;
-    background: var(--sp-bg-white);
-    border: 1px solid var(--sp-border-light);
-    border-radius: 8px;
-    cursor: pointer;
-    transition: var(--sp-transition);
+  display: flex;
+  align-items: center;
+  padding: 12px 16px;
+  background: var(--sp-bg-white);
+  border: 1px solid var(--sp-border-light);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: var(--sp-transition);
 }
 
 .sp-select-box:hover {
-    border-color: var(--sp-purple-light);
+  border-color: var(--sp-purple-light);
 }
 
 .sp-select-icon {
-    width: 28px;
-    height: 28px;
-    margin-right: 12px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  width: 28px;
+  height: 28px;
+  margin-right: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .sp-select-icon img {
-    width: 24px;
-    height: 24px;
-    border-radius: 50%;
-    object-fit: cover;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  object-fit: cover;
 }
 
 .sp-select-icon i {
-    font-size: 18px;
-    color: var(--sp-purple-dark);
+  font-size: 18px;
+  color: var(--sp-purple-dark);
 }
 
 .sp-select-value {
-    flex: 1;
-    font-size: 14px;
-    font-weight: 500;
-    color: var(--sp-text-dark);
+  flex: 1;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--sp-text-dark);
 }
 
 .sp-select-value.sp-placeholder {
-    color: var(--sp-text-muted);
+  color: var(--sp-text-muted);
 }
 
 .sp-select-box i.fa-chevron-down {
-    font-size: 12px;
-    color: var(--sp-text-muted);
+  font-size: 12px;
+  color: var(--sp-text-muted);
 }
 
 .sp-input-box {
-    background: var(--sp-bg-white);
-    border: 1px solid var(--sp-border-light);
-    border-radius: 8px;
-    overflow: hidden;
+  background: var(--sp-bg-white);
+  border: 1px solid var(--sp-border-light);
+  border-radius: 8px;
+  overflow: hidden;
 }
 
 .sp-input-box input {
-    width: 100%;
-    height: 50px;
-    padding: 0 16px;
-    border: none;
-    font-size: 14px;
-    color: var(--sp-text-dark);
-    background: transparent;
+  width: 100%;
+  height: 50px;
+  padding: 0 16px;
+  border: none;
+  font-size: 14px;
+  color: var(--sp-text-dark);
+  background: transparent;
 }
 
 .sp-input-box input:focus {
-    outline: none;
+  outline: none;
 }
 
 .sp-input-box input::placeholder {
-    color: var(--sp-text-muted);
+  color: var(--sp-text-muted);
 }
 
 .sp-info-row-inline {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 12px 16px;
-    background: var(--sp-bg-white);
-    border: 1px solid var(--sp-border-light);
-    border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 16px;
+  background: var(--sp-bg-white);
+  border: 1px solid var(--sp-border-light);
+  border-radius: 8px;
 }
 
 .sp-info-row-inline .sp-info-label {
-    font-size: 13px;
-    color: var(--sp-text-muted);
+  font-size: 13px;
+  color: var(--sp-text-muted);
 }
 
 .sp-info-row-inline .sp-info-value {
-    font-size: 14px;
-    color: var(--sp-text-dark);
+  font-size: 14px;
+  color: var(--sp-text-dark);
 }
 
 .sp-balance-box {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 16px;
-    background: var(--sp-bg-white);
-    border: 1px solid var(--sp-border-light);
-    border-radius: 8px;
-    margin-bottom: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px;
+  background: var(--sp-bg-white);
+  border: 1px solid var(--sp-border-light);
+  border-radius: 8px;
+  margin-bottom: 16px;
 }
 
 .sp-balance-label {
-    font-size: 14px;
-    color: var(--sp-text-muted);
+  font-size: 14px;
+  color: var(--sp-text-muted);
 }
 
 .sp-balance-value {
-    font-size: 20px;
-    font-weight: 700;
-    color: var(--sp-text-dark);
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--sp-text-dark);
 }
 
 .sp-form-actions {
-    padding: 20px 0;
+  padding: 20px 0;
 }
 
 .sp-form-link {
-    display: block;
-    text-align: center;
-    margin-top: 12px;
-    font-size: 13px;
-    color: var(--sp-purple-dark);
-    text-decoration: none;
+  display: block;
+  text-align: center;
+  margin-top: 12px;
+  font-size: 13px;
+  color: var(--sp-purple-dark);
+  text-decoration: none;
 }
 
 /* ============================================
    Transaction List
    ============================================ */
 .sp-transaction-list {
-    padding: 16px 0;
+  padding: 16px 0;
 }
 
 /* ============================================
    Settings Menu
    ============================================ */
 .sp-settings-menu {
-    background: var(--sp-bg-white);
-    margin: 16px;
-    border-radius: 8px;
-    overflow: hidden;
+  background: var(--sp-bg-white);
+  margin: 16px;
+  border-radius: 8px;
+  overflow: hidden;
 }
 
 .sp-settings-item {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 56px;
-    padding: 0 16px;
-    text-decoration: none;
-    border-bottom: 1px solid var(--sp-border-light);
-    transition: var(--sp-transition);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 56px;
+  padding: 0 16px;
+  text-decoration: none;
+  border-bottom: 1px solid var(--sp-border-light);
+  transition: var(--sp-transition);
 }
 
 .sp-settings-item:last-child {
-    border-bottom: none;
+  border-bottom: none;
 }
 
 .sp-settings-item:hover {
-    background: var(--sp-bg-light);
+  background: var(--sp-bg-light);
 }
 
 .sp-settings-item span {
-    font-size: 14px;
-    color: var(--sp-text-dark);
+  font-size: 14px;
+  color: var(--sp-text-dark);
 }
 
 .sp-settings-item i {
-    font-size: 12px;
-    color: var(--sp-text-muted);
+  font-size: 12px;
+  color: var(--sp-text-muted);
 }
 
 /* ============================================
    Step Indicator
    ============================================ */
 .sp-step-indicator {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 24px 16px;
-    gap: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px 16px;
+  gap: 8px;
 }
 
 .sp-step {
-    width: 28px;
-    height: 28px;
-    border-radius: 50%;
-    background: var(--sp-bg-light);
-    color: var(--sp-text-muted);
-    font-size: 12px;
-    font-weight: 600;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: var(--sp-bg-light);
+  color: var(--sp-text-muted);
+  font-size: 12px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .sp-step.active {
-    background: var(--sp-btn-gradient);
-    color: var(--sp-text-white);
+  background: var(--sp-btn-gradient);
+  color: var(--sp-text-white);
 }
 
 .sp-step-line {
-    width: 40px;
-    height: 2px;
-    background: var(--sp-border-light);
+  width: 40px;
+  height: 2px;
+  background: var(--sp-border-light);
 }
 
 /* ============================================
    Password Section (Change Password)
    ============================================ */
 .sp-password-section {
-    text-align: center;
-    padding: 24px 16px;
-    background: var(--sp-bg-white);
-    margin: 0 16px;
-    border-radius: 8px;
+  text-align: center;
+  padding: 24px 16px;
+  background: var(--sp-bg-white);
+  margin: 0 16px;
+  border-radius: 8px;
 }
 
 .sp-password-title {
-    font-size: 16px;
-    font-weight: 600;
-    color: var(--sp-text-dark);
-    margin: 0 0 20px;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--sp-text-dark);
+  margin: 0 0 20px;
 }
 
 .sp-step-counter {
-    font-size: 13px;
-    color: var(--sp-text-muted);
-    margin: 16px 0 0;
+  font-size: 13px;
+  color: var(--sp-text-muted);
+  margin: 16px 0 0;
 }
 
 /* ============================================
    Phone Input Row
    ============================================ */
 .sp-phone-input-row {
-    display: flex;
-    gap: 12px;
-    background: var(--sp-bg-white);
-    border: 1px solid var(--sp-border-light);
-    border-radius: 8px;
-    overflow: hidden;
+  display: flex;
+  gap: 12px;
+  background: var(--sp-bg-white);
+  border: 1px solid var(--sp-border-light);
+  border-radius: 8px;
+  overflow: hidden;
 }
 
 .sp-country-code {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    padding: 12px 16px;
-    border-right: 1px solid var(--sp-border-light);
-    cursor: pointer;
-    min-width: 80px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 16px;
+  border-right: 1px solid var(--sp-border-light);
+  cursor: pointer;
+  min-width: 80px;
 }
 
 .sp-country-code span {
-    font-size: 14px;
-    color: var(--sp-text-dark);
+  font-size: 14px;
+  color: var(--sp-text-dark);
 }
 
 .sp-country-code i {
-    font-size: 10px;
-    color: var(--sp-text-muted);
+  font-size: 10px;
+  color: var(--sp-text-muted);
 }
 
 .sp-phone-input {
-    flex: 1;
+  flex: 1;
 }
 
 .sp-phone-input input {
-    width: 100%;
-    height: 50px;
-    padding: 0 16px;
-    border: none;
-    font-size: 14px;
-    color: var(--sp-text-dark);
-    background: transparent;
+  width: 100%;
+  height: 50px;
+  padding: 0 16px;
+  border: none;
+  font-size: 14px;
+  color: var(--sp-text-dark);
+  background: transparent;
 }
 
 .sp-phone-input input:focus {
-    outline: none;
+  outline: none;
 }
 
 /* ============================================
    Verification Row
    ============================================ */
 .sp-verification-row {
-    display: flex;
-    align-items: center;
-    background: var(--sp-bg-white);
-    border: 1px solid var(--sp-border-light);
-    border-radius: 8px;
-    overflow: hidden;
+  display: flex;
+  align-items: center;
+  background: var(--sp-bg-white);
+  border: 1px solid var(--sp-border-light);
+  border-radius: 8px;
+  overflow: hidden;
 }
 
 .sp-verification-label {
-    padding: 12px 16px;
-    font-size: 13px;
-    color: var(--sp-text-muted);
-    border-right: 1px solid var(--sp-border-light);
-    min-width: 70px;
+  padding: 12px 16px;
+  font-size: 13px;
+  color: var(--sp-text-muted);
+  border-right: 1px solid var(--sp-border-light);
+  min-width: 70px;
 }
 
 .sp-verification-input {
-    flex: 1;
+  flex: 1;
 }
 
 .sp-verification-input input {
-    width: 100%;
-    height: 50px;
-    padding: 0 16px;
-    border: none;
-    font-size: 14px;
-    color: var(--sp-text-dark);
-    background: transparent;
+  width: 100%;
+  height: 50px;
+  padding: 0 16px;
+  border: none;
+  font-size: 14px;
+  color: var(--sp-text-dark);
+  background: transparent;
 }
 
 .sp-verification-input input:focus {
-    outline: none;
+  outline: none;
 }
 
 .sp-verify-btn {
-    padding: 8px 16px;
-    margin-right: 8px;
-    background: var(--sp-btn-gradient);
-    color: var(--sp-text-white);
-    border: none;
-    border-radius: 16px;
-    font-size: 12px;
-    cursor: pointer;
-    white-space: nowrap;
+  padding: 8px 16px;
+  margin-right: 8px;
+  background: var(--sp-btn-gradient);
+  color: var(--sp-text-white);
+  border: none;
+  border-radius: 16px;
+  font-size: 12px;
+  cursor: pointer;
+  white-space: nowrap;
 }
 
 /* ============================================
    Form Row (KYC Page)
    ============================================ */
 .sp-form-row {
-    display: flex;
-    align-items: center;
-    background: var(--sp-bg-white);
-    border: 1px solid var(--sp-border-light);
-    border-radius: 8px;
-    overflow: hidden;
+  display: flex;
+  align-items: center;
+  background: var(--sp-bg-white);
+  border: 1px solid var(--sp-border-light);
+  border-radius: 8px;
+  overflow: hidden;
 }
 
 .sp-form-row-label {
-    padding: 12px 16px;
-    font-size: 13px;
-    color: var(--sp-text-muted);
-    border-right: 1px solid var(--sp-border-light);
-    min-width: 80px;
+  padding: 12px 16px;
+  font-size: 13px;
+  color: var(--sp-text-muted);
+  border-right: 1px solid var(--sp-border-light);
+  min-width: 80px;
 }
 
 .sp-form-row-value {
-    flex: 1;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 12px 16px;
-    cursor: pointer;
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 16px;
+  cursor: pointer;
 }
 
 .sp-form-row-value span {
-    font-size: 14px;
-    color: var(--sp-text-muted);
+  font-size: 14px;
+  color: var(--sp-text-muted);
 }
 
 .sp-form-row-value i {
-    font-size: 12px;
-    color: var(--sp-text-muted);
+  font-size: 12px;
+  color: var(--sp-text-muted);
 }
 
 .sp-form-row-input {
-    flex: 1;
+  flex: 1;
 }
 
 .sp-form-row-input input {
-    width: 100%;
-    height: 50px;
-    padding: 0 16px;
-    border: none;
-    font-size: 14px;
-    color: var(--sp-text-dark);
-    background: transparent;
+  width: 100%;
+  height: 50px;
+  padding: 0 16px;
+  border: none;
+  font-size: 14px;
+  color: var(--sp-text-dark);
+  background: transparent;
 }
 
 .sp-form-row-input input:focus {
-    outline: none;
+  outline: none;
 }
 
 /* ============================================
    Form Hint & Notice
    ============================================ */
 .sp-form-hint {
-    text-align: center;
-    margin-top: 12px;
-    font-size: 13px;
-    color: var(--sp-text-muted);
+  text-align: center;
+  margin-top: 12px;
+  font-size: 13px;
+  color: var(--sp-text-muted);
 }
 
 .sp-form-hint a {
-    color: var(--sp-purple-dark);
-    text-decoration: none;
+  color: var(--sp-purple-dark);
+  text-decoration: none;
 }
 
 .sp-form-notice {
-    margin: 16px;
-    padding: 16px;
-    background: var(--sp-bg-light);
-    border-radius: 8px;
+  margin: 16px;
+  padding: 16px;
+  background: var(--sp-bg-light);
+  border-radius: 8px;
 }
 
 .sp-form-notice p {
-    font-size: 12px;
-    color: var(--sp-text-muted);
-    line-height: 1.6;
-    margin: 0 0 8px;
+  font-size: 12px;
+  color: var(--sp-text-muted);
+  line-height: 1.6;
+  margin: 0 0 8px;
 }
 
 .sp-form-notice p:last-child {
-    margin-bottom: 0;
+  margin-bottom: 0;
 }
 
 /* ============================================
    Chat Page Styles
    ============================================ */
 .sp-chat-page {
-    display: flex;
-    flex-direction: column;
-    min-height: calc(100vh - 56px - var(--sp-bottom-nav-height));
-    background: var(--sp-bg-white);
+  display: flex;
+  flex-direction: column;
+  min-height: calc(100vh - 56px - var(--sp-bottom-nav-height));
+  background: var(--sp-bg-white);
 }
 
 .sp-chat-user-info {
-    display: flex;
-    align-items: center;
-    padding: 16px;
-    background: var(--sp-bg-white);
-    border-bottom: 1px solid var(--sp-border-light);
+  display: flex;
+  align-items: center;
+  padding: 16px;
+  background: var(--sp-bg-white);
+  border-bottom: 1px solid var(--sp-border-light);
 }
 
 .sp-chat-user-avatar {
-    margin-right: 12px;
+  margin-right: 12px;
 }
 
 .sp-chat-user-avatar .sp-avatar-placeholder {
-    width: 48px;
-    height: 48px;
-    border-radius: 8px;
-    background: var(--sp-purple-dark);
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 8px;
+  background: var(--sp-purple-dark);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .sp-chat-user-avatar .sp-avatar-placeholder i {
-    font-size: 20px;
-    color: var(--sp-text-white);
+  font-size: 20px;
+  color: var(--sp-text-white);
 }
 
 .sp-chat-user-name {
-    font-size: 16px;
-    font-weight: 600;
-    color: var(--sp-purple-dark);
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--sp-purple-dark);
 }
 
 .sp-chat-messages {
-    flex: 1;
-    padding: 16px;
-    overflow-y: auto;
+  flex: 1;
+  padding: 16px;
+  overflow-y: auto;
 }
 
 .sp-chat-message {
-    display: flex;
-    align-items: flex-start;
-    margin-bottom: 16px;
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 16px;
 }
 
 .sp-chat-message.sp-sent {
-    justify-content: flex-end;
+  justify-content: flex-end;
 }
 
 .sp-chat-message.sp-received {
-    justify-content: flex-start;
+  justify-content: flex-start;
 }
 
 .sp-message-avatar {
-    flex-shrink: 0;
+  flex-shrink: 0;
 }
 
 .sp-avatar-small {
-    width: 32px;
-    height: 32px;
-    border-radius: 50%;
-    background: var(--sp-purple-dark);
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: var(--sp-purple-dark);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .sp-avatar-small i {
-    font-size: 14px;
-    color: var(--sp-text-white);
+  font-size: 14px;
+  color: var(--sp-text-white);
 }
 
 .sp-avatar-small.sp-avatar-user {
-    background: var(--sp-purple-light);
+  background: var(--sp-purple-light);
 }
 
 .sp-chat-message.sp-sent .sp-message-avatar {
-    margin-left: 8px;
+  margin-left: 8px;
 }
 
 .sp-chat-message.sp-received .sp-message-avatar {
-    margin-right: 8px;
+  margin-right: 8px;
 }
 
 .sp-chat-bubble {
-    max-width: 70%;
-    padding: 12px 16px;
-    border-radius: 16px;
-    font-size: 14px;
-    line-height: 1.4;
+  max-width: 70%;
+  padding: 12px 16px;
+  border-radius: 16px;
+  font-size: 14px;
+  line-height: 1.4;
 }
 
 .sp-chat-bubble-sent {
-    background: var(--sp-bg-light);
-    color: var(--sp-text-dark);
-    border-bottom-right-radius: 4px;
+  background: var(--sp-bg-light);
+  color: var(--sp-text-dark);
+  border-bottom-right-radius: 4px;
 }
 
 .sp-chat-bubble-received {
-    background: var(--sp-purple-dark);
-    color: var(--sp-text-white);
-    border-bottom-left-radius: 4px;
+  background: var(--sp-purple-dark);
+  color: var(--sp-text-white);
+  border-bottom-left-radius: 4px;
 }
 
 .sp-chat-input-bar {
-    position: fixed;
-    bottom: var(--sp-bottom-nav-height);
-    left: 50%;
-    transform: translateX(-50%);
-    width: 100%;
-    max-width: var(--sp-mobile-width);
-    height: 60px;
-    padding: 10px 16px;
-    background: var(--sp-bg-white);
-    border-top: 1px solid var(--sp-border-light);
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    z-index: 50;
+  position: fixed;
+  bottom: var(--sp-bottom-nav-height);
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: var(--sp-mobile-width);
+  height: 60px;
+  padding: 10px 16px;
+  background: var(--sp-bg-white);
+  border-top: 1px solid var(--sp-border-light);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  z-index: 50;
 }
 
 .sp-chat-input-wrapper {
-    flex: 1;
-    display: flex;
-    align-items: center;
-    background: var(--sp-bg-white);
-    border: 1px solid var(--sp-border-light);
-    border-radius: 20px;
-    padding-right: 8px;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  background: var(--sp-bg-white);
+  border: 1px solid var(--sp-border-light);
+  border-radius: 20px;
+  padding-right: 8px;
 }
 
 .sp-chat-input {
-    flex: 1;
-    height: 40px;
-    padding: 0 16px;
-    border: none;
-    border-radius: 20px;
-    font-size: 14px;
-    background: transparent;
+  flex: 1;
+  height: 40px;
+  padding: 0 16px;
+  border: none;
+  border-radius: 20px;
+  font-size: 14px;
+  background: transparent;
 }
 
 .sp-chat-input:focus {
-    outline: none;
+  outline: none;
 }
 
 .sp-voice-btn {
-    width: 32px;
-    height: 32px;
-    border: none;
-    background: transparent;
-    color: var(--sp-text-muted);
-    font-size: 16px;
-    cursor: pointer;
+  width: 32px;
+  height: 32px;
+  border: none;
+  background: transparent;
+  color: var(--sp-text-muted);
+  font-size: 16px;
+  cursor: pointer;
 }
 
 .sp-chat-send-btn {
-    width: 44px;
-    height: 44px;
-    border-radius: 50%;
-    background: var(--sp-btn-gradient);
-    border: none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    box-shadow: var(--sp-shadow-gold);
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--sp-btn-gradient);
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: var(--sp-shadow-gold);
 }
 
 .sp-chat-send-btn i {
-    color: var(--sp-text-white);
-    font-size: 16px;
+  color: var(--sp-text-white);
+  font-size: 16px;
 }
 
 /* ============================================
    Customer Service Page Styles
    ============================================ */
 .sp-cs-page {
-    display: flex;
-    flex-direction: column;
-    min-height: calc(100vh - 56px - var(--sp-bottom-nav-height));
-    background: var(--sp-bg-white);
+  display: flex;
+  flex-direction: column;
+  min-height: calc(100vh - 56px - var(--sp-bottom-nav-height));
+  background: var(--sp-bg-white);
 }
 
 .sp-cs-welcome {
-    flex: 1;
-    padding: 40px 24px;
-    text-align: center;
+  flex: 1;
+  padding: 40px 24px;
+  text-align: center;
 }
 
 .sp-cs-logo {
-    width: 80px;
-    height: 80px;
-    margin: 0 auto 24px;
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 24px;
 }
 
 .sp-cs-logo img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 
 .sp-cs-logo-placeholder {
-    width: 80px;
-    height: 80px;
-    background: var(--sp-purple-dark);
-    border-radius: 16px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  width: 80px;
+  height: 80px;
+  background: var(--sp-purple-dark);
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .sp-cs-logo-placeholder i {
-    font-size: 36px;
-    color: var(--sp-gold);
+  font-size: 36px;
+  color: var(--sp-gold);
 }
 
 .sp-cs-title {
-    font-size: 22px;
-    font-weight: 700;
-    color: var(--sp-purple-dark);
-    margin: 0 0 16px;
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--sp-purple-dark);
+  margin: 0 0 16px;
 }
 
 .sp-cs-desc {
-    font-size: 14px;
-    color: var(--sp-text-muted);
-    line-height: 1.6;
-    margin: 0 0 32px;
+  font-size: 14px;
+  color: var(--sp-text-muted);
+  line-height: 1.6;
+  margin: 0 0 32px;
 }
 
 .sp-cs-options {
-    text-align: left;
+  text-align: left;
 }
 
 .sp-cs-option {
-    display: flex;
-    align-items: center;
-    padding: 16px;
-    background: var(--sp-bg-white);
-    border: 1px solid var(--sp-border-light);
-    border-radius: 8px;
-    margin-bottom: 12px;
-    text-decoration: none;
-    transition: var(--sp-transition);
+  display: flex;
+  align-items: center;
+  padding: 16px;
+  background: var(--sp-bg-white);
+  border: 1px solid var(--sp-border-light);
+  border-radius: 8px;
+  margin-bottom: 12px;
+  text-decoration: none;
+  transition: var(--sp-transition);
 }
 
 .sp-cs-option:hover {
-    border-color: var(--sp-purple-dark);
-    background: var(--sp-bg-light);
+  border-color: var(--sp-purple-dark);
+  background: var(--sp-bg-light);
 }
 
 .sp-cs-option i {
-    font-size: 20px;
-    color: var(--sp-purple-dark);
-    margin-right: 12px;
+  font-size: 20px;
+  color: var(--sp-purple-dark);
+  margin-right: 12px;
 }
 
 .sp-cs-option span {
-    font-size: 15px;
-    color: var(--sp-text-dark);
+  font-size: 15px;
+  color: var(--sp-text-dark);
 }
 
 .sp-cs-user-info {
-    background: var(--sp-bg-white);
+  background: var(--sp-bg-white);
 }
 
 .sp-cs-avatar {
-    width: 48px;
-    height: 48px;
-    border-radius: 8px;
-    background: var(--sp-purple-dark);
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 8px;
+  background: var(--sp-purple-dark);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .sp-cs-avatar i {
-    font-size: 24px;
-    color: var(--sp-gold);
+  font-size: 24px;
+  color: var(--sp-gold);
 }
 
 .sp-cs-avatar-small {
-    width: 32px;
-    height: 32px;
-    border-radius: 50%;
-    background: var(--sp-purple-dark);
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: var(--sp-purple-dark);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .sp-cs-avatar-small i {
-    font-size: 14px;
-    color: var(--sp-gold);
+  font-size: 14px;
+  color: var(--sp-gold);
 }
 
 /* ============================================
    Activity Page Styles
    ============================================ */
 .sp-activity-content {
-    padding: 16px;
+  padding: 16px;
 }
 
 .sp-activity-rules {
-    margin: 0;
-    padding: 0 0 0 20px;
-    list-style: decimal;
+  margin: 0;
+  padding: 0 0 0 20px;
+  list-style: decimal;
 }
 
 .sp-activity-rules li {
-    font-size: 13px;
-    color: var(--sp-text-dark);
-    line-height: 1.8;
-    margin-bottom: 12px;
+  font-size: 13px;
+  color: var(--sp-text-dark);
+  line-height: 1.8;
+  margin-bottom: 12px;
 }
 
 .sp-activity-period {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
-    padding: 16px;
-    color: var(--sp-text-muted);
-    font-size: 13px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 16px;
+  color: var(--sp-text-muted);
+  font-size: 13px;
 }
 
 /* Ranking Table */
 .sp-ranking-table {
-    margin: 16px;
-    background: var(--sp-bg-white);
-    border-radius: 8px;
-    overflow: hidden;
+  margin: 16px;
+  background: var(--sp-bg-white);
+  border-radius: 8px;
+  overflow: hidden;
 }
 
 .sp-table-header {
-    display: flex;
-    padding: 12px 16px;
-    background: var(--sp-bg-light);
-    font-size: 14px;
-    font-weight: 600;
-    color: var(--sp-text-dark);
+  display: flex;
+  padding: 12px 16px;
+  background: var(--sp-bg-light);
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--sp-text-dark);
 }
 
 .sp-table-header span:first-child {
-    width: 60px;
+  width: 60px;
 }
 
 .sp-table-header span:nth-child(2) {
-    flex: 1;
+  flex: 1;
 }
 
 .sp-table-header span:last-child {
-    width: 100px;
-    text-align: right;
+  width: 100px;
+  text-align: right;
 }
 
 .sp-table-row {
-    display: flex;
-    padding: 12px 16px;
-    border-bottom: 1px solid var(--sp-border-light);
-    font-size: 14px;
-    color: var(--sp-text-dark);
+  display: flex;
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--sp-border-light);
+  font-size: 14px;
+  color: var(--sp-text-dark);
 }
 
 .sp-table-row:last-child {
-    border-bottom: none;
+  border-bottom: none;
 }
 
 .sp-table-row span:first-child {
-    width: 60px;
-    color: var(--sp-purple-dark);
-    font-weight: 600;
+  width: 60px;
+  color: var(--sp-purple-dark);
+  font-weight: 600;
 }
 
 .sp-table-row span:nth-child(2) {
-    flex: 1;
+  flex: 1;
 }
 
 .sp-table-row span:last-child {
-    width: 100px;
-    text-align: right;
+  width: 100px;
+  text-align: right;
 }
 
 /* ============================================
    Ranking Page Styles
    ============================================ */
 .sp-ranking-page {
-    background: linear-gradient(180deg, var(--sp-purple-dark) 0%, var(--sp-purple-dark) 200px, var(--sp-bg-light) 200px);
+  background: linear-gradient(
+    180deg,
+    var(--sp-purple-dark) 0%,
+    var(--sp-purple-dark) 200px,
+    var(--sp-bg-light) 200px
+  );
 }
 
 .sp-ranking-header {
-    padding: 20px 16px;
+  padding: 20px 16px;
 }
 
 .sp-ranking-top3 {
-    display: flex;
-    align-items: flex-end;
-    justify-content: center;
-    gap: 16px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 16px;
 }
 
 .sp-ranking-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 16px 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 16px 8px;
 }
 
 .sp-ranking-item.rank-1 {
-    order: 2;
+  order: 2;
 }
 
 .sp-ranking-item.rank-2 {
-    order: 1;
+  order: 1;
 }
 
 .sp-ranking-item.rank-3 {
-    order: 3;
+  order: 3;
 }
 
 .sp-ranking-medal {
-    width: 32px;
-    height: 32px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 8px;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 8px;
 }
 
 .sp-ranking-medal.gold {
-    background: linear-gradient(135deg, #ffd700, #ffb800);
-    color: #fff;
+  background: linear-gradient(135deg, #ffd700, #ffb800);
+  color: #fff;
 }
 
 .sp-ranking-medal.silver {
-    background: linear-gradient(135deg, #c0c0c0, #a0a0a0);
-    color: #fff;
+  background: linear-gradient(135deg, #c0c0c0, #a0a0a0);
+  color: #fff;
 }
 
 .sp-ranking-medal.bronze {
-    background: linear-gradient(135deg, #cd7f32, #b87333);
-    color: #fff;
+  background: linear-gradient(135deg, #cd7f32, #b87333);
+  color: #fff;
 }
 
 .sp-ranking-avatar {
-    width: 56px;
-    height: 56px;
-    border-radius: 50%;
-    background: var(--sp-bg-light);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 8px;
-    border: 3px solid var(--sp-bg-light);
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: var(--sp-bg-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 8px;
+  border: 3px solid var(--sp-bg-light);
 }
 
 .sp-ranking-avatar.gold {
-    width: 72px;
-    height: 72px;
-    border-color: var(--sp-gold);
+  width: 72px;
+  height: 72px;
+  border-color: var(--sp-gold);
 }
 
 .sp-ranking-avatar i {
-    font-size: 24px;
-    color: var(--sp-text-muted);
+  font-size: 24px;
+  color: var(--sp-text-muted);
 }
 
 .sp-ranking-avatar.gold i {
-    font-size: 32px;
+  font-size: 32px;
 }
 
 .sp-ranking-name {
-    font-size: 12px;
-    color: var(--sp-text-white);
-    margin-bottom: 4px;
+  font-size: 12px;
+  color: var(--sp-text-white);
+  margin-bottom: 4px;
 }
 
 .sp-ranking-score {
-    font-size: 11px;
-    color: var(--sp-gold);
+  font-size: 11px;
+  color: var(--sp-gold);
 }
 
 .sp-ranking-list {
-    background: var(--sp-bg-white);
-    border-radius: 16px 16px 0 0;
-    margin-top: -16px;
-    padding: 16px;
+  background: var(--sp-bg-white);
+  border-radius: 16px 16px 0 0;
+  margin-top: -16px;
+  padding: 16px;
 }
 
 .sp-ranking-row {
-    display: flex;
-    align-items: center;
-    padding: 12px 0;
-    border-bottom: 1px solid var(--sp-border-light);
+  display: flex;
+  align-items: center;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--sp-border-light);
 }
 
 .sp-ranking-row:last-child {
-    border-bottom: none;
+  border-bottom: none;
 }
 
 .sp-ranking-num {
-    width: 32px;
-    font-size: 16px;
-    font-weight: 600;
-    color: var(--sp-purple-dark);
+  width: 32px;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--sp-purple-dark);
 }
 
 .sp-ranking-user {
-    flex: 1;
-    display: flex;
-    align-items: center;
-    gap: 12px;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 12px;
 }
 
 .sp-ranking-user-avatar {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    background: var(--sp-bg-light);
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--sp-bg-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .sp-ranking-user-avatar i {
-    font-size: 16px;
-    color: var(--sp-text-muted);
+  font-size: 16px;
+  color: var(--sp-text-muted);
 }
 
 .sp-ranking-user span {
-    font-size: 14px;
-    color: var(--sp-text-dark);
+  font-size: 14px;
+  color: var(--sp-text-dark);
 }
 
 .sp-ranking-amount {
-    font-size: 14px;
-    font-weight: 600;
-    color: var(--sp-gold-dark);
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--sp-gold-dark);
 }
 
 /* ============================================
    Game Detail Page Styles
    ============================================ */
 .sp-game-detail-page {
-    background: var(--sp-purple-dark);
+  background: var(--sp-purple-dark);
 }
 
 .sp-game-banner {
-    position: relative;
-    height: 150px;
-    background: linear-gradient(135deg, #1a0a2e, #2d1b4e);
-    overflow: hidden;
+  position: relative;
+  height: 150px;
+  background: linear-gradient(135deg, #1a0a2e, #2d1b4e);
+  overflow: hidden;
 }
 
 .sp-game-banner img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .sp-game-banner-overlay {
-    position: absolute;
-    bottom: 16px;
-    left: 16px;
-    display: flex;
-    flex-direction: column;
+  position: absolute;
+  bottom: 16px;
+  left: 16px;
+  display: flex;
+  flex-direction: column;
 }
 
 .sp-game-banner-name {
-    font-size: 24px;
-    font-weight: 700;
-    color: var(--sp-gold);
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--sp-gold);
 }
 
 .sp-game-banner-code {
-    font-size: 12px;
-    color: var(--sp-text-white);
+  font-size: 12px;
+  color: var(--sp-text-white);
 }
 
 .sp-game-points-bar {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 12px 16px;
-    background: var(--sp-bg-white);
-    margin: 16px;
-    border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 16px;
+  background: var(--sp-bg-white);
+  margin: 16px;
+  border-radius: 8px;
 }
 
 .sp-points-left {
-    display: flex;
-    align-items: center;
-    gap: 12px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
 }
 
 .sp-points-label {
-    font-size: 14px;
-    color: var(--sp-text-muted);
+  font-size: 14px;
+  color: var(--sp-text-muted);
 }
 
 .sp-points-value {
-    font-size: 16px;
-    font-weight: 600;
-    color: var(--sp-text-dark);
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--sp-text-dark);
 }
 
 .sp-deposit-btn {
-    display: flex;
-    align-items: center;
-    gap: 4px;
-    padding: 8px 16px;
-    background: var(--sp-btn-gradient);
-    border-radius: 20px;
-    color: var(--sp-text-white);
-    text-decoration: none;
-    font-size: 13px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 8px 16px;
+  background: var(--sp-btn-gradient);
+  border-radius: 20px;
+  color: var(--sp-text-white);
+  text-decoration: none;
+  font-size: 13px;
 }
 
 .sp-game-info-row {
-    display: flex;
-    justify-content: space-between;
-    padding: 12px 16px;
-    margin: 0 16px;
-    background: rgba(255,255,255,0.1);
-    border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 16px;
+  margin: 0 16px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
 }
 
 .sp-info-label {
-    font-size: 14px;
-    color: var(--sp-text-white);
+  font-size: 14px;
+  color: var(--sp-text-white);
 }
 
 .sp-info-value {
-    font-size: 14px;
-    color: var(--sp-gold);
+  font-size: 14px;
+  color: var(--sp-gold);
 }
 
 .sp-game-description {
-    padding: 16px;
-    margin: 16px;
-    background: var(--sp-bg-white);
-    border-radius: 8px;
-    font-size: 13px;
-    color: var(--sp-text-dark);
-    line-height: 1.8;
+  padding: 16px;
+  margin: 16px;
+  background: var(--sp-bg-white);
+  border-radius: 8px;
+  font-size: 13px;
+  color: var(--sp-text-dark);
+  line-height: 1.8;
 }
 
 .sp-game-detail-page .sp-form-actions {
-    padding: 16px;
+  padding: 16px;
 }
 
 /* ============================================
    Auth Pages (Login/Register) Styles
    ============================================ */
 .sp-auth-page {
-    min-height: 100vh;
-    background: linear-gradient(180deg, var(--sp-purple-dark) 0%, #1a0a2e 100%);
-    padding: 24px;
-    display: flex;
-    flex-direction: column;
+  min-height: 100vh;
+  background: linear-gradient(180deg, var(--sp-purple-dark) 0%, #1a0a2e 100%);
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
 }
 
 .sp-auth-home-link {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    color: var(--sp-text-white);
-    text-decoration: none;
-    font-size: 14px;
-    margin-bottom: 32px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--sp-text-white);
+  text-decoration: none;
+  font-size: 14px;
+  margin-bottom: 32px;
 }
 
 .sp-auth-logo {
-    text-align: center;
-    margin-bottom: 24px;
+  text-align: center;
+  margin-bottom: 24px;
 }
 
 .sp-auth-logo img {
-    max-height: 60px;
+  max-height: 60px;
 }
 
 .sp-auth-logo-text {
-    font-size: 32px;
-    font-weight: 700;
+  font-size: 32px;
+  font-weight: 700;
 }
 
 .sp-logo-super {
-    color: var(--sp-text-white);
+  color: var(--sp-text-white);
 }
 
 .sp-logo-ong {
-    color: var(--sp-gold);
+  color: var(--sp-gold);
 }
 
 .sp-auth-title {
-    text-align: center;
-    font-size: 18px;
-    font-weight: 600;
-    color: var(--sp-text-white);
-    margin: 0 0 32px;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--sp-text-white);
+  margin: 0 0 32px;
 }
 
 .sp-auth-form {
-    flex: 1;
+  flex: 1;
 }
 
 .sp-auth-input-group {
-    margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 
 .sp-auth-label {
-    display: block;
-    font-size: 14px;
-    color: var(--sp-text-white);
-    margin-bottom: 8px;
+  display: block;
+  font-size: 14px;
+  color: var(--sp-text-white);
+  margin-bottom: 8px;
 }
 
 .sp-auth-input {
-    width: 100%;
-    height: 50px;
-    padding: 0 16px;
-    background: rgba(255,255,255,0.1);
-    border: 1px solid rgba(255,255,255,0.2);
-    border-radius: 8px;
-    font-size: 14px;
-    color: var(--sp-text-white);
+  width: 100%;
+  height: 50px;
+  padding: 0 16px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  font-size: 14px;
+  color: var(--sp-text-white);
 }
 
 .sp-auth-input::placeholder {
-    color: rgba(255,255,255,0.5);
+  color: rgba(255, 255, 255, 0.5);
 }
 
 .sp-auth-input:focus {
-    outline: none;
-    border-color: var(--sp-gold);
+  outline: none;
+  border-color: var(--sp-gold);
 }
 
 .sp-forgot-link {
-    display: block;
-    text-align: right;
-    color: var(--sp-gold);
-    font-size: 13px;
-    margin-bottom: 24px;
+  display: block;
+  text-align: right;
+  color: var(--sp-gold);
+  font-size: 13px;
+  margin-bottom: 24px;
 }
 
 .sp-auth-btn {
-    margin-bottom: 24px;
+  margin-bottom: 24px;
 }
 
 .sp-auth-switch {
-    text-align: center;
-    font-size: 14px;
-    color: var(--sp-text-white);
+  text-align: center;
+  font-size: 14px;
+  color: var(--sp-text-white);
 }
 
 .sp-auth-switch a {
-    color: var(--sp-gold);
-    text-decoration: none;
+  color: var(--sp-gold);
+  text-decoration: none;
 }
 
 /* Register Page */
 .sp-register-page .sp-form-section {
-    margin-bottom: 4px;
+  margin-bottom: 4px;
 }
 
 .sp-input-hint {
-    font-size: 12px;
-    color: var(--sp-text-muted);
-    margin: 4px 16px 12px;
+  font-size: 12px;
+  color: var(--sp-text-muted);
+  margin: 4px 16px 12px;
 }
 
 .sp-terms-checkbox {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    padding: 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 16px;
 }
 
 .sp-terms-checkbox input[type="checkbox"] {
-    width: 18px;
-    height: 18px;
-    accent-color: var(--sp-gold);
+  width: 18px;
+  height: 18px;
+  accent-color: var(--sp-gold);
 }
 
 .sp-terms-checkbox label {
-    font-size: 13px;
-    color: var(--sp-text-muted);
+  font-size: 13px;
+  color: var(--sp-text-muted);
 }
 
 .sp-terms-checkbox a {
-    color: var(--sp-purple-dark);
-    text-decoration: none;
+  color: var(--sp-purple-dark);
+  text-decoration: none;
 }
 
 /* ============================================
    About Page Styles
    ============================================ */
 .sp-about-page {
-    text-align: center;
+  text-align: center;
 }
 
 .sp-about-logo {
-    padding: 40px 24px 24px;
+  padding: 40px 24px 24px;
 }
 
 .sp-about-logo img {
-    width: 80px;
-    height: 80px;
-    margin-bottom: 16px;
+  width: 80px;
+  height: 80px;
+  margin-bottom: 16px;
 }
 
 .sp-about-logo-placeholder {
-    width: 80px;
-    height: 80px;
-    margin: 0 auto 16px;
-    background: var(--sp-purple-dark);
-    border-radius: 16px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 16px;
+  background: var(--sp-purple-dark);
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .sp-about-logo-placeholder i {
-    font-size: 36px;
-    color: var(--sp-gold);
+  font-size: 36px;
+  color: var(--sp-gold);
 }
 
 .sp-about-name {
-    font-size: 24px;
-    font-weight: 700;
-    color: var(--sp-purple-dark);
-    margin: 0 0 8px;
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--sp-purple-dark);
+  margin: 0 0 8px;
 }
 
 .sp-about-version {
-    font-size: 14px;
-    color: var(--sp-text-muted);
+  font-size: 14px;
+  color: var(--sp-text-muted);
 }
 
 .sp-about-content {
-    padding: 0 24px;
-    text-align: left;
+  padding: 0 24px;
+  text-align: left;
 }
 
 .sp-about-section {
-    margin-bottom: 24px;
+  margin-bottom: 24px;
 }
 
 .sp-about-section h3 {
-    font-size: 16px;
-    font-weight: 600;
-    color: var(--sp-purple-dark);
-    margin: 0 0 12px;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--sp-purple-dark);
+  margin: 0 0 12px;
 }
 
 .sp-about-section p {
-    font-size: 14px;
-    color: var(--sp-text-muted);
-    line-height: 1.6;
-    margin: 0;
+  font-size: 14px;
+  color: var(--sp-text-muted);
+  line-height: 1.6;
+  margin: 0;
 }
 
 .sp-about-section ul {
-    margin: 0;
-    padding: 0 0 0 20px;
+  margin: 0;
+  padding: 0 0 0 20px;
 }
 
 .sp-about-section li {
-    font-size: 14px;
-    color: var(--sp-text-muted);
-    line-height: 1.8;
+  font-size: 14px;
+  color: var(--sp-text-muted);
+  line-height: 1.8;
 }
 
 .sp-about-contact-btn {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    margin-top: 12px;
-    padding: 12px 24px;
-    background: var(--sp-btn-gradient);
-    border-radius: 25px;
-    color: var(--sp-text-white);
-    text-decoration: none;
-    font-size: 14px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 12px;
+  padding: 12px 24px;
+  background: var(--sp-btn-gradient);
+  border-radius: 25px;
+  color: var(--sp-text-white);
+  text-decoration: none;
+  font-size: 14px;
 }
 
 .sp-about-links {
-    margin: 24px 16px;
-    background: var(--sp-bg-white);
-    border-radius: 8px;
-    overflow: hidden;
+  margin: 24px 16px;
+  background: var(--sp-bg-white);
+  border-radius: 8px;
+  overflow: hidden;
 }
 
 .sp-about-link {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 56px;
-    padding: 0 16px;
-    text-decoration: none;
-    border-bottom: 1px solid var(--sp-border-light);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 56px;
+  padding: 0 16px;
+  text-decoration: none;
+  border-bottom: 1px solid var(--sp-border-light);
 }
 
 .sp-about-link:last-child {
-    border-bottom: none;
+  border-bottom: none;
 }
 
 .sp-about-link span {
-    font-size: 15px;
-    color: var(--sp-text-dark);
+  font-size: 15px;
+  color: var(--sp-text-dark);
 }
 
 .sp-about-link i {
-    color: var(--sp-text-muted);
+  color: var(--sp-text-muted);
 }
 
 .sp-about-copyright {
-    padding: 24px;
-    text-align: center;
+  padding: 24px;
+  text-align: center;
 }
 
 .sp-about-copyright p {
-    font-size: 12px;
-    color: var(--sp-text-muted);
-    margin: 0;
+  font-size: 12px;
+  color: var(--sp-text-muted);
+  margin: 0;
 }
 
 /* ============================================
    Terms Page Styles
    ============================================ */
 .sp-terms-page {
-    background: var(--sp-bg-white);
+  background: var(--sp-bg-white);
 }
 
 .sp-terms-content {
-    padding: 24px;
+  padding: 24px;
 }
 
 .sp-terms-content h2 {
-    font-size: 20px;
-    font-weight: 600;
-    color: var(--sp-purple-dark);
-    margin: 0 0 8px;
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--sp-purple-dark);
+  margin: 0 0 8px;
 }
 
 .sp-terms-date {
-    font-size: 12px;
-    color: var(--sp-text-muted);
-    margin: 0 0 24px;
+  font-size: 12px;
+  color: var(--sp-text-muted);
+  margin: 0 0 24px;
 }
 
 .sp-terms-section {
-    margin-bottom: 24px;
+  margin-bottom: 24px;
 }
 
 .sp-terms-section h3 {
-    font-size: 15px;
-    font-weight: 600;
-    color: var(--sp-text-dark);
-    margin: 0 0 8px;
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--sp-text-dark);
+  margin: 0 0 8px;
 }
 
 .sp-terms-section p {
-    font-size: 14px;
-    color: var(--sp-text-muted);
-    line-height: 1.7;
-    margin: 0;
+  font-size: 14px;
+  color: var(--sp-text-muted);
+  line-height: 1.7;
+  margin: 0;
 }
 
 /* ============================================
    Tutorial/FAQ Page Styles
    ============================================ */
 .sp-tutorial-list {
-    padding: 16px;
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
 }
 
 .sp-tutorial-item {
-    border-radius: 8px;
-    overflow: hidden;
+  border-radius: 8px;
+  overflow: hidden;
 }
 
 .sp-tutorial-thumbnail {
-    position: relative;
-    height: 100px;
-    background: var(--sp-purple-dark);
+  position: relative;
+  height: 100px;
+  background: var(--sp-purple-dark);
 }
 
 .sp-tutorial-placeholder {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .sp-tutorial-placeholder i {
-    font-size: 40px;
-    color: var(--sp-text-white);
-    opacity: 0.5;
+  font-size: 40px;
+  color: var(--sp-text-white);
+  opacity: 0.5;
 }
 
 .sp-faq-list {
-    padding: 16px;
+  padding: 16px;
 }
 
 .sp-faq-item {
-    background: var(--sp-bg-white);
-    border-radius: 8px;
-    margin-bottom: 12px;
-    overflow: hidden;
+  background: var(--sp-bg-white);
+  border-radius: 8px;
+  margin-bottom: 12px;
+  overflow: hidden;
 }
 
 .sp-faq-question {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 16px;
-    cursor: pointer;
-    transition: var(--sp-transition);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px;
+  cursor: pointer;
+  transition: var(--sp-transition);
 }
 
 .sp-faq-question:hover {
-    background: var(--sp-bg-light);
+  background: var(--sp-bg-light);
 }
 
 .sp-faq-question span {
-    font-size: 15px;
-    font-weight: 500;
-    color: var(--sp-text-dark);
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--sp-text-dark);
 }
 
 .sp-faq-icon {
-    color: var(--sp-text-muted);
-    transition: transform 0.3s ease;
+  color: var(--sp-text-muted);
+  transition: transform 0.3s ease;
 }
 
 .sp-faq-answer {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.3s ease;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
 }
 
 .sp-faq-answer.active {
-    max-height: 500px;
+  max-height: 500px;
 }
 
 .sp-faq-answer p {
-    padding: 0 16px 16px;
-    font-size: 14px;
-    color: var(--sp-text-muted);
-    line-height: 1.7;
-    margin: 0;
+  padding: 0 16px 16px;
+  font-size: 14px;
+  color: var(--sp-text-muted);
+  line-height: 1.7;
+  margin: 0;
 }
 
 /* ============================================
    Forgot Password Page Styles
    ============================================ */
 .sp-auth-subtitle {
-    text-align: center;
-    font-size: 14px;
-    color: rgba(255,255,255,0.7);
-    margin: -16px 0 32px;
+  text-align: center;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.7);
+  margin: -16px 0 32px;
 }
 
 .sp-auth-phone-input {
-    display: flex;
-    gap: 8px;
+  display: flex;
+  gap: 8px;
 }
 
 .sp-country-select {
-    width: 80px;
-    height: 50px;
-    padding: 0 8px;
-    background: rgba(255,255,255,0.1);
-    border: 1px solid rgba(255,255,255,0.2);
-    border-radius: 8px;
-    font-size: 14px;
-    color: var(--sp-text-white);
+  width: 80px;
+  height: 50px;
+  padding: 0 8px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  font-size: 14px;
+  color: var(--sp-text-white);
 }
 
 .sp-auth-phone-input .sp-auth-input {
-    flex: 1;
+  flex: 1;
 }
 
 .sp-auth-verify-row {
-    display: flex;
-    gap: 8px;
+  display: flex;
+  gap: 8px;
 }
 
 .sp-verify-input {
-    flex: 1;
+  flex: 1;
 }
 
 .sp-auth-verify-btn {
-    width: 100px;
-    height: 50px;
-    background: var(--sp-btn-gradient);
-    border: none;
-    border-radius: 8px;
-    font-size: 13px;
-    color: var(--sp-text-white);
-    cursor: pointer;
+  width: 100px;
+  height: 50px;
+  background: var(--sp-btn-gradient);
+  border: none;
+  border-radius: 8px;
+  font-size: 13px;
+  color: var(--sp-text-white);
+  cursor: pointer;
 }
 
 /* ============================================
@@ -4126,401 +4163,360 @@
 
 /* Home Content Wrapper */
 .sp-home-content {
-    padding-bottom: calc(var(--sp-bottom-nav-height) + 20px);
-    background: var(--sp-bg-primary);
-    min-height: 100vh;
+  padding-bottom: calc(var(--sp-bottom-nav-height) + 20px);
+  background: var(--sp-bg-primary);
+  min-height: 100vh;
 }
 
 /* Home Header */
 .sp-home-header {
-    background: var(--sp-header-gradient);
-    padding: 12px 16px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+  background: var(--sp-header-gradient);
+  padding: 12px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .sp-home-header-top {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
 }
 
 .sp-logo-wrap {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 .sp-logo {
-    height: 28px;
-    width: auto;
+  height: 28px;
+  width: auto;
 }
 
 .sp-header-globe {
-    width: 32px;
-    height: 32px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .sp-globe-icon {
-    width: 24px;
-    height: 24px;
-    filter: brightness(0) invert(1);
+  width: 24px;
+  height: 24px;
+  filter: brightness(0) invert(1);
 }
 
 /* Point Section (Below Banner) */
 .sp-point-section {
-    padding: 0 16px;
-    margin-top: -8px;
+  padding: 0 16px;
+  margin-top: -8px;
 }
 
 .sp-point-bar {
-    background: var(--sp-bg-card);
-    border-radius: 20px;
-    padding: 10px 16px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+  background: var(--sp-bg-card);
+  border-radius: 20px;
+  padding: 10px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .sp-point-label {
-    font-size: 13px;
-    color: var(--sp-text-muted);
+  font-size: 13px;
+  color: var(--sp-text-muted);
 }
 
 .sp-point-value-wrap {
-    display: flex;
-    align-items: center;
-    gap: 8px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
 
 .sp-point-value {
-    font-size: 14px;
-    font-weight: 600;
-    color: var(--sp-gold);
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--sp-gold);
 }
 
 .sp-point-dropdown {
-    font-size: 10px;
-    color: var(--sp-gold);
+  font-size: 10px;
+  color: var(--sp-gold);
 }
 
 /* Feature Section (8 Icons Horizontal Scroll) */
 .sp-feature-section {
-    padding: 16px 0;
+  padding: 16px 0;
 }
 
 .sp-feature-scroll {
-    display: flex;
-    overflow-x: auto;
-    padding: 0 16px;
-    gap: 16px;
-    -webkit-overflow-scrolling: touch;
-    scrollbar-width: none;
+  display: flex;
+  overflow-x: auto;
+  padding: 0 16px;
+  gap: 16px;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
 }
 
 .sp-feature-scroll::-webkit-scrollbar {
-    display: none;
+  display: none;
 }
 
 .sp-feature-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-decoration: none;
-    min-width: 60px;
-    flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  min-width: 60px;
+  flex-shrink: 0;
 }
 
 .sp-feature-icon {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    background: var(--sp-btn-gradient);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 8px;
-    box-shadow: var(--sp-shadow-gold);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: var(--sp-btn-gradient);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 8px;
+  box-shadow: var(--sp-shadow-gold);
 }
 
 .sp-feature-icon img {
-    width: 24px;
-    height: 24px;
-    filter: brightness(0) invert(1);
+  width: 24px;
+  height: 24px;
+  filter: brightness(0) invert(1);
 }
 
 .sp-feature-icon i {
-    font-size: 22px;
-    color: var(--sp-text-white);
+  font-size: 22px;
+  color: var(--sp-text-white);
 }
 
 .sp-feature-label {
-    font-size: 11px;
-    color: var(--sp-text-white);
-    white-space: nowrap;
-    text-align: center;
+  font-size: 11px;
+  color: var(--sp-text-white);
+  white-space: nowrap;
+  text-align: center;
 }
 
 /* Banner Section Updates */
 .sp-banner-section {
-    margin: 12px 16px;
-    position: relative;
+  margin: 12px 16px;
+  position: relative;
 }
 
 .sp-banner-slide {
-    position: relative;
-    border-radius: 12px;
-    overflow: hidden;
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
 }
 
 .sp-banner-bg {
-    width: 100%;
-    height: 150px;
-    object-fit: cover;
-    display: block;
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  display: block;
 }
 
 .sp-banner-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: linear-gradient(to right, rgba(0,0,0,0.5) 0%, transparent 70%);
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.5) 0%, transparent 70%);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .sp-banner-label {
-    display: inline-block;
-    font-size: 10px;
-    color: #ff8ad8;
-    background: rgba(255,138,216,0.2);
-    padding: 2px 8px;
-    border-radius: 10px;
-    margin-bottom: 6px;
-    width: fit-content;
+  display: inline-block;
+  font-size: 10px;
+  color: #ff8ad8;
+  background: rgba(255, 138, 216, 0.2);
+  padding: 2px 8px;
+  border-radius: 10px;
+  margin-bottom: 6px;
+  width: fit-content;
 }
 
 .sp-banner-title {
-    font-size: 18px;
-    font-weight: 700;
-    color: var(--sp-gold);
-    margin: 0 0 12px;
-    text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--sp-gold);
+  margin: 0 0 12px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 .sp-banner-btn {
-    display: inline-block;
-    padding: 8px 20px;
-    background: var(--sp-btn-gradient);
-    color: var(--sp-text-white);
-    font-size: 12px;
-    font-weight: 600;
-    border-radius: 20px;
-    text-decoration: none;
-    width: fit-content;
-    box-shadow: var(--sp-shadow-gold);
+  display: inline-block;
+  padding: 8px 20px;
+  background: var(--sp-btn-gradient);
+  color: var(--sp-text-white);
+  font-size: 12px;
+  font-weight: 600;
+  border-radius: 20px;
+  text-decoration: none;
+  width: fit-content;
+  box-shadow: var(--sp-shadow-gold);
 }
 
 .sp-banner-indicators {
-    position: absolute;
-    bottom: 10px;
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    gap: 6px;
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 6px;
 }
 
 .sp-indicator {
-    width: 6px;
-    height: 6px;
-    border-radius: 50%;
-    background: rgba(255,255,255,0.4);
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.4);
 }
 
 .sp-indicator.active {
-    width: 18px;
-    border-radius: 3px;
-    background: var(--sp-gold);
+  width: 18px;
+  border-radius: 3px;
+  background: var(--sp-gold);
 }
 
 /* Game Section */
 .sp-game-section {
-    padding: 0 0 20px;
+  padding: 0 0 20px;
 }
 
 /* Game Tabs (Category Buttons) */
 .sp-game-tabs {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    padding: 0 16px 16px;
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0 16px 16px;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
 }
 
 .sp-game-tabs::-webkit-scrollbar {
-    display: none;
+  display: none;
 }
 
 .sp-game-tab {
-    flex-shrink: 0;
-    padding: 8px 16px;
-    font-size: 13px;
-    color: var(--sp-text-muted);
-    background: transparent;
-    border: none;
-    cursor: pointer;
-    white-space: nowrap;
-    transition: var(--sp-transition);
-    display: flex;
-    align-items: center;
-    gap: 6px;
+  flex-shrink: 0;
+  padding: 8px 16px;
+  font-size: 13px;
+  color: var(--sp-text-muted);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: var(--sp-transition);
+  display: flex;
+  align-items: center;
+  gap: 6px;
 }
 
 .sp-game-tab:first-child {
-    width: 48px;
-    height: 48px;
-    padding: 0;
-    border: 2px solid var(--sp-orange);
-    border-radius: 50%;
-    justify-content: center;
-    flex-direction: column;
+  width: 48px;
+  height: 48px;
+  padding: 0;
+  border: 2px solid var(--sp-orange);
+  border-radius: 50%;
+  justify-content: center;
+  flex-direction: column;
 }
 
 .sp-game-tab:first-child i {
-    font-size: 14px;
-    color: var(--sp-orange);
+  font-size: 14px;
+  color: var(--sp-orange);
 }
 
 .sp-game-tab:first-child span {
-    font-size: 9px;
-    color: var(--sp-orange);
+  font-size: 9px;
+  color: var(--sp-orange);
 }
 
 .sp-game-tab:first-child.active {
-    background: var(--sp-btn-gradient);
-    border-color: transparent;
+  background: var(--sp-btn-gradient);
+  border-color: transparent;
 }
 
 .sp-game-tab:first-child.active i,
 .sp-game-tab:first-child.active span {
-    color: var(--sp-text-white);
+  color: var(--sp-text-white);
 }
 
 .sp-game-tab:not(:first-child).active {
-    background: var(--sp-btn-gradient);
-    color: var(--sp-text-white);
-    border-radius: 20px;
+  background: var(--sp-btn-gradient);
+  color: var(--sp-text-white);
+  border-radius: 20px;
 }
 
 /* Game Grid */
 .sp-game-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 12px;
-    padding: 0 16px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  padding: 0 16px;
 }
 
 .sp-game-item {
-    display: flex;
-    flex-direction: column;
-    text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
 }
 
 .sp-game-thumb {
-    width: 100%;
-    aspect-ratio: 1;
-    border-radius: 12px;
-    overflow: hidden;
-    margin-bottom: 6px;
-    background: var(--sp-bg-card);
+  width: 100%;
+  aspect-ratio: 1;
+  border-radius: 12px;
+  overflow: hidden;
+  margin-bottom: 6px;
+  background: var(--sp-bg-card);
 }
 
 .sp-game-thumb img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .sp-game-name {
-    font-size: 11px;
-    color: var(--sp-text-white);
-    text-align: center;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+  font-size: 11px;
+  color: var(--sp-text-white);
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
-/* Bottom Navigation Updates */
-.sp-bottom-nav {
-    position: fixed;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 100%;
-    max-width: var(--sp-mobile-width);
-    height: var(--sp-bottom-nav-height);
-    background: linear-gradient(180deg, #f5f0fa 0%, #e8e0f0 50%, #d0c4e0 100%);
-    display: flex;
-    align-items: flex-end;
-    justify-content: space-around;
-    padding-bottom: 8px;
-    z-index: 100;
-    box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
-}
-
-.sp-nav-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    color: var(--sp-purple-medium);
-    font-size: 10px;
-    padding: 5px 15px;
-    text-decoration: none;
-    transition: var(--sp-transition);
-}
-
-.sp-nav-item i {
-    font-size: 20px;
-    margin-bottom: 4px;
-}
-
-.sp-nav-item span {
-    font-size: 10px;
-}
-
-.sp-nav-item.active,
-.sp-nav-item:hover {
-    color: var(--sp-purple-dark);
-}
+/* DUPLICATE REMOVED - .sp-bottom-nav definition at line 236 with background: #1a003c is the active one */
 
 /* Center Crown Button */
 .sp-nav-center {
-    position: relative;
-    margin-top: -30px;
+  position: relative;
+  margin-top: -30px;
 }
 
 .sp-nav-crown {
-    width: 60px;
-    height: 60px;
-    background: var(--sp-purple-dark);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-decoration: none;
-    box-shadow: var(--sp-shadow-md);
+  width: 60px;
+  height: 60px;
+  background: var(--sp-purple-dark);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  box-shadow: var(--sp-shadow-md);
 }
 
 .sp-nav-crown i {
-    font-size: 28px;
-    color: var(--sp-gold);
+  font-size: 28px;
+  color: var(--sp-gold);
 }
