@@ -21,7 +21,8 @@
       "Bash(powershell -Command \"Rename-Item -Path ''c:\\\\Users\\\\user\\\\Desktop\\\\zgames\\\\resource\\\\game-icons\\\\AB1537@3x-generic.png'' -NewName ''yuanbao-mahjong-2.png''\")",
       "Bash(powershell -Command:*)",
       "Bash(if not exist \"C:\\\\Users\\\\user\\\\ai-claude\\\\projects\" mkdir \"C:\\\\Users\\\\user\\\\ai-claude\\\\projects\")",
-      "Bash(findstr:*)"
+      "Bash(findstr:*)",
+      "Bash(start http://localhost/)"
     ]
   }
 }

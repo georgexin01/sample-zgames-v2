@@ -3,22 +3,7 @@
 /**
  * index.php - SUPERONG Mobile App
  * 首页 (Home Page)
- * 99% Design Similarity with Sample Images
- * 
- * Design Elements:
- * - Banner Slider (3 rotating banners with overlay)
- * - Point/Balance bar (gradient background)
- * - 8 Feature Icons (Activity, Ranking, Support, Invite, Level, Transfer, History, etc)
- * - Promo Grid (4 columns)
- * - Game Category Grid (3 columns)
- * - Hot Games Grid (2 columns)
- * 
- * Color Scheme:
- * - Primary Purple: #3d3d7a
- * - Gold Accent: #d4a84b  
- * - Background Light: #f5f5f5
- * - Text Dark: #2d2d5a
- * - Text Muted: #9999aa
+ * 100% Design Match with home.png
  */
 
 $pageName = 'home';
@@ -29,7 +14,7 @@ include 'lib/header.php';
 ?>
 
 <!-- Main Content -->
-<main class="sp-page">
+<main class="sp-page sp-page-dark">
     <div class="container-fluid" style="padding: 0;">
 
         <!-- ========== BANNER SLIDER ========== -->
@@ -68,149 +53,120 @@ include 'lib/header.php';
         </section>
 
         <!-- ========== POINTS/BALANCE BAR ========== -->
-        <div class="sp-point-section">
-            <div class="sp-point-bar">
-                <span class="sp-point-label">当前余额</span>
-                <div class="sp-point-value-wrap">
-                    <span class="sp-point-value">¥ 15,250.50</span>
-                    <i class="fas fa-chevron-down sp-point-dropdown"></i>
+        <div class="sp-point-section-home">
+            <div class="sp-point-bar-home">
+                <span class="sp-point-label-home">Point:</span>
+                <div class="sp-point-value-wrap-home">
+                    <span class="sp-point-value-home">MYR 0.00</span>
+                    <img src="resource/ui-elements/dropdown-white.png" alt="dropdown" class="sp-point-dropdown-icon">
                 </div>
             </div>
         </div>
 
-        <!-- ========== FEATURE ICONS (8 Items) ========== -->
-        <section class="sp-feature-section">
-            <div class="sp-feature-scroll">
-                <a href="activity.php" class="sp-feature-item">
-                    <div class="sp-feature-icon"><img src="resource/ui-elements/gift.png" alt="活动"></div>
-                    <span class="sp-feature-label">活动</span>
+        <!-- ========== QUICK ACTION BUTTONS (4 Items) ========== -->
+        <section class="sp-quick-buttons-section">
+            <div class="sp-quick-buttons-row">
+                <a href="activity.php" class="sp-quick-btn">
+                    <div class="sp-quick-btn-icon"><img src="resource/ui-elements/gift.png" alt="活动"></div>
+                    <span class="sp-quick-btn-label">活动</span>
                 </a>
-                <a href="ranking.php" class="sp-feature-item">
-                    <div class="sp-feature-icon"><img src="resource/ui-elements/champion.png" alt="排行榜"></div>
-                    <span class="sp-feature-label">排行榜</span>
+                <a href="ranking.php" class="sp-quick-btn">
+                    <div class="sp-quick-btn-icon"><img src="resource/ui-elements/champion.png" alt="排行榜"></div>
+                    <span class="sp-quick-btn-label">排行榜</span>
                 </a>
-                <a href="#" class="sp-feature-item">
-                    <div class="sp-feature-icon"><i class="fas fa-qrcode"></i></div>
-                    <span class="sp-feature-label">二维码</span>
+                <a href="#" class="sp-quick-btn" onclick="showQRModal()">
+                    <div class="sp-quick-btn-icon"><img src="resource/ui-elements/item-blue-7.png" alt="二维码"></div>
+                    <span class="sp-quick-btn-label">二维码</span>
                 </a>
-                <a href="customer-service.php" class="sp-feature-item">
-                    <div class="sp-feature-icon"><img src="resource/ui-elements/customer-service.png" alt="客服"></div>
-                    <span class="sp-feature-label">客服</span>
-                </a>
-                <a href="invite.php" class="sp-feature-item">
-                    <div class="sp-feature-icon"><img src="resource/ui-elements/user-plus.png" alt="邀请好友"></div>
-                    <span class="sp-feature-label">邀请好友</span>
-                </a>
-                <a href="vip.php" class="sp-feature-item">
-                    <div class="sp-feature-icon"><img src="resource/ui-elements/level-1.png" alt="等级"></div>
-                    <span class="sp-feature-label">等级</span>
-                </a>
-                <a href="transfer.php" class="sp-feature-item">
-                    <div class="sp-feature-icon"><img src="resource/ui-elements/transfer.png" alt="转账"></div>
-                    <span class="sp-feature-label">转账</span>
-                </a>
-                <a href="transaction.php" class="sp-feature-item">
-                    <div class="sp-feature-icon"><img src="resource/ui-elements/history.png" alt="记录"></div>
-                    <span class="sp-feature-label">记录</span>
+                <a href="transfer.php" class="sp-quick-btn">
+                    <div class="sp-quick-btn-icon"><img src="resource/ui-elements/transfer.png" alt="转账"></div>
+                    <span class="sp-quick-btn-label">转账</span>
                 </a>
             </div>
         </section>
 
-        <!-- ========== PROMOTIONS GRID (4 Columns) ========== -->
-        <div class="sp-promo-section">
-            <h2 class="sp-section-title">热门推荐</h2>
-            <div class="sp-promo-grid">
-                <?php for ($i = 0; $i < 8; $i++): ?>
-                    <a href="games.php" class="sp-promo-card">
-                        <img src="resource/game-icons/<?php
-                                                        $promos = ['dragon-gem.png', 'golden-temple.png', 'lucky-piggy.png', 'king-arthur.png', 'ragnarok-odin.png', 'super-pink-joker.png', 'dancing-joker.png', 'trick-or-treat.png'];
-                                                        echo $promos[$i % 8];
-                                                        ?>" alt="Promo">
-                        <span class="sp-promo-label">HOT</span>
-                    </a>
-                <?php endfor; ?>
+        <!-- ========== HOT GAMES SLIDER (matches image_games_hot.png) ========== -->
+        <section class="sp-hot-games-section">
+            <div class="sp-hot-games-header">
+                <img src="resource/ui-elements/fire.png" alt="热门" class="sp-hot-icon">
+                <span class="sp-hot-title">热门</span>
             </div>
-        </div>
-
-        <!-- ========== GAME CATEGORIES (3 Columns) ========== -->
-        <div class="sp-category-section">
-            <h2 class="sp-section-title">游戏分类</h2>
-            <div class="sp-category-grid">
-                <?php
-                $categories = [
-                    ['name' => 'SLOT', 'count' => '128'],
-                    ['name' => 'LIVE', 'count' => '85'],
-                    ['name' => 'SPORT', 'count' => '42'],
-                    ['name' => 'LOTTO', 'count' => '36'],
-                    ['name' => '电子', 'count' => '94'],
-                    ['name' => '棋牌', 'count' => '58'],
-                    ['name' => '捕鱼', 'count' => '27'],
-                    ['name' => '真人', 'count' => '71'],
-                    ['name' => '彩票', 'count' => '45']
-                ];
-                foreach ($categories as $index => $cat):
-                ?>
-                    <a href="games.php?cat=<?php echo strtolower($cat['name']); ?>" class="sp-category-card">
-                        <img src="resource/game-icons/<?php
-                                                        $imgs = ['dragon-gem.png', 'golden-temple.png', 'lucky-piggy.png'];
-                                                        echo $imgs[$index % 3];
-                                                        ?>" alt="<?php echo $cat['name']; ?>">
-                        <div class="sp-category-overlay">
-                            <div class="sp-category-name"><?php echo $cat['name']; ?></div>
-                            <div class="sp-category-count"><?php echo $cat['count']; ?> 款</div>
-                        </div>
-                    </a>
-                <?php endforeach; ?>
+            <div class="sp-hot-games-slider-wrapper">
+                <div class="sp-hot-games-slider">
+                    <?php
+                    $hotGames = [
+                        ['img' => 'super-3-hot-chillies.png', 'name' => 'Hot Chillies'],
+                        ['img' => 'coin-princess-x1000.png', 'name' => 'Lucky Penny'],
+                        ['img' => 'golden-temple.png', 'name' => 'Sweet Bonanza'],
+                        ['img' => 'lucky-piggy.png', 'name' => 'Mahjong'],
+                        ['img' => 'dragon-gem.png', 'name' => 'Dragon Gem'],
+                        ['img' => 'king-arthur.png', 'name' => 'King Arthur'],
+                        ['img' => 'ragnarok-odin.png', 'name' => 'Ragnarok'],
+                        ['img' => 'super-pink-joker.png', 'name' => 'Pink Joker']
+                    ];
+                    foreach ($hotGames as $index => $game):
+                    ?>
+                        <a href="game.php?id=<?php echo $index + 1; ?>" class="sp-hot-game-item">
+                            <div class="sp-hot-game-thumb">
+                                <img src="resource/game-icons/<?php echo $game['img']; ?>" alt="<?php echo htmlspecialchars($game['name']); ?>">
+                            </div>
+                        </a>
+                    <?php endforeach; ?>
+                </div>
             </div>
-        </div>
+        </section>
 
-        <!-- ========== HOT GAMES (2 Columns) ========== -->
-        <div class="sp-game-section">
-            <h2 class="sp-section-title">热门游戏</h2>
-            <div class="sp-game-grid">
+        <!-- ========== CATEGORY TABS ========== -->
+        <section class="sp-category-tabs-section">
+            <div class="sp-category-tabs">
+                <a href="#" class="sp-category-tab active" data-category="hot">
+                    <img src="resource/ui-elements/fire.png" alt="热门" class="sp-tab-icon">
+                    <span>热门</span>
+                </a>
+                <a href="#" class="sp-category-tab" data-category="slots">老虎机</a>
+                <a href="#" class="sp-category-tab" data-category="fishing">捕鱼</a>
+                <a href="#" class="sp-category-tab" data-category="live">真人</a>
+                <a href="#" class="sp-category-tab" data-category="chess">棋牌</a>
+                <a href="#" class="sp-category-tab" data-category="sports">体育</a>
+                <a href="#" class="sp-category-tab" data-category="esports">电竞</a>
+            </div>
+        </section>
+
+        <!-- ========== GAMES GRID (4 Columns) ========== -->
+        <section class="sp-games-section-home">
+            <div class="sp-games-grid-home">
+                <!-- ALL Button as first grid item -->
+                <a href="games.php" class="sp-all-btn-grid">
+                    <div class="sp-all-btn-inner">
+                        <img src="resource/ui-elements/menu-1.png" alt="ALL" class="sp-all-icon">
+                        <span>ALL</span>
+                    </div>
+                </a>
+
                 <?php
                 $games = [
-                    ['name' => 'Wild Fury', 'rating' => 4.8],
-                    ['name' => 'Wealthy Dynasty', 'rating' => 4.7],
-                    ['name' => 'Lucky Piggy', 'rating' => 4.9],
-                    ['name' => 'Dragon Gem', 'rating' => 4.6],
-                    ['name' => 'Golden Temple', 'rating' => 4.8],
-                    ['name' => 'King Arthur', 'rating' => 4.7],
-                    ['name' => 'Ragnarok', 'rating' => 4.9],
-                    ['name' => 'Dancing Joker', 'rating' => 4.5]
+                    ['img' => 'aristocrat-roman-warrior.png', 'name' => 'Wild Fury'],
+                    ['img' => 'coin-princess-x1000.png', 'name' => 'Lucky Penny'],
+                    ['img' => 'dragon-gem.png', 'name' => 'Aristocrat'],
+                    ['img' => 'golden-temple.png', 'name' => '9 Texes'],
+                    ['img' => 'lucky-piggy.png', 'name' => 'Lucky Piggy'],
+                    ['img' => 'king-arthur.png', 'name' => 'King Arthur'],
+                    ['img' => 'ragnarok-odin.png', 'name' => 'Ragnarok'],
+                    ['img' => 'super-pink-joker.png', 'name' => 'Pink Joker'],
+                    ['img' => 'dancing-joker.png', 'name' => 'Dancing Joker'],
+                    ['img' => 'trick-or-treat.png', 'name' => 'Trick Treat'],
+                    ['img' => 'gold-rush-party.png', 'name' => 'Gold Rush']
                 ];
                 foreach ($games as $index => $game):
                 ?>
-                    <a href="game.php?id=<?php echo $index + 1; ?>" class="sp-game-card">
-                        <div class="sp-game-image">
-                            <img src="resource/game-icons/<?php
-                                                            $gameImgs = ['dragon-gem.png', 'golden-temple.png', 'lucky-piggy.png', 'king-arthur.png', 'ragnarok-odin.png', 'super-pink-joker.png', 'dancing-joker.png', 'trick-or-treat.png'];
-                                                            echo $gameImgs[$index % 8];
-                                                            ?>" alt="<?php echo $game['name']; ?>">
-                            <span class="sp-game-badge">HOT</span>
-                        </div>
-                        <div class="sp-game-body">
-                            <div class="sp-game-name"><?php echo $game['name']; ?></div>
-                            <div class="sp-game-meta">
-                                <span class="sp-game-rating">
-                                    <i class="fas fa-star"></i>
-                                    <?php echo $game['rating']; ?>
-                                </span>
-                                <span><?php echo rand(1000, 9999); ?> 人</span>
-                            </div>
+                    <a href="game.php?id=<?php echo $index + 1; ?>" class="sp-game-item-home">
+                        <div class="sp-game-thumb-home">
+                            <img src="resource/game-icons/<?php echo $game['img']; ?>" alt="<?php echo htmlspecialchars($game['name']); ?>">
                         </div>
                     </a>
                 <?php endforeach; ?>
             </div>
-        </div>
-
-        <!-- ========== SEE MORE BUTTON ========== -->
-        <div class="sp-button-container">
-            <a href="games.php" class="sp-btn-primary sp-btn-large">
-                <i class="fas fa-gamepad"></i>
-                查看所有游戏
-            </a>
-        </div>
+        </section>
 
     </div>
 </main>
@@ -247,7 +203,21 @@ include 'lib/header.php';
         indicators.forEach((indicator, index) => {
             indicator.addEventListener('click', () => showSlide(index));
         });
+
+        // Category tab handlers
+        const tabs = document.querySelectorAll('.sp-category-tab');
+        tabs.forEach(tab => {
+            tab.addEventListener('click', function(e) {
+                e.preventDefault();
+                tabs.forEach(t => t.classList.remove('active'));
+                this.classList.add('active');
+            });
+        });
     });
+
+    function showQRModal() {
+        alert('二维码功能');
+    }
 </script>
 
 <?php include 'lib/htmlBody.php'; ?>

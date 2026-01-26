@@ -2,36 +2,36 @@
 
 /**
  * footer.php - SUPERONG Mobile App
- * Bottom Navigation + Customer Service Floating Button
- * 99% Similarity Required
+ * Bottom Navigation - 100% Match with home.png design
+ * 5 items: 首页, 优惠, Crown(center), 充值, 我的
  */
 ?>
 
 <!-- Bottom Navigation -->
 <nav class="sp-bottom-nav">
-    <!-- 通知 (Notification) -->
-    <a href="notification.php" class="sp-nav-item <?php echo isActivePage($pageName, 'notification'); ?>">
-        <img src="resource/ui-elements/alert.png" alt="通知" class="sp-nav-icon">
-        <span>通知</span>
+    <!-- 首页 (Home) -->
+    <a href="index.php" class="sp-nav-item <?php echo isActivePage($pageName, 'home'); ?>">
+        <img src="resource/ui-elements/menu-1.png" alt="首页" class="sp-nav-icon">
+        <span>首页</span>
     </a>
 
-    <!-- 邀请好友 (Invite Friends) -->
-    <a href="invite.php" class="sp-nav-item <?php echo isActivePage($pageName, 'invite'); ?>">
-        <img src="resource/ui-elements/user-plus.png" alt="邀请好友" class="sp-nav-icon">
-        <span>邀请好友</span>
+    <!-- 优惠 (Promo) -->
+    <a href="promo.php" class="sp-nav-item <?php echo isActivePage($pageName, 'promo'); ?>">
+        <img src="resource/ui-elements/gift.png" alt="优惠" class="sp-nav-icon">
+        <span>优惠</span>
     </a>
 
-    <!-- Center Spade Button (Home) -->
+    <!-- Center Crown Button (Home) -->
     <div class="sp-nav-center">
         <a href="index.php" class="sp-nav-crown <?php echo isActivePage($pageName, 'index'); ?>">
             <img src="resource/ui-elements/logo-transparent.png" alt="Home" class="sp-nav-crown-logo">
         </a>
     </div>
 
-    <!-- 聊天室 (Chat) -->
-    <a href="chatroom.php" class="sp-nav-item <?php echo isActivePage($pageName, 'chatroom'); ?>">
-        <img src="resource/ui-elements/chat.png" alt="聊天室" class="sp-nav-icon">
-        <span>聊天室</span>
+    <!-- 充值 (Deposit) -->
+    <a href="deposit.php" class="sp-nav-item <?php echo isActivePage($pageName, 'deposit'); ?>">
+        <img src="resource/ui-elements/wallet.png" alt="充值" class="sp-nav-icon">
+        <span>充值</span>
     </a>
 
     <!-- 我的 (Profile) -->

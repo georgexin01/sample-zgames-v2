@@ -1328,3 +1328,624 @@
   background: #e74c3c;
   color: #ffffff;
 }
+
+/* ============================================
+   HOME PAGE - 100% Match with home.png Design
+   ============================================ */
+
+/* Points Bar - Home Style */
+.sp-point-section-home {
+  background: var(--sp-primary-dark, #1a003c);
+  padding: 10px 16px;
+}
+
+.sp-point-bar-home {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  padding: 10px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.sp-point-label-home {
+  font-size: 13px;
+  color: #ffffff;
+  font-weight: 500;
+}
+
+.sp-point-value-wrap-home {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.sp-point-value-home {
+  font-size: 14px;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.sp-point-dropdown-icon {
+  width: 12px;
+  height: 12px;
+  object-fit: contain;
+  opacity: 0.8;
+}
+
+/* Feature Icons - Home Style (8 items in 2 rows of 4) */
+.sp-feature-section-home {
+  background: var(--sp-primary-dark, #1a003c);
+  padding: 16px;
+}
+
+.sp-feature-grid-home {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px 8px;
+}
+
+.sp-feature-item-home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  color: #ffffff;
+  transition: all 0.3s ease;
+}
+
+.sp-feature-item-home:hover {
+  transform: translateY(-3px);
+}
+
+.sp-feature-icon-home {
+  width: 48px;
+  height: 48px;
+  background: linear-gradient(135deg, #f5a623 0%, #e8851c 100%);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(245, 166, 35, 0.3);
+}
+
+.sp-feature-icon-home img {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+}
+
+.sp-feature-label-home {
+  font-size: 11px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.9);
+  text-align: center;
+}
+
+/* Category Tabs - Medium purple background */
+.sp-category-tabs-section {
+  background: #2d3d5a;
+  padding: 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.sp-category-tabs {
+  display: flex;
+  overflow-x: auto;
+  padding: 0 12px;
+  gap: 0;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.sp-category-tabs::-webkit-scrollbar {
+  display: none;
+}
+
+.sp-category-tab {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  padding: 14px 16px;
+  font-size: 13px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.6);
+  text-decoration: none;
+  white-space: nowrap;
+  border-bottom: 2px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.sp-category-tab:hover {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.sp-category-tab.active {
+  color: #d4a84b;
+  border-bottom-color: #d4a84b;
+}
+
+.sp-tab-icon {
+  width: 16px;
+  height: 16px;
+  object-fit: contain;
+}
+
+/* Games Section - Home - Darker purple background */
+.sp-games-section-home {
+  background: linear-gradient(180deg, #1a1a3a 0%, #0d0d20 100%);
+  padding: 16px;
+  min-height: 400px;
+  padding-bottom: 100px;
+}
+
+/* Games Grid - 4 columns (matches home.png) */
+.sp-games-grid-home {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+/* ALL Button as Grid Item */
+.sp-all-btn-grid {
+  display: block;
+  text-decoration: none;
+  border-radius: 10px;
+  overflow: hidden;
+  aspect-ratio: 1;
+  background: rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+}
+
+.sp-all-btn-grid:hover {
+  background: rgba(255, 255, 255, 0.18);
+  transform: translateY(-3px);
+}
+
+.sp-all-btn-inner {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  color: #ffffff;
+}
+
+.sp-all-icon {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+  filter: brightness(0) invert(1);
+}
+
+.sp-all-btn-inner span {
+  font-size: 11px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.sp-game-item-home {
+  display: block;
+  text-decoration: none;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.sp-game-item-home:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+}
+
+.sp-game-thumb-home {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1;
+  border-radius: 10px;
+  overflow: hidden;
+  background: #2d2d5a;
+}
+
+.sp-game-thumb-home img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Bottom Nav - Purple gradient matching home.png */
+.sp-bottom-nav {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 414px;
+  height: 70px;
+  background: linear-gradient(180deg, #3d3d6a 0%, #2a2a4a 50%, #1a1a3a 100%);
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-around;
+  padding-bottom: 10px;
+  z-index: 100;
+  box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.sp-nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 10px;
+  padding: 5px 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.sp-nav-item.active,
+.sp-nav-item:hover {
+  color: #ffffff;
+}
+
+.sp-nav-icon {
+  width: 24px;
+  height: 24px;
+  margin-bottom: 4px;
+  object-fit: contain;
+  filter: brightness(0) invert(1);
+  opacity: 0.7;
+}
+
+.sp-nav-item.active .sp-nav-icon,
+.sp-nav-item:hover .sp-nav-icon {
+  opacity: 1;
+}
+
+/* Center Crown Button */
+.sp-nav-center {
+  position: relative;
+  height: 100%;
+  width: 60px;
+}
+
+.sp-nav-crown {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  background: linear-gradient(180deg, #f5a623 0%, #d4a84b 100%);
+  top: -25px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 101;
+  box-shadow: 0 4px 15px rgba(212, 168, 75, 0.4);
+}
+
+.sp-nav-crown-logo {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
+/* Banner Section - Updated */
+.sp-banner-section {
+  position: relative;
+  width: 100%;
+  height: 180px;
+  background: var(--sp-primary-dark, #1a003c);
+  overflow: hidden;
+  margin-bottom: 0;
+}
+
+.sp-banner-slider {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.sp-banner-slide {
+  position: absolute;
+  width: calc(100% - 32px);
+  height: calc(100% - 16px);
+  margin: 8px 16px;
+  border-radius: 16px;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+  overflow: hidden;
+}
+
+.sp-banner-slide.active {
+  opacity: 1;
+}
+
+.sp-banner-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 16px;
+}
+
+.sp-banner-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.6) 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 16px;
+  color: #ffffff;
+  z-index: 2;
+  border-radius: 16px;
+}
+
+.sp-banner-label {
+  display: inline-block;
+  background: #d4a84b;
+  color: #1a003c;
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-size: 10px;
+  font-weight: 700;
+  width: fit-content;
+  margin-bottom: 6px;
+}
+
+.sp-banner-title {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: #ffffff;
+}
+
+.sp-banner-btn {
+  display: inline-block;
+  background: #d4a84b;
+  color: #1a003c;
+  padding: 8px 20px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  width: fit-content;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.sp-banner-btn:hover {
+  background: #e5c16e;
+  transform: translateY(-2px);
+}
+
+.sp-banner-indicators {
+  position: absolute;
+  bottom: 20px;
+  right: 24px;
+  display: flex;
+  gap: 6px;
+  z-index: 3;
+}
+
+.sp-indicator {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.4);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.sp-indicator.active {
+  background: #d4a84b;
+  width: 18px;
+  border-radius: 3px;
+}
+
+/* Mobile Nav Spacer */
+.mobile-nav-spacer {
+  height: 80px;
+}
+
+/* ============================================
+   QUICK ACTION BUTTONS (4 Items Row)
+   Matches index_button.png exactly
+   Background: Light gray (#f5f5f5)
+   ============================================ */
+.sp-quick-buttons-section {
+  background: #f5f5f5;
+  padding: 12px 16px;
+}
+
+.sp-quick-buttons-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.sp-quick-btn {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 12px 6px;
+  background: linear-gradient(180deg, #f5a623 0%, #e89020 100%);
+  border-radius: 12px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  aspect-ratio: 1;
+  max-width: 80px;
+}
+
+.sp-quick-btn:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.08);
+}
+
+.sp-quick-btn:active {
+  transform: translateY(0);
+  filter: brightness(0.95);
+}
+
+.sp-quick-btn-icon {
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sp-quick-btn-icon img {
+  width: 26px;
+  height: 26px;
+  object-fit: contain;
+  filter: brightness(0) invert(1);
+}
+
+.sp-quick-btn-label {
+  font-size: 11px;
+  font-weight: 500;
+  color: #ffffff;
+  text-align: center;
+}
+
+/* ============================================
+   HOT GAMES HORIZONTAL SLIDER
+   Matches image_games_hot.png design exactly
+   - Orange background
+   - Header with fire icon + "热门" centered
+   - Horizontal scroll with left/right peek effect
+   ============================================ */
+.sp-hot-games-section {
+  background: linear-gradient(180deg, #f5a623 0%, #e8951c 100%);
+  padding: 10px 0 14px 0;
+}
+
+.sp-hot-games-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  padding: 0 16px 10px 16px;
+}
+
+.sp-hot-icon {
+  width: 16px;
+  height: 16px;
+  object-fit: contain;
+}
+
+.sp-hot-title {
+  font-size: 13px;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.sp-hot-games-slider-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+.sp-hot-games-slider {
+  display: flex;
+  gap: 8px;
+  padding: 0 20px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+}
+
+.sp-hot-games-slider::-webkit-scrollbar {
+  display: none;
+}
+
+.sp-hot-game-item {
+  flex: 0 0 auto;
+  width: 70px;
+  text-decoration: none;
+  scroll-snap-align: start;
+  transition: transform 0.3s ease;
+}
+
+.sp-hot-game-item:hover {
+  transform: scale(1.05);
+}
+
+.sp-hot-game-thumb {
+  width: 70px;
+  height: 88px;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #2d2d5a;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.25);
+}
+
+.sp-hot-game-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Responsive adjustments for quick buttons */
+@media (max-width: 375px) {
+  .sp-quick-buttons-section {
+    padding: 12px;
+  }
+
+  .sp-quick-buttons-row {
+    gap: 6px;
+  }
+
+  .sp-quick-btn {
+    padding: 10px 4px;
+    border-radius: 10px;
+    min-height: 60px;
+  }
+
+  .sp-quick-btn-icon img {
+    width: 22px;
+    height: 22px;
+  }
+
+  .sp-quick-btn-label {
+    font-size: 10px;
+  }
+
+  .sp-games-grid-home {
+    gap: 8px;
+  }
+}
+
+/* Responsive */
+@media (max-width: 375px) {
+  .sp-feature-grid-home {
+    gap: 12px 4px;
+  }
+
+  .sp-feature-icon-home {
+    width: 42px;
+    height: 42px;
+  }
+
+  .sp-feature-icon-home img {
+    width: 24px;
+    height: 24px;
+  }
+
+  .sp-games-grid-home {
+    gap: 8px;
+  }
+
+  .sp-banner-section {
+    height: 160px;
+  }
+}
