@@ -85,37 +85,6 @@ include 'lib/header.php';
             </div>
         </section>
 
-        <!-- ========== HOT GAMES SLIDER (matches image_games_hot.png) ========== -->
-        <section class="sp-hot-games-section">
-            <div class="sp-hot-games-header">
-                <img src="resource/ui-elements/fire.png" alt="热门" class="sp-hot-icon">
-                <span class="sp-hot-title">热门</span>
-            </div>
-            <div class="sp-hot-games-slider-wrapper">
-                <div class="sp-hot-games-slider">
-                    <?php
-                    $hotGames = [
-                        ['img' => 'super-3-hot-chillies.png', 'name' => 'Hot Chillies'],
-                        ['img' => 'coin-princess-x1000.png', 'name' => 'Lucky Penny'],
-                        ['img' => 'golden-temple.png', 'name' => 'Sweet Bonanza'],
-                        ['img' => 'lucky-piggy.png', 'name' => 'Mahjong'],
-                        ['img' => 'dragon-gem.png', 'name' => 'Dragon Gem'],
-                        ['img' => 'king-arthur.png', 'name' => 'King Arthur'],
-                        ['img' => 'ragnarok-odin.png', 'name' => 'Ragnarok'],
-                        ['img' => 'super-pink-joker.png', 'name' => 'Pink Joker']
-                    ];
-                    foreach ($hotGames as $index => $game):
-                    ?>
-                        <a href="game.php?id=<?php echo $index + 1; ?>" class="sp-hot-game-item">
-                            <div class="sp-hot-game-thumb">
-                                <img src="resource/game-icons/<?php echo $game['img']; ?>" alt="<?php echo htmlspecialchars($game['name']); ?>">
-                            </div>
-                        </a>
-                    <?php endforeach; ?>
-                </div>
-            </div>
-        </section>
-
         <!-- ========== CATEGORY TABS ========== -->
         <section class="sp-category-tabs-section">
             <div class="sp-category-tabs">
