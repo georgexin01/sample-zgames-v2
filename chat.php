@@ -1,101 +1,76 @@
 <?php
 /**
  * chat.php - SUPERONG Mobile App
- * 聊天 (Chat Page)
- * 99% Similarity Required
+ * 聊天 (Chat List Page)
+ * 100% Match with chat_list聊天列表.png
  */
 
-// Page settings
 $pageName = 'chat';
 $pageTitle = '聊天';
+$headerTitle = '聊天';
+$headerRightIcon = 'fa-cog';
+$headerRightLink = 'chat-settings.php';
 
-// Get chat user from URL parameter
-$chatUserId = isset($_GET['user']) ? $_GET['user'] : '';
-$headerTitle = $chatUserId ? $chatUserId : '聊天';
-
-// Include header
 include 'lib/htmlHead.php';
 include 'lib/header.php';
 
-// Chat user data (dummy)
-$chatUser = array(
-    'id' => 'AAA111',
-    'name' => 'AAA111',
-    'avatar' => null,
-);
-
-// Dummy messages
-$messages = array(
-    array(
-        'id' => 1,
-        'type' => 'sent',
-        'text' => '我的介绍怎么样？',
-        'time' => '10:30',
-    ),
-    array(
-        'id' => 2,
-        'type' => 'received',
-        'text' => 'SUPERONG超好玩',
-        'time' => '10:31',
-    ),
-);
+// Dummy chat list
+$chats = [
+    [
+        'id' => 'AAA111',
+        'name' => 'AAA111',
+        'lastMessage' => 'SUPERONG超好玩',
+        'time' => '04:29',
+    ],
+];
 ?>
 
-<!-- ========== CHAT PAGE CONTENT ========== -->
-<main class="sp-page-content sp-chat-page">
+<!-- ========== CHAT LIST PAGE CONTENT ========== -->
+<main class="sp-page sp-page-dark">
+    <div class="sp-chat-list-container">
 
-    <!-- Chat User Info -->
-    <div class="sp-chat-user-info">
-        <div class="sp-chat-user-avatar">
-            <div class="sp-avatar-placeholder">
-                <i class="fas fa-user"></i>
-            </div>
+        <!-- Tab Switch -->
+        <div class="sp-tab-switch">
+            <button class="sp-tab-btn">通讯录</button>
+            <button class="sp-tab-btn active">聊天</button>
         </div>
-        <span class="sp-chat-user-name"><?php echo e($chatUser['name']); ?></span>
-    </div>
 
-    <!-- Chat Messages -->
-    <div class="sp-chat-messages">
-        <?php foreach ($messages as $msg): ?>
-        <div class="sp-chat-message <?php echo $msg['type'] === 'sent' ? 'sp-sent' : 'sp-received'; ?>">
-            <?php if ($msg['type'] === 'received'): ?>
-            <div class="sp-message-avatar">
-                <div class="sp-avatar-small">
+        <!-- Chat List -->
+        <div class="sp-chat-list">
+            <?php foreach ($chats as $chat): ?>
+            <a href="chat-conversation.php?user=<?php echo urlencode($chat['id']); ?>" class="sp-chat-item">
+                <div class="sp-chat-avatar">
                     <i class="fas fa-user"></i>
                 </div>
-            </div>
-            <?php endif; ?>
-            <div class="sp-chat-bubble sp-chat-bubble-<?php echo $msg['type']; ?>">
-                <?php echo e($msg['text']); ?>
-            </div>
-            <?php if ($msg['type'] === 'sent'): ?>
-            <div class="sp-message-avatar">
-                <div class="sp-avatar-small sp-avatar-user">
-                    <i class="fas fa-user"></i>
+                <div class="sp-chat-content">
+                    <div class="sp-chat-name"><?php echo htmlspecialchars($chat['name']); ?></div>
+                    <div class="sp-chat-preview"><?php echo htmlspecialchars($chat['lastMessage']); ?></div>
                 </div>
-            </div>
-            <?php endif; ?>
+                <div class="sp-chat-time"><?php echo htmlspecialchars($chat['time']); ?></div>
+            </a>
+            <?php endforeach; ?>
         </div>
-        <?php endforeach; ?>
-    </div>
 
-    <!-- Chat Input Bar -->
-    <div class="sp-chat-input-bar">
-        <div class="sp-chat-input-wrapper">
-            <input type="text" placeholder="Tell me what do you want?" class="sp-chat-input">
-            <button type="button" class="sp-voice-btn">
-                <i class="fas fa-microphone"></i>
-            </button>
-        </div>
-        <button type="button" class="sp-chat-send-btn">
-            <i class="fas fa-paper-plane"></i>
-        </button>
-    </div>
+        <!-- Customer Service Button -->
+        <a href="customer-service.php" class="sp-cs-btn-outline">
+            Customer Service
+        </a>
 
+    </div>
 </main>
 
-<?php
-// Include footer
-include 'lib/footer.php';
-include 'lib/htmlBody.php';
-?>
+<!-- Mobile Nav Spacer -->
+<div class="mobile-nav-spacer"></div>
+
+<?php include 'lib/footer.php'; ?>
+
+<script>
+document.querySelectorAll('.sp-tab-btn').forEach(btn => {
+    btn.addEventListener('click', function() {
+        document.querySelectorAll('.sp-tab-btn').forEach(b => b.classList.remove('active'));
+        this.classList.add('active');
+    });
+});
+</script>
+
+<?php include 'lib/htmlBody.php'; ?>

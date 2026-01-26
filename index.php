@@ -85,50 +85,74 @@ include 'lib/header.php';
             </div>
         </section>
 
-        <!-- ========== CATEGORY TABS ========== -->
+        <!-- ========== CATEGORY TABS (Pill Style) ========== -->
         <section class="sp-category-tabs-section">
             <div class="sp-category-tabs">
                 <a href="#" class="sp-category-tab active" data-category="hot">
-                    <img src="resource/ui-elements/fire.png" alt="热门" class="sp-tab-icon">
-                    <span>热门</span>
+                    <img src="resource/game-icons/spade-icon-orange.png" alt="ALL" class="sp-tab-icon">
+                    <span>ALL</span>
                 </a>
-                <a href="#" class="sp-category-tab" data-category="slots">老虎机</a>
-                <a href="#" class="sp-category-tab" data-category="fishing">捕鱼</a>
-                <a href="#" class="sp-category-tab" data-category="live">真人</a>
-                <a href="#" class="sp-category-tab" data-category="chess">棋牌</a>
-                <a href="#" class="sp-category-tab" data-category="sports">体育</a>
-                <a href="#" class="sp-category-tab" data-category="esports">电竞</a>
+                <a href="#" class="sp-category-tab" data-category="slots">SLOT</a>
+                <a href="#" class="sp-category-tab" data-category="live">LIVE</a>
+                <a href="#" class="sp-category-tab" data-category="sports">SPORT</a>
+                <a href="#" class="sp-category-tab" data-category="fishing">FISH</a>
+                <a href="#" class="sp-category-tab" data-category="chess">CHESS</a>
+                <a href="#" class="sp-category-tab" data-category="esports">ESPORT</a>
             </div>
         </section>
 
-        <!-- ========== GAMES GRID (4 Columns) ========== -->
+        <!-- ========== GAMES GRID (3 Columns) ========== -->
         <section class="sp-games-section-home">
-            <div class="sp-games-grid-home">
-                <!-- ALL Button as first grid item -->
-                <a href="games.php" class="sp-all-btn-grid">
-                    <div class="sp-all-btn-inner">
-                        <img src="resource/ui-elements/menu-1.png" alt="ALL" class="sp-all-icon">
-                        <span>ALL</span>
-                    </div>
-                </a>
-
+            <div class="sp-games-grid-home" id="gamesGrid">
                 <?php
+                // All games with categories: hot, slots, fishing, live, chess, sports, esports
                 $games = [
-                    ['img' => 'aristocrat-roman-warrior.png', 'name' => 'Wild Fury'],
-                    ['img' => 'coin-princess-x1000.png', 'name' => 'Lucky Penny'],
-                    ['img' => 'dragon-gem.png', 'name' => 'Aristocrat'],
-                    ['img' => 'golden-temple.png', 'name' => '9 Texes'],
-                    ['img' => 'lucky-piggy.png', 'name' => 'Lucky Piggy'],
-                    ['img' => 'king-arthur.png', 'name' => 'King Arthur'],
-                    ['img' => 'ragnarok-odin.png', 'name' => 'Ragnarok'],
-                    ['img' => 'super-pink-joker.png', 'name' => 'Pink Joker'],
-                    ['img' => 'dancing-joker.png', 'name' => 'Dancing Joker'],
-                    ['img' => 'trick-or-treat.png', 'name' => 'Trick Treat'],
-                    ['img' => 'gold-rush-party.png', 'name' => 'Gold Rush']
+                    // HOT (Featured games from all categories)
+                    ['img' => 'dragon-gem.png', 'name' => 'Dragon Gem', 'category' => 'hot,slots'],
+                    ['img' => 'golden-temple.png', 'name' => 'Golden Temple', 'category' => 'hot,slots'],
+                    ['img' => 'lucky-piggy.png', 'name' => 'Lucky Piggy', 'category' => 'hot,slots'],
+                    ['img' => 'ae-sexy-live.png', 'name' => 'AE Sexy', 'category' => 'hot,live'],
+                    ['img' => '3x-catch.png', 'name' => '3X Catch', 'category' => 'hot,fishing'],
+                    ['img' => 'king-arthur.png', 'name' => 'King Arthur', 'category' => 'hot,slots'],
+
+                    // SLOTS (老虎机)
+                    ['img' => 'aristocrat-roman-warrior.png', 'name' => 'Roman Warrior', 'category' => 'slots'],
+                    ['img' => 'coin-princess-x1000.png', 'name' => 'Coin Princess', 'category' => 'slots'],
+                    ['img' => 'dragon-gem-2.png', 'name' => 'Dragon Gem 2', 'category' => 'slots'],
+                    ['img' => 'golden-temple-2.png', 'name' => 'Golden Temple 2', 'category' => 'slots'],
+                    ['img' => 'ragnarok-odin.png', 'name' => 'Ragnarok Odin', 'category' => 'slots'],
+                    ['img' => 'super-pink-joker.png', 'name' => 'Pink Joker', 'category' => 'slots'],
+                    ['img' => 'dancing-joker.png', 'name' => 'Dancing Joker', 'category' => 'slots'],
+                    ['img' => 'trick-or-treat.png', 'name' => 'Trick or Treat', 'category' => 'slots'],
+                    ['img' => 'gold-rush-party.png', 'name' => 'Gold Rush', 'category' => 'slots'],
+                    ['img' => 'flame-777.png', 'name' => 'Flame 777', 'category' => 'slots'],
+                    ['img' => '918kiss-genie.png', 'name' => '918Kiss Genie', 'category' => 'slots'],
+                    ['img' => 'super-3-hot-chillies.png', 'name' => 'Hot Chillies', 'category' => 'slots'],
+                    ['img' => 'super-china-pots.png', 'name' => 'China Pots', 'category' => 'slots'],
+                    ['img' => 'paxo-759-gaming-skeleton.png', 'name' => 'Skeleton', 'category' => 'slots'],
+
+                    // FISHING (捕鱼)
+                    ['img' => '3x-catch.png', 'name' => '3X Catch', 'category' => 'fishing'],
+
+                    // LIVE (真人)
+                    ['img' => 'ae-sexy-live.png', 'name' => 'AE Sexy', 'category' => 'live'],
+                    ['img' => 'ag-asia-gaming-live.png', 'name' => 'AG Live', 'category' => 'live'],
+                    ['img' => 'allbet-live.png', 'name' => 'Allbet Live', 'category' => 'live'],
+
+                    // CHESS (棋牌)
+                    ['img' => 'yuanbao-mahjong-2.png', 'name' => 'Yuanbao Mahjong', 'category' => 'chess'],
+
+                    // SPORTS (体育) - using slot icons as placeholders
+                    ['img' => 'king-arthur.png', 'name' => 'Sports Bet', 'category' => 'sports'],
+                    ['img' => 'ragnarok-odin.png', 'name' => 'Live Sports', 'category' => 'sports'],
+
+                    // ESPORTS (电竞) - using slot icons as placeholders
+                    ['img' => 'dragon-gem.png', 'name' => 'LoL Betting', 'category' => 'esports'],
+                    ['img' => 'flame-777.png', 'name' => 'Dota 2', 'category' => 'esports'],
                 ];
                 foreach ($games as $index => $game):
                 ?>
-                    <a href="game.php?id=<?php echo $index + 1; ?>" class="sp-game-item-home">
+                    <a href="game.php?id=<?php echo $index + 1; ?>" class="sp-game-item-home" data-category="<?php echo $game['category']; ?>">
                         <div class="sp-game-thumb-home">
                             <img src="resource/game-icons/<?php echo $game['img']; ?>" alt="<?php echo htmlspecialchars($game['name']); ?>">
                         </div>
@@ -145,9 +169,10 @@ include 'lib/header.php';
 
 <?php include 'lib/footer.php'; ?>
 
-<!-- BANNER SLIDER SCRIPT -->
+<!-- BANNER SLIDER + CATEGORY FILTER SCRIPT -->
 <script>
     document.addEventListener('DOMContentLoaded', function() {
+        // ===== BANNER SLIDER =====
         const slides = document.querySelectorAll('.sp-banner-slide');
         const indicators = document.querySelectorAll('.sp-indicator');
         let currentSlide = 0;
@@ -173,15 +198,46 @@ include 'lib/header.php';
             indicator.addEventListener('click', () => showSlide(index));
         });
 
-        // Category tab handlers
+        // ===== CATEGORY TAB FILTER =====
         const tabs = document.querySelectorAll('.sp-category-tab');
+        const gameItems = document.querySelectorAll('.sp-game-item-home');
+
+        function filterGames(category) {
+            gameItems.forEach(item => {
+                const itemCategories = item.dataset.category.split(',');
+
+                // First fade out all items
+                item.classList.add('sp-game-hiding');
+                item.classList.remove('sp-game-showing');
+
+                setTimeout(() => {
+                    if (category === 'hot' || itemCategories.includes(category)) {
+                        item.style.display = 'block';
+                        // Trigger reflow for animation
+                        void item.offsetWidth;
+                        item.classList.remove('sp-game-hiding');
+                        item.classList.add('sp-game-showing');
+                    } else {
+                        item.style.display = 'none';
+                    }
+                }, 150);
+            });
+        }
+
+        // Category tab click handlers
         tabs.forEach(tab => {
             tab.addEventListener('click', function(e) {
                 e.preventDefault();
                 tabs.forEach(t => t.classList.remove('active'));
                 this.classList.add('active');
+
+                const category = this.dataset.category;
+                filterGames(category);
             });
         });
+
+        // Initial filter - show hot games
+        filterGames('hot');
     });
 
     function showQRModal() {

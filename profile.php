@@ -2,135 +2,129 @@
 /**
  * profile.php - SUPERONG Mobile App
  * 我的 (Profile Page)
- * 99% Similarity Required
+ * 100% Match with profile我的_个人中心.png
  */
 
-// Page settings
 $pageName = 'profile';
 $pageTitle = '我的';
 $headerTitle = '我的';
-$headerRightIcon = 'fa-share-alt';
-$headerRightLink = '#';
+$headerRightIcon = 'fa-sign-out-alt';
+$headerRightLink = 'javascript:showLogoutModal()';
 
-// Include header
 include 'lib/htmlHead.php';
 include 'lib/header.php';
 
-// Use global user data
-global $currentUser, $profileMenuItems;
+// Dummy user data (simulating logged-in user)
+$user = [
+    'username' => 'SUPERONG123',
+    'level' => 'SUPERONG',
+    'phone' => '+6012 435 6567',
+    'joinDate' => '22-08-1996',
+    'point' => 1000.00
+];
 ?>
 
 <!-- ========== PROFILE PAGE CONTENT ========== -->
-<main class="sp-page-content">
+<main class="sp-page sp-page-dark">
+    <div class="container-fluid" style="padding: 0;">
 
-    <!-- Profile Card -->
-    <div class="sp-profile-card">
-        <div class="sp-profile-avatar">
-            <div class="sp-avatar-circle">
-                <img src="resource/ui-elements/user-alt.png" alt="Avatar" style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%;">
+        <!-- ========== USER PROFILE CARD ========== -->
+        <section class="sp-profile-card-section">
+            <div class="sp-profile-user-card">
+                <!-- Avatar with Ring -->
+                <div class="sp-profile-avatar-wrap">
+                    <div class="sp-avatar-ring">
+                        <i class="fas fa-user"></i>
+                    </div>
+                </div>
+                <!-- Username & Level -->
+                <h2 class="sp-profile-username"><?php echo htmlspecialchars($user['username']); ?></h2>
+                <p class="sp-profile-level"><?php echo htmlspecialchars($user['level']); ?></p>
+                <!-- Phone & Date Info -->
+                <div class="sp-profile-meta">
+                    <div class="sp-profile-meta-item">
+                        <i class="fas fa-phone-alt"></i>
+                        <span><?php echo htmlspecialchars($user['phone']); ?></span>
+                    </div>
+                    <div class="sp-profile-meta-item">
+                        <i class="fas fa-calendar-alt"></i>
+                        <span><?php echo htmlspecialchars($user['joinDate']); ?></span>
+                    </div>
+                </div>
             </div>
-        </div>
-        <h2 class="sp-profile-name"><?php echo e($currentUser['username']); ?></h2>
-        <p class="sp-profile-nickname"><?php echo e($currentUser['nickname']); ?></p>
-        <div class="sp-profile-info">
-            <div class="sp-profile-info-item">
-                <i class="fas fa-phone"></i>
-                <span><?php echo e($currentUser['phone']); ?></span>
-            </div>
-            <div class="sp-profile-info-item">
-                <i class="fas fa-birthday-cake"></i>
-                <span><?php echo e($currentUser['birthday']); ?></span>
-            </div>
-        </div>
-    </div>
+        </section>
 
-    <!-- Point Balance -->
-    <div class="sp-point-row">
-        <span class="sp-point-row-label">Point</span>
-        <span class="sp-point-row-value"><?php echo number_format($currentUser['point'], 2); ?></span>
-    </div>
+        <!-- ========== POINT BAR ========== -->
+        <section class="sp-profile-point-section">
+            <div class="sp-profile-point-row">
+                <span class="sp-profile-point-label">Point</span>
+                <span class="sp-profile-point-value"><?php echo number_format($user['point'], 2); ?></span>
+            </div>
+        </section>
 
-    <!-- Menu Section -->
-    <div class="sp-menu-section">
-        <div class="sp-menu-label">其他功能</div>
-        <div class="sp-menu-list">
-            <a href="deposit.php" class="sp-menu-item">
-                <div style="display:flex; align-items:center; gap:10px;">
-                    <img src="resource/ui-elements/wallet-orange.png" style="width:24px; height:24px;">
+        <!-- ========== MENU SECTION ========== -->
+        <section class="sp-profile-menu-section">
+            <div class="sp-profile-menu-header">
+                <span>其他功能</span>
+            </div>
+            <div class="sp-profile-menu-list">
+                <a href="deposit.php" class="sp-profile-menu-item">
                     <span>充值</span>
-                </div>
-                <i class="fas fa-chevron-right"></i>
-            </a>
-            <a href="withdraw.php" class="sp-menu-item">
-                <div style="display:flex; align-items:center; gap:10px;">
-                    <img src="resource/ui-elements/cash-orange.png" style="width:24px; height:24px;">
+                    <i class="fas fa-chevron-right"></i>
+                </a>
+                <a href="withdrawal.php" class="sp-profile-menu-item">
                     <span>提款</span>
-                </div>
-                <i class="fas fa-chevron-right"></i>
-            </a>
-            <a href="transfer.php" class="sp-menu-item">
-                <div style="display:flex; align-items:center; gap:10px;">
-                    <img src="resource/ui-elements/transfer.png" style="width:24px; height:24px;">
+                    <i class="fas fa-chevron-right"></i>
+                </a>
+                <a href="transfer.php" class="sp-profile-menu-item">
                     <span>转帐</span>
-                </div>
-                <i class="fas fa-chevron-right"></i>
-            </a>
-            <a href="activity.php" class="sp-menu-item">
-                <div style="display:flex; align-items:center; gap:10px;">
-                    <img src="resource/ui-elements/gift.png" style="width:24px; height:24px;">
+                    <i class="fas fa-chevron-right"></i>
+                </a>
+                <a href="activity.php" class="sp-profile-menu-item">
                     <span>活动</span>
-                </div>
-                <i class="fas fa-chevron-right"></i>
-            </a>
-            <a href="ranking.php" class="sp-menu-item">
-                <div style="display:flex; align-items:center; gap:10px;">
-                    <img src="resource/ui-elements/champion.png" style="width:24px; height:24px;">
+                    <i class="fas fa-chevron-right"></i>
+                </a>
+                <a href="ranking.php" class="sp-profile-menu-item">
                     <span>排行榜</span>
-                </div>
-                <i class="fas fa-chevron-right"></i>
-            </a>
-            <a href="transaction.php" class="sp-menu-item">
-                <div style="display:flex; align-items:center; gap:10px;">
-                    <img src="resource/ui-elements/history.png" style="width:24px; height:24px;">
+                    <i class="fas fa-chevron-right"></i>
+                </a>
+                <a href="transaction.php" class="sp-profile-menu-item">
                     <span>交易记录</span>
-                </div>
-                <i class="fas fa-chevron-right"></i>
-            </a>
-            <a href="profit-report.php" class="sp-menu-item">
-                <div style="display:flex; align-items:center; gap:10px;">
-                    <img src="resource/ui-elements/file-orange.png" style="width:24px; height:24px;">
+                    <i class="fas fa-chevron-right"></i>
+                </a>
+                <a href="winloss.php" class="sp-profile-menu-item">
                     <span>输赢报表</span>
-                </div>
-                <i class="fas fa-chevron-right"></i>
-            </a>
-            <a href="bet-record.php" class="sp-menu-item">
-                <div style="display:flex; align-items:center; gap:10px;">
-                    <img src="resource/ui-elements/file.png" style="width:24px; height:24px;">
+                    <i class="fas fa-chevron-right"></i>
+                </a>
+                <a href="betting.php" class="sp-profile-menu-item">
                     <span>投注记录</span>
-                </div>
-                <i class="fas fa-chevron-right"></i>
-            </a>
-            <a href="settings.php" class="sp-menu-item">
-                <div style="display:flex; align-items:center; gap:10px;">
-                    <img src="resource/ui-elements/item-blue-8.png" style="width:24px; height:24px;">
+                    <i class="fas fa-chevron-right"></i>
+                </a>
+                <a href="settings.php" class="sp-profile-menu-item">
                     <span>安全设定</span>
-                </div>
-                <i class="fas fa-chevron-right"></i>
-            </a>
-            <a href="#" class="sp-menu-item" onclick="logout(); return false;">
-                <div style="display:flex; align-items:center; gap:10px;">
-                    <img src="resource/ui-elements/logout-blue.png" style="width:24px; height:24px;">
-                    <span>退出登录</span>
-                </div>
-                <i class="fas fa-chevron-right"></i>
-            </a>
-        </div>
-    </div>
+                    <i class="fas fa-chevron-right"></i>
+                </a>
+            </div>
+        </section>
 
+    </div>
 </main>
 
-<?php
-// Include footer (bottom nav + modals)
-include 'lib/footer.php';
-include 'lib/htmlBody.php';
-?>
+<!-- Mobile Nav Spacer -->
+<div class="mobile-nav-spacer"></div>
+
+<?php include 'lib/footer.php'; ?>
+
+<script>
+function showLogoutModal() {
+    document.getElementById('confirmModalIcon').innerHTML = '<i class="fas fa-sign-out-alt"></i>';
+    document.getElementById('confirmModalTitle').textContent = '确认退出？';
+    document.getElementById('confirmModalMessage').textContent = '您确定要退出登入吗？';
+    document.getElementById('confirmModalBtn').onclick = function() {
+        window.location.href = 'login.php';
+    };
+    document.getElementById('confirmModal').classList.add('active');
+}
+</script>
+
+<?php include 'lib/htmlBody.php'; ?>

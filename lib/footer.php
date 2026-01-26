@@ -22,11 +22,9 @@
     </a>
 
     <!-- Center Crown Button (Home) -->
-    <div class="sp-nav-center">
-        <a href="index.php" class="sp-nav-crown <?php echo isActivePage($pageName, 'index'); ?>">
-            <img src="resource/ui-elements/logo-transparent.png" alt="Home" class="sp-nav-crown-logo">
-        </a>
-    </div>
+    <a href="index.php" class="sp-nav-center-link">
+        <img src="resource/ui-elements/logo-transparent.png" alt="Home" class="sp-nav-crown-logo">
+    </a>
 
     <!-- 充值 (Deposit) -->
     <a href="deposit.php" class="sp-nav-item <?php echo isActivePage($pageName, 'deposit'); ?>">

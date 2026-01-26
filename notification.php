@@ -2,104 +2,88 @@
 /**
  * notification.php - SUPERONG Mobile App
  * 通知 (Notification Page)
- * 99% Similarity Required
+ * 100% Match with notification通知.png
  */
 
-// Page settings
 $pageName = 'notification';
 $pageTitle = '通知';
 $headerTitle = '通知';
 
-// Include header
 include 'lib/htmlHead.php';
 include 'lib/header.php';
 
 // Dummy notification data
-$notifications = array(
-    array(
-        'type' => 'success',
-        'icon' => 'fa-check-circle',
+$notifications = [
+    [
+        'status' => 'success',
         'title' => '充值成功',
         'date' => '2025-12-24 18:28:33',
         'bank' => 'Hong Leong Bank',
         'amount' => 'MYR 100'
-    ),
-    array(
-        'type' => 'pending',
-        'icon' => 'fa-clock',
+    ],
+    [
+        'status' => 'pending',
         'title' => '充值处理中',
         'date' => '2025-12-24 18:25:33',
         'bank' => 'Hong Leong Bank',
         'amount' => 'MYR 100'
-    ),
-);
-
-$latestNews = array(
-    array(
-        'icon' => 'fa-bell',
-        'iconBg' => 'warning',
-        'title' => '活动通知',
-        'date' => '2025-12-24 18:28:33',
-        'content' => 'SUPERONG 全新上线！'
-    ),
-);
+    ],
+];
 ?>
 
 <!-- ========== NOTIFICATION PAGE CONTENT ========== -->
-<main class="sp-page-content">
+<main class="sp-page sp-page-dark">
+    <div class="sp-notification-container">
 
-    <!-- Tab Navigation -->
-    <div class="sp-tabs-container">
-        <div class="sp-tabs" data-tab-group="notification">
-            <button class="sp-tab active">通知</button>
-            <button class="sp-tab">最新消息</button>
+        <!-- Tab Switch -->
+        <div class="sp-tab-switch">
+            <button class="sp-tab-btn active">通知</button>
+            <button class="sp-tab-btn">最新消息</button>
         </div>
-    </div>
 
-    <!-- Tab Content: 通知 -->
-    <div class="sp-tab-content" data-tab-content="notification" style="display: block;">
-        <?php foreach ($notifications as $notif): ?>
-        <div class="sp-notification-item">
-            <div class="sp-notification-header">
-                <div class="sp-notification-status <?php echo e($notif['type']); ?>">
-                    <i class="fas <?php echo e($notif['icon']); ?>"></i>
+        <!-- Notification List -->
+        <div class="sp-notification-list">
+            <?php foreach ($notifications as $notif): ?>
+            <div class="sp-notification-card">
+                <div class="sp-notification-header">
+                    <div class="sp-notification-icon <?php echo $notif['status']; ?>">
+                        <?php if ($notif['status'] === 'success'): ?>
+                        <i class="fas fa-check"></i>
+                        <?php else: ?>
+                        <i class="fas fa-clock"></i>
+                        <?php endif; ?>
+                    </div>
+                    <span class="sp-notification-title"><?php echo htmlspecialchars($notif['title']); ?></span>
+                    <span class="sp-notification-date"><?php echo htmlspecialchars($notif['date']); ?></span>
                 </div>
-                <span class="sp-notification-title"><?php echo e($notif['title']); ?></span>
-                <span class="sp-notification-date"><?php echo e($notif['date']); ?></span>
+                <div class="sp-notification-body">
+                    <span class="sp-notification-bank"><?php echo htmlspecialchars($notif['bank']); ?></span>
+                    <span class="sp-notification-amount"><?php echo htmlspecialchars($notif['amount']); ?></span>
+                </div>
             </div>
-            <div class="sp-notification-body">
-                <span class="sp-notification-bank"><?php echo e($notif['bank']); ?></span>
-                <span class="sp-notification-amount"><?php echo e($notif['amount']); ?></span>
-            </div>
+            <?php endforeach; ?>
         </div>
-        <?php endforeach; ?>
-    </div>
 
-    <!-- Tab Content: 最新消息 -->
-    <div class="sp-tab-content" data-tab-content="notification" style="display: none;">
-        <?php foreach ($latestNews as $news): ?>
-        <div class="sp-news-item">
-            <div class="sp-news-header">
-                <div class="sp-news-icon <?php echo e($news['iconBg']); ?>">
-                    <i class="fas <?php echo e($news['icon']); ?>"></i>
-                </div>
-                <span class="sp-news-title"><?php echo e($news['title']); ?></span>
-                <span class="sp-news-date"><?php echo e($news['date']); ?></span>
-            </div>
-            <div class="sp-news-content">
-                <div class="sp-news-icon-large">
-                    <img src="resource/logo/superong-icon.png" alt="SUPERONG">
-                </div>
-                <p class="sp-news-text"><?php echo e($news['content']); ?></p>
-            </div>
-        </div>
-        <?php endforeach; ?>
     </div>
-
 </main>
 
-<?php
-// Include footer (bottom nav + modals)
-include 'lib/footer.php';
-include 'lib/htmlBody.php';
-?>
+<!-- Floating Customer Service Button -->
+<a href="customer-service.php" class="sp-float-cs-btn">
+    <i class="fas fa-headset"></i>
+</a>
+
+<!-- Mobile Nav Spacer -->
+<div class="mobile-nav-spacer"></div>
+
+<?php include 'lib/footer.php'; ?>
+
+<script>
+document.querySelectorAll('.sp-tab-btn').forEach(btn => {
+    btn.addEventListener('click', function() {
+        document.querySelectorAll('.sp-tab-btn').forEach(b => b.classList.remove('active'));
+        this.classList.add('active');
+    });
+});
+</script>
+
+<?php include 'lib/htmlBody.php'; ?>
