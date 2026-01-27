@@ -6,43 +6,29 @@
  * 100% Design Match with home.png
  */
 
-$pageName = 'home';
+$pageName = 'alert';
 $pageTitle = 'SUPERONG';
+$bodyClass = 'sp-bg-fixed';
 
 include 'lib/htmlHead.php';
 include 'lib/header.php';
 ?>
 
 <!-- Main Content -->
-<main class="sp-page sp-page-dark">
-    <div class="container-fluid" style="padding: 0;">
+<main class="sp-page">
+    <div class="sp-main-content" style="padding: 0; width: 100%; max-width: 100%; overflow-x: hidden;">
 
         <!-- ========== BANNER SLIDER ========== -->
         <section class="sp-banner-section">
             <div class="sp-banner-slider">
                 <div class="sp-banner-slide active">
                     <img src="resource/game-icons/pp-wang-zhe-slot-banner.png" alt="Banner 1">
-                    <div class="sp-banner-overlay">
-                        <span class="sp-banner-label">PLAYTECH</span>
-                        <h3 class="sp-banner-title">PP王者电子特供</h3>
-                        <a href="games.php" class="sp-banner-btn">立即前往</a>
-                    </div>
                 </div>
                 <div class="sp-banner-slide">
                     <img src="resource/game-icons/golden-temple.png" alt="Banner 2">
-                    <div class="sp-banner-overlay">
-                        <span class="sp-banner-label">MEGA888</span>
-                        <h3 class="sp-banner-title">金庙每日免费旋转</h3>
-                        <a href="games.php" class="sp-banner-btn">立即前往</a>
-                    </div>
                 </div>
                 <div class="sp-banner-slide">
                     <img src="resource/game-icons/dragon-gem.png" alt="Banner 3">
-                    <div class="sp-banner-overlay">
-                        <span class="sp-banner-label">PRAGMATIC</span>
-                        <h3 class="sp-banner-title">龙珠宝石大奖等您</h3>
-                        <a href="games.php" class="sp-banner-btn">立即前往</a>
-                    </div>
                 </div>
             </div>
             <div class="sp-banner-indicators">
@@ -55,10 +41,25 @@ include 'lib/header.php';
         <!-- ========== POINTS/BALANCE BAR ========== -->
         <div class="sp-point-section-home">
             <div class="sp-point-bar-home">
-                <span class="sp-point-label-home">Point:</span>
-                <div class="sp-point-value-wrap-home">
+                <!-- Left Side: Point + Value -->
+                <div class="sp-point-left">
+                    <span class="sp-point-label-home">Point:</span>
                     <span class="sp-point-value-home">MYR 0.00</span>
-                    <img src="resource/ui-elements/dropdown-white.png" alt="dropdown" class="sp-point-dropdown-icon">
+                </div>
+                <!-- Right Side: 3 Action Buttons -->
+                <div class="sp-point-right">
+                    <a href="deposit.php" class="sp-point-action">
+                        <div class="sp-point-action-icon"><img src="resource/ui-elements/wallet-orange.png" alt="充值"></div>
+                        <span class="sp-point-action-label">充值</span>
+                    </a>
+                    <a href="withdrawal.php" class="sp-point-action">
+                        <div class="sp-point-action-icon"><img src="resource/ui-elements/cash-orange.png" alt="提现"></div>
+                        <span class="sp-point-action-label">提款</span>
+                    </a>
+                    <a href="transfer.php" class="sp-point-action">
+                        <div class="sp-point-action-icon"><img src="resource/ui-elements/file-orange.png" alt="转账"></div>
+                        <span class="sp-point-action-label">交易记录</span>
+                    </a>
                 </div>
             </div>
         </div>
@@ -75,7 +76,7 @@ include 'lib/header.php';
                     <span class="sp-quick-btn-label">排行榜</span>
                 </a>
                 <a href="#" class="sp-quick-btn" onclick="showQRModal()">
-                    <div class="sp-quick-btn-icon"><img src="resource/ui-elements/item-blue-7.png" alt="二维码"></div>
+                    <div class="sp-quick-btn-icon"><img src="resource/ui-elements/qrcode.png" alt="二维码"></div>
                     <span class="sp-quick-btn-label">二维码</span>
                 </a>
                 <a href="transfer.php" class="sp-quick-btn">
@@ -85,19 +86,73 @@ include 'lib/header.php';
             </div>
         </section>
 
+        <!-- ========== HOT GAMES ========== -->
+        <section class="sp-hot-games-section">
+            <div class="sp-section-header">
+                <div class="sp-hot-label">
+                    <span>热门</span>
+                    <img src="resource/ui-elements/fire.png" alt="热门" class="sp-hot-label-icon">
+                </div>
+            </div>
+            <div class="swiper hotGamesSwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <a href="game.php?id=1" class="sp-hot-game-item">
+                            <img src="resource/game-icons/dragon-gem.png" alt="Dragon Gem">
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="game.php?id=2" class="sp-hot-game-item">
+                            <img src="resource/game-icons/golden-temple.png" alt="Golden Temple">
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="game.php?id=3" class="sp-hot-game-item">
+                            <img src="resource/game-icons/lucky-piggy.png" alt="Lucky Piggy">
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="game.php?id=4" class="sp-hot-game-item">
+                            <img src="resource/game-icons/ae-sexy-live.png" alt="AE Sexy">
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="game.php?id=5" class="sp-hot-game-item">
+                            <img src="resource/game-icons/king-arthur.png" alt="King Arthur">
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="game.php?id=6" class="sp-hot-game-item">
+                            <img src="resource/game-icons/3x-catch.png" alt="3X Catch">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- ========== CATEGORY TABS (Pill Style) ========== -->
         <section class="sp-category-tabs-section">
             <div class="sp-category-tabs">
                 <a href="#" class="sp-category-tab active" data-category="hot">
-                    <img src="resource/game-icons/spade-icon-orange.png" alt="ALL" class="sp-tab-icon">
+                    <img src="resource/ui-elements/logo-white.png" alt="ALL" class="sp-tab-icon">
                     <span>ALL</span>
                 </a>
-                <a href="#" class="sp-category-tab" data-category="slots">SLOT</a>
-                <a href="#" class="sp-category-tab" data-category="live">LIVE</a>
-                <a href="#" class="sp-category-tab" data-category="sports">SPORT</a>
-                <a href="#" class="sp-category-tab" data-category="fishing">FISH</a>
-                <a href="#" class="sp-category-tab" data-category="chess">CHESS</a>
-                <a href="#" class="sp-category-tab" data-category="esports">ESPORT</a>
+                <a href="#" class="sp-category-tab" data-category="slots">
+                    <img src="resource/ui-elements/slots.png" alt="SLOT" class="sp-tab-icon">
+                    <span>SLOT</span>
+                </a>
+                <a href="#" class="sp-category-tab" data-category="live">
+                    <img src="resource/ui-elements/card.png" alt="LIVE" class="sp-tab-icon">
+                    <span>LIVE</span>
+                </a>
+                <a href="#" class="sp-category-tab" data-category="sports">
+                    <img src="resource/ui-elements/horse.png" alt="SPORT" class="sp-tab-icon">
+                    <span>SPORT</span>
+                </a>
+                <a href="#" class="sp-category-tab" data-category="lotto">
+                    <img src="resource/ui-elements/pools.png" alt="LOTTO" class="sp-tab-icon">
+                    <span>LOTTO</span>
+                </a>
             </div>
         </section>
 
@@ -105,15 +160,15 @@ include 'lib/header.php';
         <section class="sp-games-section-home">
             <div class="sp-games-grid-home" id="gamesGrid">
                 <?php
-                // All games with categories: hot, slots, fishing, live, chess, sports, esports
+                // All games with categories: hot, slots, live, sports, lotto
                 $games = [
                     // HOT (Featured games from all categories)
                     ['img' => 'dragon-gem.png', 'name' => 'Dragon Gem', 'category' => 'hot,slots'],
                     ['img' => 'golden-temple.png', 'name' => 'Golden Temple', 'category' => 'hot,slots'],
                     ['img' => 'lucky-piggy.png', 'name' => 'Lucky Piggy', 'category' => 'hot,slots'],
                     ['img' => 'ae-sexy-live.png', 'name' => 'AE Sexy', 'category' => 'hot,live'],
-                    ['img' => '3x-catch.png', 'name' => '3X Catch', 'category' => 'hot,fishing'],
                     ['img' => 'king-arthur.png', 'name' => 'King Arthur', 'category' => 'hot,slots'],
+                    ['img' => '3x-catch.png', 'name' => '3X Catch', 'category' => 'hot,lotto'],
 
                     // SLOTS (老虎机)
                     ['img' => 'aristocrat-roman-warrior.png', 'name' => 'Roman Warrior', 'category' => 'slots'],
@@ -131,24 +186,21 @@ include 'lib/header.php';
                     ['img' => 'super-china-pots.png', 'name' => 'China Pots', 'category' => 'slots'],
                     ['img' => 'paxo-759-gaming-skeleton.png', 'name' => 'Skeleton', 'category' => 'slots'],
 
-                    // FISHING (捕鱼)
-                    ['img' => '3x-catch.png', 'name' => '3X Catch', 'category' => 'fishing'],
-
                     // LIVE (真人)
                     ['img' => 'ae-sexy-live.png', 'name' => 'AE Sexy', 'category' => 'live'],
                     ['img' => 'ag-asia-gaming-live.png', 'name' => 'AG Live', 'category' => 'live'],
                     ['img' => 'allbet-live.png', 'name' => 'Allbet Live', 'category' => 'live'],
+                    ['img' => 'yuanbao-mahjong-2.png', 'name' => 'Yuanbao Mahjong', 'category' => 'live'],
 
-                    // CHESS (棋牌)
-                    ['img' => 'yuanbao-mahjong-2.png', 'name' => 'Yuanbao Mahjong', 'category' => 'chess'],
-
-                    // SPORTS (体育) - using slot icons as placeholders
+                    // SPORTS (体育)
                     ['img' => 'king-arthur.png', 'name' => 'Sports Bet', 'category' => 'sports'],
                     ['img' => 'ragnarok-odin.png', 'name' => 'Live Sports', 'category' => 'sports'],
+                    ['img' => 'dragon-gem.png', 'name' => 'E-Sports', 'category' => 'sports'],
 
-                    // ESPORTS (电竞) - using slot icons as placeholders
-                    ['img' => 'dragon-gem.png', 'name' => 'LoL Betting', 'category' => 'esports'],
-                    ['img' => 'flame-777.png', 'name' => 'Dota 2', 'category' => 'esports'],
+                    // LOTTO (彩票)
+                    ['img' => '3x-catch.png', 'name' => '4D Lotto', 'category' => 'lotto'],
+                    ['img' => 'flame-777.png', 'name' => 'Mega Lotto', 'category' => 'lotto'],
+                    ['img' => 'coin-princess-x1000.png', 'name' => 'Toto', 'category' => 'lotto'],
                 ];
                 foreach ($games as $index => $game):
                 ?>
@@ -238,6 +290,19 @@ include 'lib/header.php';
 
         // Initial filter - show hot games
         filterGames('hot');
+
+        // ===== HOT GAMES SWIPER SLIDER =====
+        const hotGamesSwiper = new Swiper('.hotGamesSwiper', {
+            slidesPerView: 'auto',
+            spaceBetween: 10,
+            freeMode: true,
+            grabCursor: true,
+            touchRatio: 1,
+            resistance: true,
+            resistanceRatio: 0.85,
+            slidesOffsetBefore: -25,
+            slidesOffsetAfter: -25
+        });
     });
 
     function showQRModal() {

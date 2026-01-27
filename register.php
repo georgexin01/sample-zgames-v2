@@ -8,6 +8,7 @@
 $pageName = 'register';
 $pageTitle = '注册帐号';
 $headerTitle = '注册帐号';
+$bodyClass = 'sp-bg-fixed';
 
 include 'lib/htmlHead.php';
 include 'lib/header.php';

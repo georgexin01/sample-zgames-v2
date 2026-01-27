@@ -8,6 +8,7 @@
 
 $pageName = 'profile';
 $pageTitle = 'My Profile - SUPERONG';
+$bodyClass = 'sp-bg-fixed';
 
 // Mock user data
 $currentUser = [

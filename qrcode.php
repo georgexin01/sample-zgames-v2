@@ -8,6 +8,7 @@
 $pageName = 'qrcode';
 $pageTitle = '二维码';
 $headerTitle = '二维码';
+$bodyClass = 'sp-bg-fixed';
 $headerRightIcon = 'fa-download';
 $headerRightLink = '#';
 

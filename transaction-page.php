@@ -9,6 +9,7 @@
 $pageName = 'transaction';
 $pageTitle = 'Transactions - SUPERONG';
 $headerTitle = '交易';
+$bodyClass = 'sp-bg-fixed';
 
 include 'lib/htmlHead.php';
 include 'lib/header.php';

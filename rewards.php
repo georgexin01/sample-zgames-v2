@@ -9,6 +9,7 @@
 $pageName = 'rewards';
 $pageTitle = 'Rewards - SUPERONG';
 $headerTitle = '奖励';
+$bodyClass = 'sp-bg-fixed';
 
 include 'lib/htmlHead.php';
 include 'lib/header.php';

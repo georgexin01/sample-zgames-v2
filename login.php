@@ -7,6 +7,7 @@
 
 $pageName = 'login';
 $pageTitle = '登入';
+$bodyClass = 'sp-bg-fixed';
 $showHeader = false;
 $showFooter = false;
 

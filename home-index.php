@@ -1,6 +1,7 @@
 <?php
 $pageName = 'home';
 $pageTitle = 'SUPERONG';
+$bodyClass = 'sp-bg-fixed';
 include 'lib/htmlHead.php';
 include 'lib/header.php';
 ?>

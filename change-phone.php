@@ -9,6 +9,7 @@
 $pageName = 'change-phone';
 $pageTitle = '修改手机号码';
 $headerTitle = '修改手机号码';
+$bodyClass = 'sp-bg-fixed';
 
 // Include header
 include 'lib/htmlHead.php';

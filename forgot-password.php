@@ -8,6 +8,7 @@
 // Page settings
 $pageName = 'forgot-password';
 $pageTitle = '忘记密码';
+$bodyClass = 'sp-bg-fixed';
 $showHeader = false;
 $showFooter = false;
 

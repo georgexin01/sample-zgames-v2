@@ -10,7 +10,7 @@
 ?>
 
 <header class="sp-header-container">
-    <?php if ($pageName === 'home'): ?>
+    <?php if ($pageName === 'alert'): ?>
         <!-- HOME HEADER -->
         <div class="sp-header-home">
             <div class="sp-header-top">
@@ -18,10 +18,8 @@
                 <div class="sp-logo-area">
                     <img src="resource/ui-elements/logo_main.png" alt="SUPERONG" class="sp-logo">
                 </div>
-                <!-- Web Icon Button -->
-                <a href="https://superong.com" target="_blank" class="sp-btn-web" title="官方网站">
-                    <img src="resource/ui-elements/webs.png" alt="Website" class="sp-web-icon">
-                </a>
+                <!-- Language Selector Button -->
+                <button type="button" class="sp-btn-lang" onclick="showLangModal()" title="选择语言"></button>
             </div>
         </div>
     <?php else: ?>
@@ -37,7 +35,11 @@
             <div class="sp-header-action">
                 <?php if (isset($headerRightIcon)): ?>
                     <a href="<?php echo htmlspecialchars($headerRightLink ?? '#'); ?>" class="sp-btn-action">
-                        <i class="fas <?php echo htmlspecialchars($headerRightIcon); ?>"></i>
+                        <?php if (isset($headerRightIconType) && $headerRightIconType === 'image'): ?>
+                            <img src="<?php echo htmlspecialchars($headerRightIcon); ?>" alt="" class="sp-header-icon-img">
+                        <?php else: ?>
+                            <i class="fas <?php echo htmlspecialchars($headerRightIcon); ?>"></i>
+                        <?php endif; ?>
                     </a>
                 <?php else: ?>
                     <div style="width: 36px;"></div>

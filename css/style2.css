@@ -67,6 +67,9 @@
     #d0c4e0 100%
   );
 
+  /* ===== Hot/Label Gradient ===== */
+  --sp-hot-gradient: linear-gradient(180deg, #ac4ee9 0%, #360599 100%);
+
   /* ===== Status Colors ===== */
   --sp-success: #2ecc71;
   --sp-success-light: #58d68d;
@@ -137,17 +140,23 @@ a {
   font-family: "PingFang SC", "Microsoft YaHei", sans-serif;
   position: relative;
   overflow-x: hidden;
+  width: 100%;
+}
+
+.sp-wrapper {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 .sp-page {
   min-height: 100vh;
   padding-bottom: var(--sp-bottom-nav-height);
-  background: var(--sp-bg-white);
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
-.sp-page-dark {
-  background: var(--sp-bg-primary);
-}
 
 /* ============================================
    SUPERONG Header
@@ -985,12 +994,6 @@ a {
   border-bottom: none;
 }
 
-.sp-lang-item:hover,
-.sp-lang-item.active {
-  background: var(--sp-bg-light);
-  color: var(--sp-purple-dark);
-}
-
 /* ============================================
    Banner Section
    ============================================ */
@@ -1293,7 +1296,6 @@ a {
 
 .sp-transaction-amount {
   font-size: 16px;
-  font-weight: 600;
   color: var(--sp-text-dark);
 }
 
@@ -4090,7 +4092,6 @@ a {
 }
 
 .sp-faq-answer {
-  max-height: 0;
   overflow: hidden;
   transition: max-height 0.3s ease;
 }

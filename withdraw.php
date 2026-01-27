@@ -8,6 +8,7 @@
 $pageName = 'withdraw';
 $pageTitle = '提款';
 $headerTitle = '提款';
+$bodyClass = 'sp-bg-fixed';
 $headerRightIcon = 'fa-history';
 $headerRightLink = 'withdrawal-record.php';
 

@@ -9,6 +9,7 @@
 $pageName = 'bind-email';
 $pageTitle = '绑定Email';
 $headerTitle = '绑定Email';
+$bodyClass = 'sp-bg-fixed';
 
 // Include header
 include 'lib/htmlHead.php';

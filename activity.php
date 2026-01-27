@@ -2,37 +2,33 @@
 /**
  * activity.php - SUPERONG Mobile App
  * 活动 (Activity List Page)
- * 100% Match with activity_list活动列表.png
+ * 100% Match with design 7.png
  */
 
 $pageName = 'activity';
 $pageTitle = '活动';
 $headerTitle = '活动';
+$bodyClass = 'sp-bg-fixed';
 
 include 'lib/htmlHead.php';
 include 'lib/header.php';
 
-// Activity banners
+// Activity banners (placeholders for promotional content)
 $activities = [
-    ['id' => 1, 'image' => 'resource/ui-elements/promo-banner-1.png', 'title' => '每周老虎机排行榜'],
-    ['id' => 2, 'image' => 'resource/ui-elements/promo-banner-2.png', 'title' => '首充优惠'],
-    ['id' => 3, 'image' => 'resource/ui-elements/promo-banner-3.png', 'title' => '每日签到奖励'],
+    ['id' => 1, 'title' => '每周老虎机排行榜'],
+    ['id' => 2, 'title' => '首充优惠'],
+    ['id' => 3, 'title' => '每日签到奖励'],
 ];
 ?>
 
 <!-- ========== ACTIVITY LIST PAGE CONTENT ========== -->
-<main class="sp-page sp-page-dark">
-    <div class="sp-activity-list-container">
-
-        <!-- Activity Banners -->
+<main class="sp-page sp-activity-page">
+    <div class="sp-activity-container">
         <?php foreach ($activities as $activity): ?>
-        <a href="activity-detail.php?id=<?php echo $activity['id']; ?>" class="sp-activity-banner">
-            <div class="sp-activity-banner-placeholder">
-                <span><?php echo htmlspecialchars($activity['title']); ?></span>
-            </div>
+        <a href="activity-detail.php?id=<?php echo $activity['id']; ?>" class="sp-activity-card">
+            <!-- Placeholder dark card - will show promo banner images -->
         </a>
         <?php endforeach; ?>
-
     </div>
 </main>
 

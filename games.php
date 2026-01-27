@@ -10,6 +10,7 @@
 $pageName = 'games';
 $pageTitle = 'Games - SUPERONG';
 $headerTitle = '游戏';
+$bodyClass = 'sp-bg-fixed';
 
 include 'lib/htmlHead.php';
 include 'lib/header.php';

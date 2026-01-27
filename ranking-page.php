@@ -9,6 +9,7 @@
 $pageName = 'ranking';
 $pageTitle = 'Rankings - SUPERONG';
 $headerTitle = '排名';
+$bodyClass = 'sp-bg-fixed';
 
 include 'lib/htmlHead.php';
 include 'lib/header.php';

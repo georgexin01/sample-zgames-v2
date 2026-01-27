@@ -8,6 +8,7 @@
 $pageName = 'profile';
 $pageTitle = '我的';
 $headerTitle = '我的';
+$bodyClass = 'sp-bg-fixed';
 $headerRightIcon = 'fa-sign-out-alt';
 $headerRightLink = 'javascript:showLogoutModal()';
 

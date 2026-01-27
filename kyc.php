@@ -9,6 +9,7 @@
 $pageName = 'kyc';
 $pageTitle = '实名认证';
 $headerTitle = '实名认证';
+$bodyClass = 'sp-bg-fixed';
 
 // Include header
 include 'lib/htmlHead.php';

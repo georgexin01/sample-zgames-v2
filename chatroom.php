@@ -1,137 +1,84 @@
 <?php
 /**
  * chatroom.php - SUPERONG Mobile App
- * 聊天室 (Chatroom Page)
- * 99% Similarity Required
+ * 通讯录 (Contacts/Address Book Page)
+ * 100% Match with resource/1/17.png
  */
 
-// Page settings
-$pageName = 'chatroom';
-$pageTitle = '聊天室';
+$pageName = 'chat';
+$pageTitle = '通讯录';
 $headerTitle = '通讯录';
-$headerRightIcon = 'fa-cog';
+$bodyClass = 'sp-bg-fixed';
+$headerRightIcon = 'resource/ui-elements/settings.png';
+$headerRightIconType = 'image';
 $headerRightLink = 'chat-settings.php';
 
-// Include header
 include 'lib/htmlHead.php';
 include 'lib/header.php';
 
 // Dummy contacts data
-$contacts = array(
-    array(
-        'id' => 1,
-        'letter' => 'A',
-        'name' => 'AAA111',
-        'avatar' => 'resource/ui-elements/user-alt.png',
-    ),
-    array(
-        'id' => 2,
-        'letter' => 'A',
-        'name' => 'AAA222',
-        'avatar' => 'resource/ui-elements/user-alt.png',
-    ),
-);
-
-// Dummy chat data
-$chats = array(
-    array(
-        'id' => 1,
-        'name' => 'AAA111',
-        'avatar' => 'resource/ui-elements/user-alt.png',
-        'lastMessage' => 'SUPERONG超好玩',
-        'time' => '04:29',
-        'unread' => 0,
-    ),
-);
+$contacts = [
+    ['id' => 1, 'letter' => 'A', 'name' => 'AAA111'],
+    ['id' => 2, 'letter' => 'A', 'name' => 'AAA222'],
+];
 
 // Group contacts by letter
-$contactsByLetter = array();
+$contactsByLetter = [];
 foreach ($contacts as $contact) {
     $letter = $contact['letter'];
     if (!isset($contactsByLetter[$letter])) {
-        $contactsByLetter[$letter] = array();
+        $contactsByLetter[$letter] = [];
     }
     $contactsByLetter[$letter][] = $contact;
 }
 ?>
 
-<!-- ========== CHATROOM PAGE CONTENT ========== -->
-<main class="sp-page-content">
+<!-- ========== CONTACTS PAGE CONTENT ========== -->
+<main class="sp-page">
+    <div class="sp-contacts-container">
 
-    <!-- Tab Navigation -->
-    <div class="sp-tabs-container">
-        <div class="sp-tabs" data-tab-group="chatroom">
-            <button class="sp-tab active">通讯录</button>
-            <button class="sp-tab">聊天</button>
-        </div>
-    </div>
-
-    <!-- Tab Content: 通讯录 (Contacts) -->
-    <div class="sp-tab-content" data-tab-content="chatroom" style="display: block;">
-        <!-- Search Box -->
-        <div class="sp-search-box">
-            <input type="text" placeholder="请输入玩家ID">
-            <i class="fas fa-search"></i>
+        <!-- Tab Switch -->
+        <div class="sp-tab-switch">
+            <a href="chatroom.php" class="sp-tab-btn active">通讯录</a>
+            <a href="chat.php" class="sp-tab-btn">聊天</a>
         </div>
 
-        <!-- Contacts List -->
-        <div class="sp-contacts-list">
-            <?php foreach ($contactsByLetter as $letter => $letterContacts): ?>
-            <div class="sp-contact-group">
-                <div class="sp-contact-letter"><?php echo e($letter); ?></div>
-                <?php foreach ($letterContacts as $contact): ?>
-                <a href="chat.php?id=<?php echo $contact['id']; ?>" class="sp-contact-item">
-                    <div class="sp-contact-avatar">
-                        <img src="<?php echo $contact['avatar']; ?>" alt="Avatar" style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%;">
-                    </div>
-                    <span class="sp-contact-name"><?php echo e($contact['name']); ?></span>
-                </a>
+        <!-- Contacts Card -->
+        <div class="sp-contacts-card">
+            <!-- Search Box -->
+            <div class="sp-contacts-search">
+                <input type="text" placeholder="请输入玩家ID" class="sp-contacts-search-input">
+                <img src="resource/ui-elements/search.png" alt="" class="sp-contacts-search-icon">
+            </div>
+
+            <!-- Contacts List -->
+            <div class="sp-contacts-list">
+                <?php foreach ($contactsByLetter as $letter => $letterContacts): ?>
+                <div class="sp-contact-group">
+                    <div class="sp-contact-letter"><?php echo htmlspecialchars($letter); ?></div>
+                    <?php foreach ($letterContacts as $contact): ?>
+                    <a href="chat-conversation.php?id=<?php echo $contact['id']; ?>" class="sp-contact-item">
+                        <div class="sp-contact-avatar">
+                            <img src="resource/ui-elements/user-purple.png" alt="" class="sp-contact-avatar-img">
+                        </div>
+                        <span class="sp-contact-name"><?php echo htmlspecialchars($contact['name']); ?></span>
+                    </a>
+                    <?php endforeach; ?>
+                </div>
                 <?php endforeach; ?>
             </div>
-            <?php endforeach; ?>
         </div>
-    </div>
 
-    <!-- Tab Content: 聊天 (Chat List) -->
-    <div class="sp-tab-content" data-tab-content="chatroom" style="display: none;">
-        <!-- Chat List -->
-        <div class="sp-chat-list">
-            <?php if (empty($chats)): ?>
-            <div class="sp-empty">
-                <i class="fas fa-comments sp-empty-icon"></i>
-                <p class="sp-empty-text">暂无聊天记录</p>
-            </div>
-            <?php else: ?>
-            <?php foreach ($chats as $chat): ?>
-            <a href="chat.php?id=<?php echo $chat['id']; ?>" class="sp-chat-item">
-                <div class="sp-chat-avatar">
-                    <img src="<?php echo $chat['avatar']; ?>" alt="Avatar" style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%;">
-                </div>
-                <div class="sp-chat-content">
-                    <div class="sp-chat-header">
-                        <span class="sp-chat-name"><?php echo e($chat['name']); ?></span>
-                        <span class="sp-chat-time"><?php echo e($chat['time']); ?></span>
-                    </div>
-                    <p class="sp-chat-message"><?php echo e($chat['lastMessage']); ?></p>
-                </div>
-                <?php if ($chat['unread'] > 0): ?>
-                <span class="sp-chat-badge"><?php echo $chat['unread']; ?></span>
-                <?php endif; ?>
-            </a>
-            <?php endforeach; ?>
-            <?php endif; ?>
-        </div>
-    </div>
+        <!-- Customer Service Button -->
+        <a href="customer-service.php" class="sp-cs-btn-full">
+            Customer Service
+        </a>
 
-    <!-- Customer Service Button -->
-    <div class="sp-cs-button-container">
-        <a href="customer-service.php" class="sp-btn sp-btn-primary sp-btn-block">联系客服</a>
     </div>
-
 </main>
 
-<?php
-// Include footer (bottom nav + modals)
-include 'lib/footer.php';
-include 'lib/htmlBody.php';
-?>
+<!-- Mobile Nav Spacer -->
+<div class="mobile-nav-spacer"></div>
+
+<?php include 'lib/footer.php'; ?>
+<?php include 'lib/htmlBody.php'; ?>

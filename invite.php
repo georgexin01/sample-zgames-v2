@@ -8,6 +8,7 @@
 $pageName = 'invite';
 $pageTitle = '邀请好友';
 $headerTitle = '邀请好友';
+$bodyClass = 'sp-bg-fixed';
 $headerRightIcon = 'fa-question-circle';
 $headerRightLink = 'invite-help.php';
 

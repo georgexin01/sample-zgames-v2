@@ -8,6 +8,7 @@
 $pageName = 'about';
 $pageTitle = '关于';
 $headerTitle = '关于';
+$bodyClass = 'sp-bg-fixed';
 
 include 'lib/htmlHead.php';
 include 'lib/header.php';

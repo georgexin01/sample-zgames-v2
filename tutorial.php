@@ -9,6 +9,7 @@
 $pageName = 'tutorial';
 $pageTitle = '教程';
 $headerTitle = '教程';
+$bodyClass = 'sp-bg-fixed';
 
 // Include header
 include 'lib/htmlHead.php';

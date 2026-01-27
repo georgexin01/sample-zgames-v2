@@ -9,6 +9,7 @@
 $pageName = 'chat';
 $pageTitle = 'Chat - SUPERONG';
 $headerTitle = '客服';
+$bodyClass = 'sp-bg-fixed';
 
 include 'lib/htmlHead.php';
 include 'lib/header.php';

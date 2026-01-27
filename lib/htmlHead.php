@@ -54,6 +54,9 @@ if (!isset($pageTitle)) {
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
+    <!-- Swiper Slider CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+
     <!-- Custom CSS -->
     <link rel="stylesheet" href="<?php echo asset('css/style2.css'); ?>">
     <link rel="stylesheet" href="<?php echo asset('css/components.css'); ?>">

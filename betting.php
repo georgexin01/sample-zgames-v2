@@ -8,6 +8,7 @@
 $pageName = 'betting';
 $pageTitle = '投注记录';
 $headerTitle = '投注记录';
+$bodyClass = 'sp-bg-fixed';
 
 include 'lib/htmlHead.php';
 include 'lib/header.php';

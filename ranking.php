@@ -8,6 +8,7 @@
 $pageName = 'ranking';
 $pageTitle = '今日游戏赢家榜';
 $headerTitle = '今日游戏赢家榜';
+$bodyClass = 'sp-bg-fixed';
 
 include 'lib/htmlHead.php';
 include 'lib/header.php';

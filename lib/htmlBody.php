@@ -1,18 +1,22 @@
     </div><!-- /.sp-wrapper -->
 
+    <!-- Swiper Slider JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
     <!-- JavaScript -->
     <script src="<?php echo asset('js/main.js'); ?>"></script>
 
     <!-- Page specific JS if exists -->
     <?php if (isset($pageJS) && !empty($pageJS)): ?>
-    <script src="<?php echo asset($pageJS); ?>"></script>
+        <script src="<?php echo asset($pageJS); ?>"></script>
     <?php endif; ?>
 
     <!-- Inline scripts -->
     <?php if (isset($inlineJS) && !empty($inlineJS)): ?>
-    <script>
-        <?php echo $inlineJS; ?>
-    </script>
+        <script>
+            <?php echo $inlineJS; ?>
+        </script>
     <?php endif; ?>
-</body>
-</html>
+    </body>
+
+    </html>

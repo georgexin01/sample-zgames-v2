@@ -8,6 +8,7 @@
 $pageName = 'settings';
 $pageTitle = '设定';
 $headerTitle = '设定';
+$bodyClass = 'sp-bg-fixed';
 
 include 'lib/htmlHead.php';
 include 'lib/header.php';

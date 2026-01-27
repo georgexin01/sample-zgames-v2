@@ -5,9 +5,10 @@
  * Similar to activity page - shows promotional offers
  */
 
-$pageName = 'promo';
+$pageName = 'invite';
 $pageTitle = '优惠';
 $headerTitle = '优惠';
+$bodyClass = 'sp-bg-fixed';
 
 include 'lib/htmlHead.php';
 include 'lib/header.php';

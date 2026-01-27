@@ -8,6 +8,7 @@
 $pageName = 'transfer';
 $pageTitle = '转帐';
 $headerTitle = '转帐';
+$bodyClass = 'sp-bg-fixed';
 $headerRightIcon = 'fa-history';
 $headerRightLink = 'transfer-record.php';
 

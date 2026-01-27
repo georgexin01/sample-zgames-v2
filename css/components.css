@@ -218,7 +218,7 @@
 .sp-feature-icon {
   width: 50px;
   height: 50px;
-  background: linear-gradient(135deg, #f5a623, #e8851c);
+  background: linear-gradient(180deg, #f9c20f, #fda027, #f0742c, #ec692e);
   border-radius: 12px;
   display: flex;
   align-items: center;
@@ -513,7 +513,7 @@
 .sp-list-icon {
   width: 44px;
   height: 44px;
-  background: linear-gradient(135deg, #f5a623, #e8851c);
+  background: linear-gradient(180deg, #f9c20f, #fda027, #f0742c, #ec692e);
   border-radius: 10px;
   display: flex;
   align-items: center;
@@ -704,7 +704,7 @@
    BUTTONS - EXTENDED STYLES
    ============================================ */
 .sp-btn-primary {
-  background: linear-gradient(180deg, #f5a623 0%, #e8851c 100%);
+  background: linear-gradient(180deg, #f9c20f, #fda027, #f0742c, #ec692e);
   color: #ffffff;
   border: none;
   padding: 12px 24px;
@@ -791,7 +791,7 @@
 .sp-modal-overlay {
   position: fixed;
   inset: 0;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0);
   display: flex;
   align-items: flex-end;
   z-index: 1000;
@@ -870,12 +870,59 @@
   background: #dfe6e9;
 }
 
+/* Language Selector Modal */
+#langModal {
+  justify-content: flex-end;
+  align-items: flex-start;
+  padding: 50px 12px 0 0;
+}
+
+.sp-lang-modal {
+  display: flex;
+  align-items: stretch;
+  gap: 0;
+  background: linear-gradient(180deg, #f9c20f, #fda027, #f0742c, #ec692e);
+  border-radius: 8px;
+  padding: 0;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+  animation: langFadeIn 0.2s ease;
+  overflow: hidden;
+}
+
+@keyframes langFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.sp-lang-list {
+  display: flex;
+  flex-direction: column;
+  padding: 6px 0 6px 0;
+  gap: 2px;
+}
+
+.sp-lang-item {
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
+  padding: 3px 0;
+  transition: color 0.2s ease;
+  white-space: nowrap;
+}
+
 /* ============================================
    HEADER - Complete Redesigned
    ============================================ */
 
 .sp-header-container {
-  background: linear-gradient(180deg, #1a1a3a 0%, #252550 100%);
+  background: #00003c;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
   position: sticky;
   top: 0;
@@ -890,7 +937,7 @@
   align-items: center;
   justify-content: center;
   position: relative;
-  height: 50px;
+  height: 40px;
 }
 
 .sp-header-top {
@@ -951,8 +998,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #d4a84b;
-  font-size: 18px;
   cursor: pointer;
   border-radius: 8px;
   transition: all 0.3s ease;
@@ -960,6 +1005,14 @@
   border: none;
   padding: 0;
   z-index: 101;
+}
+
+.sp-btn-lang::before {
+  content: "";
+  width: 22px;
+  height: 22px;
+  background: url("../resource/ui-elements/webs.png") no-repeat center center;
+  background-size: contain;
 }
 
 .sp-btn-lang:hover {
@@ -1002,9 +1055,10 @@
   display: flex;
   align-items: center;
   gap: 10px;
-  padding: 12px 16px;
-  color: #2d2d5a;
+  padding: 10px 24px;
+  color: #fff;
   text-decoration: none;
+  text-align: center;
   font-size: 14px;
   font-weight: 500;
   transition: all 0.2s ease;
@@ -1013,6 +1067,9 @@
   cursor: pointer;
   width: 100%;
   text-align: left;
+}
+.sp-lang-item:not(:last-child) {
+  border-bottom: 1px solid #cccc;
 }
 
 .sp-lang-item:hover {
@@ -1103,6 +1160,12 @@
 .sp-btn-action:hover {
   background: rgba(255, 255, 255, 0.15);
   color: #d4a84b;
+}
+
+.sp-header-icon-img {
+  width: 22px;
+  height: 22px;
+  object-fit: contain;
 }
 
 /* RESPONSIVE */
@@ -1334,51 +1397,199 @@
    Background: White to Light Purple gradient
    ============================================ */
 
-/* Main Page Background - White/Light Purple Gradient (more white) */
-.sp-page-dark {
-  background: linear-gradient(180deg, #ffffff 0%, #ffffff 60%, #f0eaf8 80%, #e0d4f0 100%) !important;
+/* Main Page Background - Fixed Gradient via ::before */
+.sp-bg-fixed::before {
+  content: "";
+  background: linear-gradient(
+    180deg,
+    #ffffff 0%,
+    #ffffff 40%,
+    #faf6fc 70%,
+    #ece1fa 90%,
+    #d7c2f3 100%
+  ) !important;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100vh;
+}
+
+/* Activity Page Styles */
+.sp-activity-page {
+  padding-top: 0;
+}
+
+.sp-activity-container {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.sp-activity-card {
+  display: block;
+  background: #00003c;
+  border-radius: 12px;
+  height: 100px;
+  width: 100%;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.sp-activity-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+}
+
+.sp-activity-card:active {
+  transform: scale(0.98);
 }
 
 /* Points Bar - Home Style */
 .sp-point-section-home {
-  background: linear-gradient(180deg, #252550 0%, #1a1a3a 100%);
-  padding: 0;
+  padding: 12px 8px;
 }
 
 .sp-point-bar-home {
-  background: transparent;
-  border-radius: 0;
+  background: #00003c;
+  border-radius: 12px;
   padding: 12px 16px;
   display: flex;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: space-between;
+}
+
+/* Left Side: Point + Value */
+.sp-point-left {
+  display: flex;
+  align-items: center;
   gap: 8px;
 }
 
 .sp-point-label-home {
-  font-size: 13px;
+  font-size: 14px;
   color: rgba(255, 255, 255, 0.7);
   font-weight: 400;
 }
 
-.sp-point-value-wrap-home {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-}
-
 .sp-point-value-home {
-  font-size: 14px;
-  font-weight: 500;
+  font-size: 16px;
+  font-weight: 400;
   color: #ffffff;
 }
 
-.sp-point-dropdown-icon {
-  width: 10px;
-  height: 10px;
+/* Right Side: 3 Action Buttons */
+.sp-point-right {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.sp-point-action {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+  text-decoration: none;
+}
+
+.sp-point-action-icon {
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sp-point-action-icon img {
+  width: 20px;
+  height: 20px;
   object-fit: contain;
-  opacity: 0.7;
-  filter: brightness(0) invert(1);
+}
+
+.sp-point-action-label {
+  font-size: 9px;
+  color: rgba(255, 255, 255, 0.8);
+  font-weight: 400;
+  white-space: nowrap;
+}
+
+/* Hot Games Section */
+.sp-hot-games-section {
+  padding: 12px 16px;
+  position: relative;
+  margin-top: 20px;
+  background: linear-gradient(180deg, #f5a623 0%, #fff0 100%);
+}
+
+.sp-section-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 12px;
+  position: relative;
+}
+
+.sp-section-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: #2d2d5a;
+}
+
+.sp-hot-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  background: var(--sp-hot-gradient);
+  padding: 6px 16px;
+  border-radius: 20px;
+  box-shadow: 0 2px 8px rgba(172, 78, 233, 0.4);
+  position: absolute;
+  top: -25px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.sp-hot-label-icon {
+  width: 16px;
+  height: 16px;
+  object-fit: contain;
+}
+
+.sp-hot-label span {
+  font-size: 13px;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+/* Swiper Hot Games Slider */
+.hotGamesSwiper {
+  width: 100%;
+  padding-bottom: 4px;
+  margin-bottom: -25px;
+}
+
+.hotGamesSwiper .swiper-slide {
+  width: auto;
+}
+
+.sp-hot-game-item {
+  width: 80px;
+  height: 80px;
+  border-radius: 16px;
+  overflow: hidden;
+  display: block;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.sp-hot-game-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 /* Feature Icons - Home Style (8 items in 2 rows of 4) */
@@ -1410,7 +1621,7 @@
 .sp-feature-icon-home {
   width: 48px;
   height: 48px;
-  background: linear-gradient(135deg, #f5a623 0%, #e8851c 100%);
+  background: linear-gradient(180deg, #f9c20f, #fda027, #f0742c, #ec692e);
   border-radius: 12px;
   display: flex;
   align-items: center;
@@ -1442,8 +1653,8 @@
   display: flex;
   align-items: center;
   overflow-x: auto;
-  padding: 8px 12px;
-  gap: 8px;
+  padding: 8px 4px;
+  gap: 3px;
   background: #ffffff;
   border-radius: 50px;
   border: none;
@@ -1460,8 +1671,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 6px;
-  padding: 10px 20px;
+  gap: 4px;
+  padding: 10px 12px 10px 6px;
   font-size: 14px;
   font-weight: 600;
   color: #b0b0b8;
@@ -1478,9 +1689,9 @@
 }
 
 .sp-category-tab.active {
-  background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%);
+  background: var(--sp-hot-gradient);
   color: #ffffff;
-  box-shadow: 0 4px 12px rgba(139, 92, 246, 0.4);
+  box-shadow: 0 4px 12px rgba(172, 78, 233, 0.4);
 }
 
 .sp-category-tab.active .sp-tab-icon {
@@ -1611,7 +1822,7 @@
   width: 100%;
   max-width: 414px;
   height: 65px;
-  background: linear-gradient(180deg, #252550 0%, #1a1a3a 100%);
+  background: #1a003c;
   display: flex;
   align-items: flex-end;
   justify-content: space-around;
@@ -1634,7 +1845,7 @@
 
 .sp-nav-item.active,
 .sp-nav-item:hover {
-  color: #f5a623;
+  color: #fff;
 }
 
 .sp-nav-icon {
@@ -1657,13 +1868,26 @@
   align-items: center;
   justify-content: center;
   position: relative;
-  top: -20px;
+  width: 70px;
+  top: -5px;
   z-index: 101;
+}
+.sp-nav-center-link:before {
+  content: "";
+  position: absolute;
+  background: url(../resource/ui-elements/footer-triangle.png) no-repeat center
+    center;
+  top: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90px;
+  height: 100%;
+  z-index: -1;
 }
 
 .sp-nav-crown-logo {
-  width: 50px;
-  height: 50px;
+  width: 85px;
+  height: 85px;
   object-fit: contain;
 }
 
@@ -1674,13 +1898,14 @@
   height: 160px;
   background: transparent;
   overflow: hidden;
+  margin-top: 6px;
   margin-bottom: 0;
-  padding: 8px 16px;
+  padding: 8px;
 }
 
 .sp-banner-slider {
   position: relative;
-  width: 100%;
+  width: calc(100% - 16px);
   height: 100%;
 }
 
@@ -1708,7 +1933,11 @@
 .sp-banner-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.6) 100%);
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.2) 0%,
+    rgba(0, 0, 0, 0.6) 100%
+  );
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -1809,7 +2038,7 @@
   justify-content: center;
   gap: 6px;
   padding: 10px 6px;
-  background: linear-gradient(180deg, #f5a623 0%, #e8851c 100%);
+  background: linear-gradient(180deg, #f9c20f, #fda027, #f0742c, #ec692e);
   border-radius: 14px;
   text-decoration: none;
   transition: all 0.2s ease;
@@ -1826,16 +2055,14 @@
 }
 
 .sp-quick-btn-icon {
-  width: 28px;
-  height: 28px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 .sp-quick-btn-icon img {
-  width: 26px;
-  height: 26px;
+  width: 41px;
+  height: 41px;
   object-fit: contain;
   filter: brightness(0) invert(1);
 }
@@ -1856,8 +2083,9 @@
    - Horizontal scroll with left/right peek effect
    ============================================ */
 .sp-hot-games-section {
-  background: linear-gradient(180deg, #f5a623 0%, #e8951c 100%);
-  padding: 10px 0 14px 0;
+  background: linear-gradient(180deg, #f5a623 0%, #f5f5f7 70%);
+  padding: 10px 0 44px 0;
+  border-radius: 10px;
 }
 
 .sp-hot-games-header {
@@ -1944,11 +2172,6 @@
     min-height: 60px;
   }
 
-  .sp-quick-btn-icon img {
-    width: 22px;
-    height: 22px;
-  }
-
   .sp-quick-btn-label {
     font-size: 10px;
   }
@@ -2010,7 +2233,11 @@
   transform: translateX(-50%);
   width: 80%;
   height: 30px;
-  background: linear-gradient(180deg, rgba(61, 61, 122, 0.3) 0%, transparent 100%);
+  background: linear-gradient(
+    180deg,
+    rgba(61, 61, 122, 0.3) 0%,
+    transparent 100%
+  );
   border-radius: 50%;
   pointer-events: none;
 }
@@ -2175,7 +2402,15 @@
 
 .sp-auth-page {
   min-height: 100vh;
-  background: linear-gradient(180deg, #ffffff 0%, #f8f5fc 20%, #efe8f8 40%, #e5daf2 60%, #d4c4e8 80%, #c9b8e0 100%);
+  background: linear-gradient(
+    180deg,
+    #ffffff 0%,
+    #f8f5fc 20%,
+    #efe8f8 40%,
+    #e5daf2 60%,
+    #d4c4e8 80%,
+    #c9b8e0 100%
+  );
   padding: 20px;
   display: flex;
   flex-direction: column;
@@ -2281,7 +2516,7 @@
 .sp-auth-btn {
   width: 100%;
   height: 54px;
-  background: linear-gradient(180deg, #f5a623 0%, #e8851c 100%);
+  background: linear-gradient(180deg, #f9c20f, #fda027, #f0742c, #ec692e);
   border: none;
   border-radius: 27px;
   font-size: 17px;
@@ -2370,6 +2605,7 @@
   gap: 0;
   margin-bottom: 20px;
   background: rgba(255, 255, 255, 0.3);
+  border: 1px solid #ddd;
   border-radius: 30px;
   padding: 4px;
 }
@@ -2379,6 +2615,7 @@
   padding: 14px 20px;
   border: none;
   border-radius: 26px;
+  text-align: center;
   font-size: 14px;
   font-weight: 600;
   cursor: pointer;
@@ -2388,9 +2625,9 @@
 }
 
 .sp-tab-btn.active {
-  background: linear-gradient(180deg, #f5a623 0%, #e8851c 100%);
+  background: linear-gradient(180deg, #ac4ee9, #360599);
   color: #ffffff;
-  box-shadow: 0 4px 12px rgba(245, 166, 35, 0.35);
+  box-shadow: 0 4px 12px rgb(208 35 245 / 26%);
 }
 
 /* Form Card */
@@ -2485,7 +2722,7 @@
 .sp-btn-submit {
   width: 100%;
   height: 54px;
-  background: linear-gradient(180deg, #f5a623 0%, #e8851c 100%);
+  background: linear-gradient(180deg, #f9c20f, #fda027, #f0742c, #ec692e);
   border: none;
   border-radius: 27px;
   font-size: 17px;
@@ -2561,7 +2798,7 @@
 }
 
 .sp-activity-banner-placeholder {
-  background: linear-gradient(135deg, #1a1a3a 0%, #2d2d5a 100%);
+  background: #00003c;
   height: 100px;
   display: flex;
   align-items: center;
@@ -2587,7 +2824,11 @@
   gap: 16px;
   padding: 25px 10px 20px 10px;
   margin-bottom: 20px;
-  background: linear-gradient(180deg, rgba(45, 45, 90, 0.1) 0%, transparent 100%);
+  background: linear-gradient(
+    180deg,
+    rgba(45, 45, 90, 0.1) 0%,
+    transparent 100%
+  );
   border-radius: 16px;
 }
 
@@ -2895,28 +3136,44 @@
 }
 
 /* Floating Customer Service Button */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 .sp-float-cs-btn {
   position: fixed;
   bottom: 100px;
   right: 16px;
-  width: 54px;
-  height: 54px;
-  background: linear-gradient(135deg, #f5a623 0%, #e8851c 100%);
-  border-radius: 12px;
+  width: 52px;
+  height: 52px;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #ffffff;
-  font-size: 22px;
-  box-shadow: 0 6px 20px rgba(245, 166, 35, 0.45);
   z-index: 99;
   text-decoration: none;
-  transition: all 0.3s ease;
+  transition: transform 0.3s ease;
+  animation: fadeInUp 0.5s ease-out;
 }
 
 .sp-float-cs-btn:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 8px 25px rgba(245, 166, 35, 0.55);
+  transform: scale(1.1);
+}
+
+.sp-float-cs-btn:active {
+  transform: scale(0.95);
+}
+
+.sp-float-cs-btn .sp-cs-icon {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 
 /* ============================================
@@ -3092,7 +3349,7 @@
 }
 
 .sp-cs-btn-outline:hover {
-  background: linear-gradient(135deg, #f5a623 0%, #e8851c 100%);
+  background: linear-gradient(180deg, #f9c20f, #fda027, #f0742c, #ec692e);
   color: #ffffff;
   box-shadow: 0 4px 15px rgba(245, 166, 35, 0.35);
 }
@@ -3113,7 +3370,7 @@
 .sp-promo-icon {
   width: 54px;
   height: 54px;
-  background: linear-gradient(135deg, #f5a623 0%, #e8851c 100%);
+  background: linear-gradient(180deg, #f9c20f, #fda027, #f0742c, #ec692e);
   border-radius: 14px;
   display: flex;
   align-items: center;
@@ -3435,7 +3692,6 @@
 .sp-cs-action-btn {
   display: flex;
   align-items: center;
-  width: 100%;
   padding: 16px 18px;
   background: #ffffff;
   border: 1px solid #e8e8ec;
@@ -3501,23 +3757,6 @@
 
 .sp-cs-mic-btn:hover {
   color: #6b5b95;
-}
-
-.sp-cs-send-btn {
-  width: 40px;
-  height: 40px;
-  background: linear-gradient(135deg, #f5a623 0%, #e8851c 100%);
-  border: none;
-  border-radius: 50%;
-  color: #ffffff;
-  cursor: pointer;
-  box-shadow: 0 4px 12px rgba(245, 166, 35, 0.35);
-  transition: all 0.2s ease;
-}
-
-.sp-cs-send-btn:hover {
-  transform: scale(1.05);
-  box-shadow: 0 6px 16px rgba(245, 166, 35, 0.45);
 }
 
 /* ============================================
@@ -3588,7 +3827,7 @@
   border-radius: 10px;
   margin-bottom: 14px;
   overflow: hidden;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.2);
 }
 
 .sp-faq-question {
@@ -3628,11 +3867,11 @@
 
 .sp-faq-answer {
   display: none;
-  padding: 18px;
-  font-size: 14px;
-  color: #666;
-  line-height: 1.7;
-  background: #fafafa;
+  padding: 16px;
+  min-height: 80px;
+  font-size: 13px;
+  color: #444;
+  line-height: 1.6;
 }
 
 /* ============================================
@@ -3702,4 +3941,1007 @@
 .sp-about-menu-item i {
   font-size: 14px;
   color: #bbb;
+}
+
+/* ============================================
+   ACTIVITY DETAIL PAGE
+   100% Match with resource/1/8.png & 9.png
+   ============================================ */
+.sp-activity-detail-container {
+  display: flex;
+  flex-direction: column;
+  min-height: calc(100vh - 50px);
+  padding-bottom: 80px;
+}
+
+/* Activity Banner */
+.sp-activity-detail-banner {
+  width: calc(100% - 32px);
+  margin: 16px auto 0;
+  height: 140px;
+  background: #00003c;
+  border-radius: 12px;
+  overflow: hidden;
+  position: relative;
+}
+
+.sp-activity-detail-banner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Tab Switch Overlay Style */
+.sp-tab-switch-overlay {
+  position: relative;
+  margin: -20px auto 0;
+  z-index: 10;
+  width: calc(100% - 64px);
+  max-width: 280px;
+  background: #fff;
+  border-radius: 25px;
+  padding: 4px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.sp-tab-switch-overlay .sp-tab-btn {
+  flex: 1;
+  padding: 10px 16px;
+  font-size: 13px;
+  font-weight: 500;
+  color: #666;
+  background: transparent;
+  border: none;
+  border-radius: 20px;
+  text-decoration: none;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.sp-tab-switch-overlay .sp-tab-btn.active {
+  background: linear-gradient(180deg, #f9c20f, #fda027, #f0742c, #ec692e);
+  color: #fff;
+  box-shadow: 0 2px 6px rgba(245, 166, 35, 0.4);
+}
+
+/* Activity Detail Card */
+.sp-activity-detail-card {
+  background: #fff;
+  margin: 16px;
+  border-radius: 12px;
+  padding: 20px 16px;
+  flex: 1;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+/* Activity Rules */
+.sp-activity-rules {
+  padding: 0;
+}
+
+.sp-activity-rule-item {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 16px;
+  line-height: 1.6;
+}
+
+.sp-activity-rule-item:last-child {
+  margin-bottom: 0;
+}
+
+.sp-rule-number {
+  color: #222;
+  font-size: 14px;
+  flex-shrink: 0;
+}
+
+.sp-rule-text {
+  color: #222;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+/* Activity Ranking Table */
+.sp-activity-ranking-table {
+  width: 100%;
+}
+
+.sp-activity-ranking-header {
+  display: flex;
+  padding: 12px 0;
+  border-bottom: 1px solid #f0f0f0;
+  font-size: 13px;
+  font-weight: 600;
+  color: #666;
+}
+
+.sp-activity-ranking-row {
+  display: flex;
+  padding: 14px 0;
+  border-bottom: 1px solid #f5f5f5;
+  font-size: 14px;
+  color: #333;
+}
+
+.sp-activity-ranking-row:last-child {
+  border-bottom: none;
+}
+
+.sp-ranking-col-rank {
+  width: 60px;
+  text-align: center;
+  flex-shrink: 0;
+}
+
+.sp-ranking-col-user {
+  flex: 1;
+  text-align: center;
+}
+
+.sp-ranking-col-amount {
+  width: 100px;
+  text-align: right;
+  flex-shrink: 0;
+}
+
+.sp-activity-ranking-empty {
+  padding: 40px 0;
+  text-align: center;
+  color: #999;
+  font-size: 14px;
+}
+
+/* Activity Date */
+.sp-activity-date {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 20px;
+  padding-top: 16px;
+  border-top: 1px solid #f0f0f0;
+  color: #999;
+  font-size: 13px;
+}
+
+.sp-activity-date i {
+  font-size: 14px;
+}
+
+/* Activity Join Button */
+.sp-activity-detail-actions {
+  padding: 0 16px 16px;
+}
+
+.sp-btn-activity-join {
+  display: block;
+  width: 100%;
+  padding: 14px 24px;
+  background: linear-gradient(180deg, #f9c20f, #fda027, #f0742c, #ec692e);
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(245, 166, 35, 0.4);
+}
+
+.sp-btn-activity-join:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(245, 166, 35, 0.5);
+}
+
+.sp-btn-activity-join:active {
+  transform: translateY(0);
+}
+
+/* ============================================
+   TRANSACTION PAGE
+   100% Match with resource/1/10.png
+   ============================================ */
+.sp-transaction-container {
+  padding: 0;
+}
+
+/* Filter Bar */
+.sp-transaction-filter {
+  display: flex;
+  gap: 10px;
+  padding: 10px 16px 12px;
+  background: transparent;
+}
+
+.sp-transaction-select {
+  flex: 1;
+  position: relative;
+}
+
+.sp-transaction-select select {
+  width: 100%;
+  padding: 10px 36px 10px 14px;
+  background: #00003c;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 500;
+  border: none;
+  border-radius: 6px;
+  appearance: none;
+  -webkit-appearance: none;
+  cursor: pointer;
+}
+
+.sp-transaction-select select option {
+  background: #00003c;
+  color: #fff;
+}
+
+.sp-transaction-select i,
+.sp-transaction-select .sp-select-arrow-icon {
+  position: absolute;
+  right: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #fff;
+  font-size: 12px;
+  pointer-events: none;
+}
+
+.sp-select-arrow-icon {
+  width: 12px;
+  height: 12px;
+  object-fit: contain;
+}
+
+/* Transaction List */
+.sp-transaction-list {
+  padding: 0 16px;
+}
+
+.sp-transaction-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  margin: 0;
+  padding: 14px 10px 0 10px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+  box-shadow: 0 1px 15px #0002;
+  margin-bottom: 15px;
+}
+
+.sp-transaction-item:last-child {
+  border-bottom: none;
+}
+
+/* Status Icon */
+.sp-transaction-status {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.sp-status-icon {
+  width: 36px;
+  height: 36px;
+  object-fit: contain;
+}
+
+/* Transaction Details */
+.sp-transaction-details {
+  flex: 1;
+}
+
+.sp-transaction-badge {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  background: #00003c;
+  padding: 10px 6px;
+  border-radius: 5px;
+}
+
+.sp-transaction-bank-icon {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.sp-transaction-bank {
+  color: #fff;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.sp-transaction-amount {
+  color: #fff;
+  font-size: 14px;
+  margin-left: auto;
+  padding-left: 16px;
+}
+
+.sp-transaction-date {
+  color: #888;
+  font-size: 13px;
+  margin-top: 6px;
+  text-align: right;
+}
+
+/* ============================================
+   GAME DETAIL PAGE
+   100% Match with resource/1/13.png
+   ============================================ */
+
+/* Game Banner */
+.sp-game-detail-banner {
+  width: 100%;
+  aspect-ratio: 16/9;
+  background: #1a1a3a;
+  overflow: hidden;
+}
+
+.sp-game-detail-banner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Points Bar */
+.sp-game-points-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 16px;
+  background: #00003c;
+}
+
+.sp-points-info {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.sp-points-label,
+.sp-points-value {
+  color: #fff;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.sp-game-deposit-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 16px;
+  background: linear-gradient(180deg, #f9c20f, #fda027, #f0742c, #ec692e);
+  border-radius: 6px;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 400;
+  text-decoration: none;
+  transition: background 0.2s ease;
+}
+
+.sp-game-deposit-btn:hover {
+  background: #e09000;
+}
+
+.sp-deposit-icon {
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
+}
+
+/* Info Card (Return Rate) */
+.sp-game-info-card {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  background: #00003c;
+  border: 1px solid #e8e8e8;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.sp-game-info-item {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 16px;
+}
+
+.sp-game-info-divider {
+  width: 1px;
+  height: 16px;
+  background: #d0d0d0;
+}
+
+.sp-game-info-label,
+.sp-game-info-value {
+  color: #fff;
+  font-size: 13px;
+  font-weight: 400;
+}
+
+/* Description Card */
+.sp-game-description-card {
+  margin: 10px 15px;
+  padding: 14px 12px;
+  background: #fff;
+  border: 1px solid #e8e8e8;
+  border-radius: 5px;
+  color: #333;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.7;
+}
+
+/* Enter Game Button */
+.sp-game-action {
+  padding: 16px;
+}
+
+.sp-game-enter-btn {
+  display: block;
+  width: 100%;
+  padding: 14px 24px;
+  background: linear-gradient(180deg, #f9c20f, #fda027, #f0742c, #ec692e);
+  border: none;
+  border-radius: 25px;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 400;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.sp-game-enter-btn:hover {
+  background: #e09000;
+}
+
+.sp-game-enter-btn:active {
+  transform: scale(0.98);
+}
+
+/* ============================================
+   FAQ PAGE STYLES (16.png)
+   ============================================ */
+.sp-faq-container {
+  padding: 16px;
+}
+
+.sp-faq-card {
+  background: #fff;
+  border-radius: 12px;
+  margin-top: 16px;
+}
+
+.sp-faq-item {
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.sp-faq-item:last-child {
+  border-bottom: none;
+}
+
+.sp-faq-question {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 400;
+  color: #333;
+}
+
+.sp-faq-arrow {
+  width: 14px;
+  height: 14px;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.sp-faq-item.active .sp-faq-arrow {
+  transform: rotate(180deg);
+}
+
+.sp-faq-answer {
+  display: none;
+  padding: 12px 16px 16px;
+  font-size: 13px;
+  margin: 3px;
+  background: #2221;
+  color: #444;
+  line-height: 1.6;
+}
+
+/* ============================================
+   CONTACTS PAGE STYLES (17.png)
+   ============================================ */
+.sp-contacts-container {
+  padding: 16px;
+}
+
+.sp-contacts-card {
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  margin-top: 16px;
+}
+
+.sp-contacts-search {
+  display: flex;
+  align-items: center;
+  padding: 12px 16px;
+  border-bottom: 1px solid #f0f0f0;
+  position: relative;
+}
+
+.sp-contacts-search-input {
+  flex: 1;
+  border: none;
+  background: transparent;
+  font-size: 14px;
+  color: #333;
+  outline: none;
+}
+
+.sp-contacts-search-input::placeholder {
+  color: #999;
+}
+
+.sp-contacts-search-icon {
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
+  color: #00003c;
+}
+
+.sp-contacts-list {
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.sp-contact-group {
+  margin-bottom: 0;
+}
+
+.sp-contact-letter {
+  background: #00003c;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 400;
+  padding: 8px 16px;
+}
+
+.sp-contact-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 16px;
+  text-decoration: none;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.sp-contact-item:last-child {
+  border-bottom: none;
+}
+
+.sp-contact-avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sp-contact-avatar-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.sp-contact-name {
+  font-size: 14px;
+  font-weight: 400;
+  color: #333;
+}
+
+/* Customer Service Full Button */
+.sp-cs-btn-full {
+  display: block;
+  width: 100%;
+  padding: 14px 24px;
+  margin-top: 16px;
+  background: linear-gradient(180deg, #f9c20f, #fda027, #f0742c, #ec692e);
+  border: none;
+  border-radius: 25px;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 400;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* ============================================
+   CHAT LIST PAGE STYLES (18.png)
+   ============================================ */
+.sp-chat-list-container {
+  padding: 16px;
+}
+
+.sp-chat-list-card {
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  margin-top: 16px;
+}
+
+.sp-chat-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 16px;
+  text-decoration: none;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.sp-chat-item:last-child {
+  border-bottom: none;
+}
+
+.sp-chat-avatar {
+  width: 44px;
+  height: 44px;
+  flex-shrink: 0;
+}
+
+.sp-chat-avatar-box {
+  width: 100%;
+  height: 100%;
+  background: #00003c;
+  border-radius: 4px;
+}
+
+.sp-chat-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.sp-chat-name {
+  font-size: 14px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 4px;
+}
+
+.sp-chat-preview {
+  font-size: 12px;
+  color: #999;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.sp-chat-time {
+  font-size: 12px;
+  color: #999;
+  flex-shrink: 0;
+}
+
+/* ============================================
+   CUSTOMER SERVICE PAGE STYLES (19.png)
+   ============================================ */
+.sp-cs-container {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  min-height: calc(100vh - 140px);
+}
+
+.sp-cs-welcome-card {
+  background: #eee5;
+  border: 1px solid #ddd;
+  border-radius: 16px;
+  padding: 30px 20px;
+  text-align: center;
+  margin-bottom: 15px;
+  flex: 1;
+}
+
+.sp-cs-logo {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 20px;
+}
+
+.sp-cs-logo-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.sp-cs-title {
+  font-size: 20px;
+  font-weight: 600;
+  color: #333;
+  margin: 0 0 12px;
+}
+
+.sp-cs-desc {
+  font-size: 13px;
+  color: #666;
+  line-height: 1.6;
+  margin: 0 0 30px;
+}
+
+.sp-cs-quick-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.sp-cs-action-btn {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 16px;
+  text-decoration: none;
+  color: #333;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.sp-cs-action-btn:last-child {
+  border-bottom: none;
+}
+
+.sp-cs-action-icon {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+}
+
+.sp-cs-action-btn span {
+  font-size: 14px;
+  font-weight: 400;
+}
+
+/* Chat Input Bar */
+.sp-cs-input-form{
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.sp-cs-input-bar {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  gap: 10px;
+  padding: 6px 0;
+  margin-top: auto;
+}
+
+.sp-cs-input-wrapper {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  background: #fff;
+  border-radius: 25px;
+  padding: 10px 16px;
+  gap: 10px;
+}
+
+.sp-cs-input {
+  flex: 1;
+  border: none;
+  background: transparent;
+  font-size: 14px;
+  color: #333;
+  outline: none;
+}
+
+.sp-cs-input::placeholder {
+  color: #999;
+}
+
+.sp-cs-mic-btn {
+  background: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.sp-cs-mic-icon {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+}
+
+.sp-cs-send-btn {
+  width: 60px;
+  height: 60px;
+  min-width: 60px;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: unset;
+  cursor: pointer;
+}
+
+.sp-cs-send-icon {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* Header Title Orange */
+.sp-header-title-orange {
+  color: #f5a623 !important;
+}
+
+/* ============================================
+   CHAT CONVERSATION PAGE STYLES (20.png)
+   ============================================ */
+.sp-conversation-container {
+  display: flex;
+  flex-direction: column;
+  min-height: calc(100vh - 140px);
+  padding: 16px;
+}
+
+.sp-conversation-user-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: #fff;
+  border-radius: 12px 12px 0 0;
+  padding: 16px;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.sp-conversation-user-avatar {
+  width: 44px;
+  height: 44px;
+}
+
+.sp-conversation-avatar-box {
+  width: 100%;
+  height: 100%;
+  background: #00003c;
+  border-radius: 4px;
+}
+
+.sp-conversation-user-name {
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+}
+
+.sp-conversation-messages {
+  flex: 1;
+  background: #fff;
+  padding: 16px;
+  overflow-y: auto;
+  border-radius: 0 0 12px 12px;
+  min-height: 300px;
+}
+
+.sp-message {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.sp-message-sent {
+  flex-direction: row-reverse;
+}
+
+.sp-message-avatar {
+  width: 32px;
+  height: 32px;
+  flex-shrink: 0;
+}
+
+.sp-message-avatar-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.sp-message-bubble {
+  max-width: 70%;
+  padding: 10px 14px;
+  border-radius: 12px;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.sp-message-received .sp-message-bubble {
+  background: #f5f5f5;
+  color: #333;
+  border-top-left-radius: 4px;
+}
+
+.sp-message-sent .sp-message-bubble {
+  background: #f0eaf8;
+  color: #333;
+  border-top-right-radius: 4px;
+}
+
+/* Conversation Input Bar */
+.sp-conversation-input-bar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 0;
+  margin-top: 16px;
+}
+
+.sp-conversation-input-wrapper {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  background: #fff;
+  border-radius: 25px;
+  padding: 10px 16px;
+  gap: 10px;
+}
+
+.sp-conversation-input {
+  flex: 1;
+  border: none;
+  background: transparent;
+  font-size: 14px;
+  color: #333;
+  outline: none;
+}
+
+.sp-conversation-input::placeholder {
+  color: #999;
+}
+
+.sp-conversation-mic-btn {
+  background: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.sp-conversation-mic-icon {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+}
+
+.sp-conversation-send-btn {
+  width: 44px;
+  height: 44px;
+  background: linear-gradient(180deg, #f9c20f, #fda027, #f0742c, #ec692e);
+  border: none;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.sp-conversation-send-icon {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+  filter: brightness(0) invert(1);
 }

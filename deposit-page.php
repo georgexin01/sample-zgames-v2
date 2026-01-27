@@ -9,6 +9,7 @@
 $pageName = 'deposit';
 $pageTitle = 'Deposit - SUPERONG';
 $headerTitle = '存款';
+$bodyClass = 'sp-bg-fixed';
 
 include 'lib/htmlHead.php';
 include 'lib/header.php';

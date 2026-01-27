@@ -9,6 +9,7 @@
 $pageName = 'settings';
 $pageTitle = 'Settings - SUPERONG';
 $headerTitle = '设置';
+$bodyClass = 'sp-bg-fixed';
 
 include 'lib/htmlHead.php';
 include 'lib/header.php';

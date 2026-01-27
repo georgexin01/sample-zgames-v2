@@ -9,6 +9,7 @@
 $pageName = 'vip';
 $pageTitle = 'VIP - SUPERONG';
 $headerTitle = 'VIP会员';
+$bodyClass = 'sp-bg-fixed';
 
 include 'lib/htmlHead.php';
 include 'lib/header.php';

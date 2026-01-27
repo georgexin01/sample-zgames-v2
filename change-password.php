@@ -9,6 +9,7 @@
 $pageName = 'change-password';
 $pageTitle = '修改密码';
 $headerTitle = '修改密码';
+$bodyClass = 'sp-bg-fixed';
 
 // Include header
 include 'lib/htmlHead.php';

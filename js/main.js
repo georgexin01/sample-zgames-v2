@@ -105,6 +105,13 @@ function showPasswordModal(options) {
   }
 }
 
+/**
+ * Show language selector modal
+ */
+function showLangModal() {
+  showModal("langModal");
+}
+
 // ============================================================================
 // PASSWORD INPUT BOXES
 // ============================================================================

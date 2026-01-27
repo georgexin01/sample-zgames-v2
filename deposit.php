@@ -5,9 +5,10 @@
  * 100% Match with deposit_bank充值_银行充值.png
  */
 
-$pageName = 'deposit';
+$pageName = 'chat';
 $pageTitle = '充值';
 $headerTitle = '充值';
+$bodyClass = 'sp-bg-fixed';
 $headerRightIcon = 'fa-history';
 $headerRightLink = 'deposit-record.php';
 

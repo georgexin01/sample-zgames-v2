@@ -8,6 +8,7 @@
 $pageName = 'notification';
 $pageTitle = '通知';
 $headerTitle = '通知';
+$bodyClass = 'sp-bg-fixed';
 
 include 'lib/htmlHead.php';
 include 'lib/header.php';
@@ -66,11 +67,6 @@ $notifications = [
 
     </div>
 </main>
-
-<!-- Floating Customer Service Button -->
-<a href="customer-service.php" class="sp-float-cs-btn">
-    <i class="fas fa-headset"></i>
-</a>
 
 <!-- Mobile Nav Spacer -->
 <div class="mobile-nav-spacer"></div>

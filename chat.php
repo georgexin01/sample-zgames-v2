@@ -2,13 +2,15 @@
 /**
  * chat.php - SUPERONG Mobile App
  * 聊天 (Chat List Page)
- * 100% Match with chat_list聊天列表.png
+ * 100% Match with resource/1/18.png
  */
 
 $pageName = 'chat';
 $pageTitle = '聊天';
 $headerTitle = '聊天';
-$headerRightIcon = 'fa-cog';
+$bodyClass = 'sp-bg-fixed';
+$headerRightIcon = 'resource/ui-elements/settings.png';
+$headerRightIconType = 'image';
 $headerRightLink = 'chat-settings.php';
 
 include 'lib/htmlHead.php';
@@ -17,7 +19,7 @@ include 'lib/header.php';
 // Dummy chat list
 $chats = [
     [
-        'id' => 'AAA111',
+        'id' => 1,
         'name' => 'AAA111',
         'lastMessage' => 'SUPERONG超好玩',
         'time' => '04:29',
@@ -26,21 +28,21 @@ $chats = [
 ?>
 
 <!-- ========== CHAT LIST PAGE CONTENT ========== -->
-<main class="sp-page sp-page-dark">
+<main class="sp-page">
     <div class="sp-chat-list-container">
 
         <!-- Tab Switch -->
         <div class="sp-tab-switch">
-            <button class="sp-tab-btn">通讯录</button>
-            <button class="sp-tab-btn active">聊天</button>
+            <a href="chatroom.php" class="sp-tab-btn">通讯录</a>
+            <a href="chat.php" class="sp-tab-btn active">聊天</a>
         </div>
 
-        <!-- Chat List -->
-        <div class="sp-chat-list">
+        <!-- Chat List Card -->
+        <div class="sp-chat-list-card">
             <?php foreach ($chats as $chat): ?>
-            <a href="chat-conversation.php?user=<?php echo urlencode($chat['id']); ?>" class="sp-chat-item">
+            <a href="chat-conversation.php?id=<?php echo $chat['id']; ?>" class="sp-chat-item">
                 <div class="sp-chat-avatar">
-                    <i class="fas fa-user"></i>
+                    <div class="sp-chat-avatar-box"></div>
                 </div>
                 <div class="sp-chat-content">
                     <div class="sp-chat-name"><?php echo htmlspecialchars($chat['name']); ?></div>
@@ -52,7 +54,7 @@ $chats = [
         </div>
 
         <!-- Customer Service Button -->
-        <a href="customer-service.php" class="sp-cs-btn-outline">
+        <a href="customer-service.php" class="sp-cs-btn-full">
             Customer Service
         </a>
 
@@ -63,14 +65,4 @@ $chats = [
 <div class="mobile-nav-spacer"></div>
 
 <?php include 'lib/footer.php'; ?>
-
-<script>
-document.querySelectorAll('.sp-tab-btn').forEach(btn => {
-    btn.addEventListener('click', function() {
-        document.querySelectorAll('.sp-tab-btn').forEach(b => b.classList.remove('active'));
-        this.classList.add('active');
-    });
-});
-</script>
-
 <?php include 'lib/htmlBody.php'; ?>

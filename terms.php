@@ -9,6 +9,7 @@
 $pageName = 'terms';
 $pageTitle = '用户协议';
 $headerTitle = '用户协议';
+$bodyClass = 'sp-bg-fixed';
 
 // Include header
 include 'lib/htmlHead.php';
