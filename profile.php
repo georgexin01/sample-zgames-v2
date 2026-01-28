@@ -1,8 +1,8 @@
 <?php
 /**
  * profile.php - SUPERONG Mobile App
- * 我的 (Profile Page)
- * 100% Match with profile我的_个人中心.png
+ * 我的 (My Profile Page)
+ * 100% Match with resource/1/53.png
  */
 
 $pageName = 'profile';
@@ -15,98 +15,77 @@ $headerRightLink = 'javascript:showLogoutModal()';
 include 'lib/htmlHead.php';
 include 'lib/header.php';
 
-// Dummy user data (simulating logged-in user)
+// Dummy user data
 $user = [
     'username' => 'SUPERONG123',
-    'level' => 'SUPERONG',
+    'displayName' => 'SUPERONG',
     'phone' => '+6012 435 6567',
-    'joinDate' => '22-08-1996',
-    'point' => 1000.00
+    'birthday' => '22-08-1996',
+    'points' => 1000.00,
+];
+
+// Menu items
+$menuItems = [
+    ['label' => '充值', 'link' => 'deposit.php'],
+    ['label' => '提款', 'link' => 'withdraw.php'],
+    ['label' => '转帐', 'link' => 'transfer.php'],
+    ['label' => '活动', 'link' => 'activity.php'],
+    ['label' => '排行榜', 'link' => 'leaderboard.php'],
+    ['label' => '交易记录', 'link' => 'transaction.php'],
+    ['label' => '输赢报表', 'link' => 'winloss-report.php'],
+    ['label' => '投注记录', 'link' => 'betting-record.php'],
+    ['label' => '安全认证', 'link' => 'verification.php'],
+    ['label' => '设定', 'link' => 'settings.php'],
 ];
 ?>
 
 <!-- ========== PROFILE PAGE CONTENT ========== -->
-<main class="sp-page sp-page-dark">
-    <div class="container-fluid" style="padding: 0;">
+<main class="sp-page">
+    <div class="sp-profile-container">
 
-        <!-- ========== USER PROFILE CARD ========== -->
-        <section class="sp-profile-card-section">
-            <div class="sp-profile-user-card">
-                <!-- Avatar with Ring -->
-                <div class="sp-profile-avatar-wrap">
-                    <div class="sp-avatar-ring">
-                        <i class="fas fa-user"></i>
-                    </div>
-                </div>
-                <!-- Username & Level -->
-                <h2 class="sp-profile-username"><?php echo htmlspecialchars($user['username']); ?></h2>
-                <p class="sp-profile-level"><?php echo htmlspecialchars($user['level']); ?></p>
-                <!-- Phone & Date Info -->
-                <div class="sp-profile-meta">
-                    <div class="sp-profile-meta-item">
-                        <i class="fas fa-phone-alt"></i>
-                        <span><?php echo htmlspecialchars($user['phone']); ?></span>
-                    </div>
-                    <div class="sp-profile-meta-item">
-                        <i class="fas fa-calendar-alt"></i>
-                        <span><?php echo htmlspecialchars($user['joinDate']); ?></span>
-                    </div>
+        <!-- Profile Card (Dark Navy) -->
+        <div class="sp-profile-card">
+            <div class="sp-profile-avatar">
+                <div class="sp-profile-avatar-inner">
+                    <img src="resource/ui-elements/user-alt-2.png" alt="" class="sp-profile-avatar-icon">
                 </div>
             </div>
-        </section>
-
-        <!-- ========== POINT BAR ========== -->
-        <section class="sp-profile-point-section">
-            <div class="sp-profile-point-row">
-                <span class="sp-profile-point-label">Point</span>
-                <span class="sp-profile-point-value"><?php echo number_format($user['point'], 2); ?></span>
+            <h2 class="sp-profile-username"><?php echo htmlspecialchars($user['username']); ?></h2>
+            <p class="sp-profile-displayname"><?php echo htmlspecialchars($user['displayName']); ?></p>
+            <div class="sp-profile-info-row">
+                <div class="sp-profile-info-item">
+                    <i class="fas fa-phone-alt"></i>
+                    <span><?php echo htmlspecialchars($user['phone']); ?></span>
+                </div>
+                <div class="sp-profile-info-divider"></div>
+                <div class="sp-profile-info-item">
+                    <i class="fas fa-calendar-alt"></i>
+                    <span><?php echo htmlspecialchars($user['birthday']); ?></span>
+                </div>
             </div>
-        </section>
+        </div>
 
-        <!-- ========== MENU SECTION ========== -->
-        <section class="sp-profile-menu-section">
+        <!-- Points Bar -->
+        <div class="sp-profile-points-bar">
+            <span class="sp-profile-points-label">Point</span>
+            <div class="sp-profile-points-divider"></div>
+            <span class="sp-profile-points-value"><?php echo number_format($user['points'], 2); ?></span>
+        </div>
+
+        <!-- Menu Card -->
+        <div class="sp-profile-menu-card">
             <div class="sp-profile-menu-header">
-                <span>其他功能</span>
+                <span class="sp-profile-menu-badge">其他功能</span>
             </div>
             <div class="sp-profile-menu-list">
-                <a href="deposit.php" class="sp-profile-menu-item">
-                    <span>充值</span>
-                    <i class="fas fa-chevron-right"></i>
+                <?php foreach ($menuItems as $item): ?>
+                <a href="<?php echo $item['link']; ?>" class="sp-profile-menu-item">
+                    <span class="sp-profile-menu-text"><?php echo htmlspecialchars($item['label']); ?></span>
+                    <i class="fas fa-chevron-right sp-profile-menu-arrow"></i>
                 </a>
-                <a href="withdrawal.php" class="sp-profile-menu-item">
-                    <span>提款</span>
-                    <i class="fas fa-chevron-right"></i>
-                </a>
-                <a href="transfer.php" class="sp-profile-menu-item">
-                    <span>转帐</span>
-                    <i class="fas fa-chevron-right"></i>
-                </a>
-                <a href="activity.php" class="sp-profile-menu-item">
-                    <span>活动</span>
-                    <i class="fas fa-chevron-right"></i>
-                </a>
-                <a href="ranking.php" class="sp-profile-menu-item">
-                    <span>排行榜</span>
-                    <i class="fas fa-chevron-right"></i>
-                </a>
-                <a href="transaction.php" class="sp-profile-menu-item">
-                    <span>交易记录</span>
-                    <i class="fas fa-chevron-right"></i>
-                </a>
-                <a href="winloss.php" class="sp-profile-menu-item">
-                    <span>输赢报表</span>
-                    <i class="fas fa-chevron-right"></i>
-                </a>
-                <a href="betting.php" class="sp-profile-menu-item">
-                    <span>投注记录</span>
-                    <i class="fas fa-chevron-right"></i>
-                </a>
-                <a href="settings.php" class="sp-profile-menu-item">
-                    <span>安全设定</span>
-                    <i class="fas fa-chevron-right"></i>
-                </a>
+                <?php endforeach; ?>
             </div>
-        </section>
+        </div>
 
     </div>
 </main>
@@ -114,18 +93,39 @@ $user = [
 <!-- Mobile Nav Spacer -->
 <div class="mobile-nav-spacer"></div>
 
+<!-- Logout Confirmation Modal -->
+<div class="sp-confirm-overlay" id="logoutModal">
+    <div class="sp-modal-card">
+        <div class="sp-modal-icon">
+            <i class="fas fa-sign-out-alt"></i>
+        </div>
+        <p class="sp-modal-title">确认退出？</p>
+        <p class="sp-modal-name">您确定要退出登入吗？</p>
+        <div class="sp-modal-buttons">
+            <button class="sp-modal-btn sp-modal-btn-cancel" onclick="closeLogoutModal()">取消</button>
+            <button class="sp-modal-btn sp-modal-btn-confirm" onclick="confirmLogout()">确定</button>
+        </div>
+    </div>
+</div>
+
 <?php include 'lib/footer.php'; ?>
 
 <script>
 function showLogoutModal() {
-    document.getElementById('confirmModalIcon').innerHTML = '<i class="fas fa-sign-out-alt"></i>';
-    document.getElementById('confirmModalTitle').textContent = '确认退出？';
-    document.getElementById('confirmModalMessage').textContent = '您确定要退出登入吗？';
-    document.getElementById('confirmModalBtn').onclick = function() {
-        window.location.href = 'login.php';
-    };
-    document.getElementById('confirmModal').classList.add('active');
+    document.getElementById('logoutModal').classList.add('active');
 }
+
+function closeLogoutModal() {
+    document.getElementById('logoutModal').classList.remove('active');
+}
+
+function confirmLogout() {
+    window.location.href = 'login.php';
+}
+
+document.getElementById('logoutModal').addEventListener('click', function(e) {
+    if (e.target === this) closeLogoutModal();
+});
 </script>
 
 <?php include 'lib/htmlBody.php'; ?>

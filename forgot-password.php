@@ -2,76 +2,117 @@
 /**
  * forgot-password.php - SUPERONG Mobile App
  * 忘记密码 (Forgot Password Page)
- * 99% Similarity Required
+ * 100% Match with resource/1/77.png, 79.png, 81.png
  */
 
-// Page settings
 $pageName = 'forgot-password';
 $pageTitle = '忘记密码';
+$headerTitle = '忘记密码';
 $bodyClass = 'sp-bg-fixed';
-$showHeader = false;
-$showFooter = false;
 
-// Include header
 include 'lib/htmlHead.php';
+include 'lib/header.php';
+
+$activeTab = isset($_GET['tab']) ? $_GET['tab'] : 'phone';
 ?>
 
 <!-- ========== FORGOT PASSWORD PAGE CONTENT ========== -->
-<main class="sp-auth-page">
-    <!-- Back Link -->
-    <a href="login.php" class="sp-auth-home-link">
-        <i class="fas fa-arrow-left"></i>
-        <span>返回登录</span>
-    </a>
-
-    <!-- Logo -->
-    <div class="sp-auth-logo">
-        <img src="resource/logo/logo.png" alt="SUPERONG" onerror="this.nextElementSibling.style.display='block'; this.style.display='none';">
-        <div class="sp-auth-logo-text" style="display:none;">
-            <span class="sp-logo-super">SUPER</span><span class="sp-logo-ong">ONG</span>
-        </div>
+<main class="sp-page">
+    <!-- Tab Switch -->
+    <div class="sp-tab-switch sp-forgot-tabs">
+        <a href="forgot-password.php?tab=phone" class="sp-tab-btn <?php echo $activeTab === 'phone' ? 'active' : ''; ?>">手机验证码</a>
+        <a href="forgot-password.php?tab=email" class="sp-tab-btn <?php echo $activeTab === 'email' ? 'active' : ''; ?>">邮箱验证码</a>
     </div>
 
-    <!-- Title -->
-    <h1 class="sp-auth-title">忘记密码</h1>
-    <p class="sp-auth-subtitle">请输入您的手机号码，我们将发送验证码给您</p>
+    <!-- Form Card -->
+    <div class="sp-auth-card">
+        <?php if ($activeTab === 'phone'): ?>
+        <!-- Phone Verification Form (77.png) -->
+        <form id="phoneVerifyForm" onsubmit="handleVerify(event, 'phone')">
+            <div class="sp-forgot-form-title">新手机号码验证码</div>
 
-    <!-- Forgot Password Form -->
-    <form id="forgotPasswordForm" class="sp-auth-form">
-        <div class="sp-auth-input-group">
-            <label class="sp-auth-label">手机号码</label>
-            <div class="sp-auth-phone-input">
-                <select class="sp-country-select">
-                    <option value="+60">+60</option>
-                    <option value="+65">+65</option>
-                    <option value="+66">+66</option>
-                </select>
-                <input type="tel" name="phone" placeholder="请输入手机号码" class="sp-auth-input">
+            <div class="sp-auth-input-row">
+                <div class="sp-country-code">
+                    <select class="sp-country-select">
+                        <option value="+60">+60</option>
+                        <option value="+65">+65</option>
+                        <option value="+66">+66</option>
+                    </select>
+                    <img src="resource/ui-elements/dropdown-blue.png" alt="" class="sp-select-arrow-icon">
+                </div>
+                <input type="tel" name="phone" placeholder="手机号码" class="sp-auth-input sp-phone-input" required>
             </div>
-        </div>
 
-        <div class="sp-auth-input-group">
-            <label class="sp-auth-label">验证码</label>
-            <div class="sp-auth-verify-row">
-                <input type="text" name="verifyCode" placeholder="请输入验证码" class="sp-auth-input sp-verify-input">
-                <button type="button" class="sp-auth-verify-btn" onclick="sendVerifyCode()">发送验证码</button>
+            <div class="sp-auth-input-row sp-verify-row">
+                <span class="sp-verify-label">验证码</span>
+                <input type="text" name="verifyCode" placeholder="请输入验证码" class="sp-auth-input sp-verify-input" required>
+                <button type="button" class="sp-verify-send-btn" onclick="sendVerifyCode('phone')">发送验证码</button>
             </div>
-        </div>
+        </form>
+        <?php else: ?>
+        <!-- Email Verification Form (79.png) -->
+        <form id="emailVerifyForm" onsubmit="handleVerify(event, 'email')">
+            <div class="sp-forgot-form-title">新邮箱验证码</div>
 
-        <button type="submit" class="sp-btn sp-btn-primary sp-auth-btn">下一步</button>
+            <div class="sp-auth-input-row">
+                <span class="sp-email-label">邮箱</span>
+                <input type="email" name="email" placeholder="请输入邮箱" class="sp-auth-input" required>
+            </div>
 
-        <p class="sp-auth-switch">
-            想起密码了？ <a href="login.php">返回登录</a>
-        </p>
-    </form>
+            <div class="sp-auth-input-row sp-verify-row">
+                <span class="sp-verify-label">验证码</span>
+                <input type="text" name="verifyCode" placeholder="请输入验证码" class="sp-auth-input sp-verify-input" required>
+                <button type="button" class="sp-verify-send-btn" onclick="sendVerifyCode('email')">发送验证码</button>
+            </div>
+        </form>
+        <?php endif; ?>
+    </div>
+
+    <!-- Submit Button -->
+    <button type="button" class="sp-btn sp-btn-primary sp-auth-btn sp-forgot-btn" onclick="submitVerify()">确认</button>
+
+    <!-- Help Link -->
+    <p class="sp-forgot-help">没有收到验证码？ <a href="customer-service.php">联系我们</a></p>
 </main>
 
+<!-- Verification Success Toast (81.png) -->
+<div id="verifySuccessToast" class="sp-toast-overlay" style="display:none;">
+    <div class="sp-toast-card">
+        <div class="sp-toast-icon sp-toast-success">
+            <img src="resource/ui-elements/check.png" alt="">
+        </div>
+        <p class="sp-toast-message">验证成功</p>
+    </div>
+</div>
+
+<!-- Mobile Nav Spacer -->
+<div class="mobile-nav-spacer"></div>
+
 <script>
-function sendVerifyCode() {
-    alert('验证码已发送');
+function sendVerifyCode(type) {
+    alert('验证码已发送到您的' + (type === 'phone' ? '手机' : '邮箱'));
+}
+
+function submitVerify() {
+    var activeTab = '<?php echo $activeTab; ?>';
+    var form = document.getElementById(activeTab === 'phone' ? 'phoneVerifyForm' : 'emailVerifyForm');
+
+    if (form.checkValidity()) {
+        // Show success toast
+        document.getElementById('verifySuccessToast').style.display = 'flex';
+        setTimeout(function() {
+            document.getElementById('verifySuccessToast').style.display = 'none';
+            window.location.href = 'new-password.php';
+        }, 2000);
+    } else {
+        form.reportValidity();
+    }
+}
+
+function handleVerify(e, type) {
+    e.preventDefault();
+    submitVerify();
 }
 </script>
 
-<?php
-include 'lib/htmlBody.php';
-?>
+<?php include 'lib/htmlBody.php'; ?>

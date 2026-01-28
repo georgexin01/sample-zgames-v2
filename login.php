@@ -2,12 +2,12 @@
 /**
  * login.php - SUPERONG Mobile App
  * 登入 (Login Page)
- * 100% Match with login登入.png
+ * 100% Match with resource/1/75.png
  */
 
 $pageName = 'login';
 $pageTitle = '登入';
-$bodyClass = 'sp-bg-fixed';
+$bodyClass = 'sp-auth-bg';
 $showHeader = false;
 $showFooter = false;
 
@@ -24,7 +24,7 @@ include 'lib/htmlHead.php';
 
     <!-- Logo -->
     <div class="sp-auth-logo">
-        <img src="resource/ui-elements/logo_main.png" alt="SUPERONG">
+        <img src="resource/ui-elements/logo_main_purple.png" alt="SUPERONG">
     </div>
 
     <!-- Welcome Text -->
@@ -32,19 +32,21 @@ include 'lib/htmlHead.php';
 
     <!-- Login Form -->
     <form id="loginForm" class="sp-auth-form" onsubmit="handleLogin(event)">
-        <div class="sp-auth-input-group">
-            <label class="sp-auth-label">用户名</label>
-            <input type="text" name="username" placeholder="请输入用户名" class="sp-auth-input" required>
+        <div class="sp-auth-card">
+            <div class="sp-auth-row">
+                <span class="sp-auth-row-label">用户名</span>
+                <input type="text" name="username" placeholder="请输入用户名" class="sp-auth-row-input" required>
+            </div>
+
+            <div class="sp-auth-row">
+                <span class="sp-auth-row-label">密码</span>
+                <input type="password" name="password" placeholder="请输入密码" class="sp-auth-row-input" required>
+            </div>
         </div>
 
-        <div class="sp-auth-input-group">
-            <label class="sp-auth-label">密码</label>
-            <input type="password" name="password" placeholder="请输入密码" class="sp-auth-input" required>
-        </div>
+        <a href="forgot-password.php" class="sp-auth-forgot-link">忘记密码?</a>
 
-        <a href="forgot-password.php" class="sp-forgot-link">忘记密码?</a>
-
-        <button type="submit" class="sp-btn sp-btn-primary sp-auth-btn">登入</button>
+        <button type="submit" class="sp-auth-submit-btn">登入</button>
 
         <p class="sp-auth-switch">
             还没有ID？ <a href="register.php">点此注册</a>
@@ -55,7 +57,6 @@ include 'lib/htmlHead.php';
 <script>
 function handleLogin(e) {
     e.preventDefault();
-    // Simulate login - redirect to home
     window.location.href = 'index.php';
 }
 </script>

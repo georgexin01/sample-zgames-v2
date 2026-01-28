@@ -55,7 +55,7 @@ include 'lib/header.php';
             <div class="sp-message <?php echo $msg['type'] === 'sent' ? 'sp-message-sent' : 'sp-message-received'; ?>">
                 <?php if ($msg['type'] === 'received'): ?>
                 <div class="sp-message-avatar">
-                    <img src="resource/ui-elements/user-purple.png" alt="" class="sp-message-avatar-img">
+                    <img src="resource/ui-elements/user-alt.png" alt="" class="sp-message-avatar-img">
                 </div>
                 <?php endif; ?>
                 <div class="sp-message-bubble">
@@ -63,23 +63,25 @@ include 'lib/header.php';
                 </div>
                 <?php if ($msg['type'] === 'sent'): ?>
                 <div class="sp-message-avatar">
-                    <img src="resource/ui-elements/user-purple.png" alt="" class="sp-message-avatar-img">
+                    <img src="resource/ui-elements/user-alt.png" alt="" class="sp-message-avatar-img">
                 </div>
                 <?php endif; ?>
             </div>
             <?php endforeach; ?>
         </div>
 
-        <!-- Chat Input Bar -->
-        <div class="sp-conversation-input-bar">
-            <div class="sp-conversation-input-wrapper">
-                <input type="text" class="sp-conversation-input" placeholder="Tell me what do you want?">
-                <button class="sp-conversation-mic-btn">
-                    <img src="resource/ui-elements/mic.png" alt="" class="sp-conversation-mic-icon">
-                </button>
+        <!-- Chat Input Bar (same design as customer-service) -->
+        <div class="sp-cs-input-form">
+            <div class="sp-cs-input-bar">
+                <div class="sp-cs-input-wrapper">
+                    <input type="text" class="sp-cs-input sp-conversation-input" placeholder="Tell me what do you want?">
+                    <button class="sp-cs-mic-btn">
+                        <img src="resource/icons/microphone-gray.png" alt="" class="sp-cs-mic-icon">
+                    </button>
+                </div>
             </div>
-            <button class="sp-conversation-send-btn" onclick="sendMessage()">
-                <img src="resource/ui-elements/send.png" alt="" class="sp-conversation-send-icon">
+            <button class="sp-cs-send-btn" onclick="sendMessage()">
+                <img src="resource/ui-elements/button-orange.png" alt="" class="sp-cs-send-icon">
             </button>
         </div>
 
@@ -103,7 +105,7 @@ function sendMessage() {
         msgDiv.innerHTML = `
             <div class="sp-message-bubble">${message}</div>
             <div class="sp-message-avatar">
-                <img src="resource/ui-elements/user-purple.png" alt="" class="sp-message-avatar-img">
+                <img src="resource/ui-elements/user-alt.png" alt="" class="sp-message-avatar-img">
             </div>
         `;
         messagesContainer.appendChild(msgDiv);

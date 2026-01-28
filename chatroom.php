@@ -9,9 +9,8 @@ $pageName = 'chat';
 $pageTitle = '通讯录';
 $headerTitle = '通讯录';
 $bodyClass = 'sp-bg-fixed';
-$headerRightIcon = 'resource/ui-elements/settings.png';
-$headerRightIconType = 'image';
-$headerRightLink = 'chat-settings.php';
+$headerRightIcon = 'fa-cog';
+$headerRightDropdown = true;
 
 include 'lib/htmlHead.php';
 include 'lib/header.php';
@@ -48,7 +47,7 @@ foreach ($contacts as $contact) {
             <!-- Search Box -->
             <div class="sp-contacts-search">
                 <input type="text" placeholder="请输入玩家ID" class="sp-contacts-search-input">
-                <img src="resource/ui-elements/search.png" alt="" class="sp-contacts-search-icon">
+                <i class="fas fa-search sp-contacts-search-icon"></i>
             </div>
 
             <!-- Contacts List -->
@@ -59,7 +58,7 @@ foreach ($contacts as $contact) {
                     <?php foreach ($letterContacts as $contact): ?>
                     <a href="chat-conversation.php?id=<?php echo $contact['id']; ?>" class="sp-contact-item">
                         <div class="sp-contact-avatar">
-                            <img src="resource/ui-elements/user-purple.png" alt="" class="sp-contact-avatar-img">
+                            <img src="resource/ui-elements/user-alt.png" alt="" class="sp-contact-avatar-img">
                         </div>
                         <span class="sp-contact-name"><?php echo htmlspecialchars($contact['name']); ?></span>
                     </a>

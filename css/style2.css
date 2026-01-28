@@ -18,8 +18,8 @@
   --sp-bg-light: #f5f5f5;
 
   /* ===== Purple Theme ===== */
-  --sp-purple-darkest: #1a1a2e;
-  --sp-purple-dark: #2d2d5a;
+  --sp-purple-darkest: #00001d;
+  --sp-purple-dark: #00003a;
   --sp-purple-medium: #3d3d7a;
   --sp-purple-light: #4a4a8a;
   --sp-purple-accent: #6b6bb5;
@@ -144,6 +144,7 @@ a {
 }
 
 .sp-wrapper {
+  display: inline;
   width: 100%;
   max-width: 100%;
   overflow-x: hidden;
@@ -505,7 +506,6 @@ a {
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(0, 0, 0, 0.6);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1383,7 +1383,6 @@ a {
   align-items: center;
   padding: 12px 16px;
   background: var(--sp-bg-white);
-  margin: 0 16px;
   border-radius: 8px;
 }
 
@@ -1901,10 +1900,6 @@ a {
   color: var(--sp-text-white);
 }
 
-.sp-tab-content {
-  padding: 0 16px;
-}
-
 /* ============================================
    Notification Items
    ============================================ */
@@ -2064,7 +2059,6 @@ a {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 1px;
-  background: rgba(255, 255, 255, 0.1);
 }
 
 .sp-referral-item {
@@ -2083,8 +2077,6 @@ a {
   display: flex;
   align-items: center;
   gap: 8px;
-  background: var(--sp-bg-input);
-  padding: 10px 12px;
   border-radius: 6px;
   font-size: 12px;
   color: var(--sp-text-white);
@@ -2148,7 +2140,7 @@ a {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 12px 16px;
+  padding: 10px 0;
   border-bottom: 1px solid var(--sp-border-light);
 }
 
@@ -2216,7 +2208,6 @@ a {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 16px;
 }
 
 .sp-section-title {
@@ -2234,8 +2225,6 @@ a {
 .sp-performance-table,
 .sp-team-table {
   background: var(--sp-bg-white);
-  border-radius: 8px;
-  margin: 0 16px;
   overflow: hidden;
 }
 
@@ -3708,7 +3697,6 @@ a {
    ============================================ */
 .sp-auth-page {
   min-height: 100vh;
-  background: linear-gradient(180deg, var(--sp-purple-dark) 0%, #1a0a2e 100%);
   padding: 24px;
   display: flex;
   flex-direction: column;
@@ -4028,7 +4016,7 @@ a {
   padding: 16px;
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 8px;
 }
 
 .sp-tutorial-item {
@@ -4040,6 +4028,7 @@ a {
   position: relative;
   height: 100px;
   background: var(--sp-purple-dark);
+  border-radius: 10px;
 }
 
 .sp-tutorial-placeholder {

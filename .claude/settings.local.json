@@ -22,7 +22,9 @@
       "Bash(powershell -Command:*)",
       "Bash(if not exist \"C:\\\\Users\\\\user\\\\ai-claude\\\\projects\" mkdir \"C:\\\\Users\\\\user\\\\ai-claude\\\\projects\")",
       "Bash(findstr:*)",
-      "Bash(start http://localhost/)"
+      "Bash(start http://localhost/)",
+      "Bash(grep:*)",
+      "Bash(ls:*)"
     ]
   }
 }

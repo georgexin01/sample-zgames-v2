@@ -2,67 +2,81 @@
 /**
  * bind-email.php - SUPERONG Mobile App
  * 绑定Email (Bind Email Page)
- * 99% Similarity Required
+ * 100% Match with resource/1/59.png, 66.png
  */
 
-// Page settings
-$pageName = 'bind-email';
+$pageName = 'settings';
 $pageTitle = '绑定Email';
 $headerTitle = '绑定Email';
+$headerTitleClass = 'sp-header-title-orange';
 $bodyClass = 'sp-bg-fixed';
 
-// Include header
 include 'lib/htmlHead.php';
 include 'lib/header.php';
 ?>
 
 <!-- ========== BIND EMAIL PAGE CONTENT ========== -->
-<main class="sp-page-content">
-
-    <!-- Email Form -->
-    <form id="bindEmailForm" class="sp-form">
-        <!-- Email Input -->
-        <div class="sp-form-section">
-            <label class="sp-form-label">邮箱地址</label>
-            <div class="sp-input-box">
-                <input type="email" name="email" id="email" placeholder="请输入邮箱地址">
-            </div>
-        </div>
-
-        <!-- Verification Code -->
-        <div class="sp-form-section">
-            <div class="sp-verification-row">
-                <div class="sp-verification-label">验证码</div>
-                <div class="sp-verification-input">
-                    <input type="text" name="verifyCode" id="verifyCode" placeholder="请输入验证码">
+<main class="sp-page">
+    <div class="sp-form-container">
+        <form id="bindEmailForm" onsubmit="handleBindEmail(event)">
+            <!-- Email Input Card -->
+            <div class="sp-auth-card">
+                <div class="sp-auth-row">
+                    <span class="sp-auth-row-label">邮箱</span>
+                    <input type="email" name="email" id="emailInput" placeholder="请输入邮箱地址" class="sp-auth-row-input" required>
                 </div>
-                <button type="button" class="sp-verify-btn" onclick="sendEmailCode()">发送验证码</button>
+                <div class="sp-auth-row">
+                    <span class="sp-auth-row-label">验证码</span>
+                    <div class="sp-auth-verify-group">
+                        <input type="text" name="verifyCode" placeholder="请输入验证码" class="sp-auth-row-input sp-verify-input" required>
+                        <button type="button" class="sp-verify-send-btn" onclick="sendVerifyCode()">发送验证码</button>
+                    </div>
+                </div>
             </div>
-        </div>
 
-        <!-- Submit Button -->
-        <div class="sp-form-actions">
-            <button type="submit" class="sp-btn sp-btn-primary sp-btn-block">确认绑定</button>
-            <p class="sp-form-hint">没有收到验证码？ <a href="customer-service.php">联络我们</a></p>
-        </div>
-    </form>
+            <!-- Submit Button -->
+            <button type="submit" class="sp-auth-submit-btn">绑定</button>
 
+            <!-- Help Link -->
+            <p class="sp-auth-help-text">没有收到验证码？ <a href="customer-service.php">联系我们</a></p>
+        </form>
+    </div>
 </main>
 
+<!-- Success Toast (66.png) -->
+<div class="sp-toast-overlay" id="bindSuccessToast">
+    <div class="sp-toast-card">
+        <div class="sp-toast-icon">
+            <i class="fas fa-check"></i>
+        </div>
+        <p class="sp-toast-message">绑定成功</p>
+    </div>
+</div>
+
+<!-- Mobile Nav Spacer -->
+<div class="mobile-nav-spacer"></div>
+
+<?php include 'lib/footer.php'; ?>
+
 <script>
-function sendEmailCode() {
-    var email = document.getElementById('email').value;
+function sendVerifyCode() {
+    var email = document.getElementById('emailInput').value;
     if (!email) {
-        alert('请输入邮箱地址');
+        alert('请先输入邮箱地址');
         return;
     }
-    // Send verification code logic
-    alert('验证码已发送到 ' + email);
+    alert('验证码已发送到您的邮箱');
+}
+
+function handleBindEmail(e) {
+    e.preventDefault();
+    // Show success toast
+    document.getElementById('bindSuccessToast').classList.add('active');
+    setTimeout(function() {
+        document.getElementById('bindSuccessToast').classList.remove('active');
+        window.location.href = 'settings.php';
+    }, 2000);
 }
 </script>
 
-<?php
-// Include footer
-include 'lib/footer.php';
-include 'lib/htmlBody.php';
-?>
+<?php include 'lib/htmlBody.php'; ?>

@@ -2,7 +2,7 @@
 /**
  * qrcode.php - SUPERONG Mobile App
  * 二维码 (QR Code Page)
- * 100% Match with qrcode二维码.png
+ * 100% Match with resource/1/47.png
  */
 
 $pageName = 'qrcode';
@@ -16,46 +16,55 @@ include 'lib/htmlHead.php';
 include 'lib/header.php';
 
 // User data
-$user = [
-    'username' => 'SUPERONG123',
-    'referralCode' => '123456',
-];
+$username = 'SUPERONG123';
+$referralCode = '123456';
 ?>
 
 <!-- ========== QR CODE PAGE CONTENT ========== -->
-<main class="sp-page sp-page-dark">
+<main class="sp-page">
     <div class="sp-qrcode-container">
 
-        <!-- Username -->
-        <h2 class="sp-qrcode-username"><?php echo htmlspecialchars($user['username']); ?></h2>
-
-        <!-- Referral Code -->
-        <div class="sp-referral-row">
-            <span class="sp-referral-label">推荐码</span>
-            <div class="sp-referral-value">
-                <span id="refCode"><?php echo htmlspecialchars($user['referralCode']); ?></span>
-                <button class="sp-copy-btn" onclick="copyToClipboard('refCode')">
-                    <i class="far fa-copy"></i>
-                </button>
-            </div>
-        </div>
-
-        <!-- QR Code Card -->
+        <!-- QR Card -->
         <div class="sp-qrcode-card">
-            <div class="sp-qrcode-image">
-                <!-- Placeholder QR Code -->
-                <div class="sp-qrcode-placeholder">
-                    <i class="fas fa-qrcode"></i>
-                </div>
+            <h2 class="sp-qrcode-username"><?php echo htmlspecialchars($username); ?></h2>
+
+            <div class="sp-qrcode-code-bar">
+                <span class="sp-qrcode-label">推荐码</span>
+                <span class="sp-qrcode-value"><?php echo htmlspecialchars($referralCode); ?></span>
+                <i class="fas fa-copy sp-qrcode-copy" onclick="copyCode('<?php echo $referralCode; ?>')"></i>
             </div>
+
+            <div class="sp-qrcode-image">
+                <img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=<?php echo urlencode($username); ?>" alt="QR Code" class="sp-qrcode-img">
+            </div>
+
             <p class="sp-qrcode-hint">扫描此二维码添加好友</p>
         </div>
 
         <!-- Scan Button -->
-        <button class="sp-btn-submit" onclick="openScanner()">扫一扫</button>
+        <button class="sp-qrcode-scan-btn" onclick="scanQR()">扫一扫</button>
 
     </div>
 </main>
+
+<!-- Success Toast -->
+<div class="sp-toast-overlay" id="copyToast" style="display: none;">
+    <div class="sp-toast-card">
+        <div class="sp-toast-icon">
+            <img src="resource/ui-elements/check.png" alt="" class="sp-toast-icon-img">
+        </div>
+        <p class="sp-toast-message">复制成功</p>
+    </div>
+</div>
+
+<div class="sp-toast-overlay" id="saveToast" style="display: none;">
+    <div class="sp-toast-card">
+        <div class="sp-toast-icon">
+            <img src="resource/ui-elements/check.png" alt="" class="sp-toast-icon-img">
+        </div>
+        <p class="sp-toast-message">保存成功</p>
+    </div>
+</div>
 
 <!-- Mobile Nav Spacer -->
 <div class="mobile-nav-spacer"></div>
@@ -63,15 +72,17 @@ $user = [
 <?php include 'lib/footer.php'; ?>
 
 <script>
-function copyToClipboard(elementId) {
-    const text = document.getElementById(elementId).textContent;
-    navigator.clipboard.writeText(text).then(() => {
-        alert('已复制: ' + text);
+function copyCode(code) {
+    navigator.clipboard.writeText(code).then(function() {
+        document.getElementById('copyToast').style.display = 'flex';
+        setTimeout(function() {
+            document.getElementById('copyToast').style.display = 'none';
+        }, 1500);
     });
 }
 
-function openScanner() {
-    alert('扫一扫功能');
+function scanQR() {
+    alert('Scan QR feature');
 }
 </script>
 

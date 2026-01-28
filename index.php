@@ -52,7 +52,7 @@ include 'lib/header.php';
                         <div class="sp-point-action-icon"><img src="resource/ui-elements/wallet-orange.png" alt="充值"></div>
                         <span class="sp-point-action-label">充值</span>
                     </a>
-                    <a href="withdrawal.php" class="sp-point-action">
+                    <a href="withdraw.php" class="sp-point-action">
                         <div class="sp-point-action-icon"><img src="resource/ui-elements/cash-orange.png" alt="提现"></div>
                         <span class="sp-point-action-label">提款</span>
                     </a>
@@ -75,7 +75,7 @@ include 'lib/header.php';
                     <div class="sp-quick-btn-icon"><img src="resource/ui-elements/champion.png" alt="排行榜"></div>
                     <span class="sp-quick-btn-label">排行榜</span>
                 </a>
-                <a href="#" class="sp-quick-btn" onclick="showQRModal()">
+                <a href="qrcode.php" class="sp-quick-btn">
                     <div class="sp-quick-btn-icon"><img src="resource/ui-elements/qrcode.png" alt="二维码"></div>
                     <span class="sp-quick-btn-label">二维码</span>
                 </a>
@@ -304,10 +304,6 @@ include 'lib/header.php';
             slidesOffsetAfter: -25
         });
     });
-
-    function showQRModal() {
-        alert('二维码功能');
-    }
 </script>
 
 <?php include 'lib/htmlBody.php'; ?>

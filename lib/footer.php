@@ -15,13 +15,13 @@
 <!-- Bottom Navigation -->
 <nav class="sp-bottom-nav">
     <!-- Alert -->
-    <a href="index.php" class="sp-nav-item <?php echo isActivePage($pageName, 'alert'); ?>">
+    <a href="notification.php" class="sp-nav-item <?php echo isActivePage($pageName, 'notification'); ?>">
         <img src="resource/ui-elements/alert.png" alt="通知" class="sp-nav-icon">
         <span>通知</span>
     </a>
 
     <!-- Invite -->
-    <a href="promo.php" class="sp-nav-item <?php echo isActivePage($pageName, 'invite'); ?>">
+    <a href="invite.php" class="sp-nav-item <?php echo isActivePage($pageName, 'invite'); ?>">
         <img src="resource/ui-elements/user-plus.png" alt="邀请好友" class="sp-nav-icon">
         <span>邀请好友</span>
     </a>
@@ -32,7 +32,7 @@
     </a>
 
     <!-- Chat -->
-    <a href="deposit.php" class="sp-nav-item <?php echo isActivePage($pageName, 'chat'); ?>">
+    <a href="chatroom.php" class="sp-nav-item <?php echo isActivePage($pageName, 'chat'); ?>">
         <img src="resource/ui-elements/chat.png" alt="聊天室" class="sp-nav-icon">
         <span>聊天室</span>
     </a>
